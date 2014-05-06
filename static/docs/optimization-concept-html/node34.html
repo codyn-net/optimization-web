@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Use of custom libraries</TITLE>
+<META NAME="description" CONTENT="Use of custom libraries">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node35.html">
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html543"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html539"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html533"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html541"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html544"
+  HREF="node35.html">Specifying the master</A>
+<B> Up:</B> <A NAME="tex2html540"
+  HREF="node30.html">Distributing Jobs</A>
+<B> Previous:</B> <A NAME="tex2html534"
+  HREF="node33.html">Running on the biorob</A>
+ &nbsp; <B>  <A NAME="tex2html542"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00524000000000000000">
+Use of custom libraries</A>
+</H2>
+If you have custom libraries, make sure
+that they are either system wide installed on the distributed systems, or to
+specify <code>LD_LIBRARY_PATH</code> in the <code>environment</code> settings of the dispatcher.
+Note: The dispatchers will not be executing under your normal login
+environment! This means that if you do anything special in your <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.png"
+ ALT="$ \sim$"></SPAN>/.bashrc
+(or similar) you will not have the same environment for the job.
+
+<P>
+It is possible that <code>LD_LIBRARY_PATH</code> does not get set properly when specified
+in the <code>environment</code> settings of the dispatcher due to security reasons. If
+this is the case, a simple workaround is to create a wrapper script which sets
+<code>LD_LIBRARY_PATH</code> and then executes the actual dispatcher. For example,
+to do this for webots, create a script at <code>~/bin/webots-runner</code>:
+
+<P>
+<BR>
+<IMG
+ WIDTH="467" HEIGHT="146" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="\begin{lstlisting}[language=sh]
+...">
+<BR>
+
+<P>
+And specify <code>$HOME/bin/webots-runner</code> in the <code>webotsPath</code> dispatcher
+setting of the webots dispatcher (in the job file).
+
+<P>
+<BR><HR>
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Blender</TITLE>
+<META NAME="description" CONTENT="Blender">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html441"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html437"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html433"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html439"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html442"
+  HREF="node28.html">Practical Information and Examples</A>
+<B> Up:</B> <A NAME="tex2html438"
+  HREF="node24.html">Dispatchers</A>
+<B> Previous:</B> <A NAME="tex2html434"
+  HREF="node26.html">External</A>
+ &nbsp; <B>  <A NAME="tex2html440"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00483000000000000000">
+Blender</A>
+</H2>
+The blender dispatcher can be used to distribute blender animation tasks. Each
+blender process will render a single frame and write it somewhere to disk.
+You can then later assemble all the single frames in a movie. Settings
+for this dispatcher are displayed in table <A HREF="#tab:blender_settings">3.10</A>. The
+dispatcher requires one parameter named ``frame'' which indicates the frame
+number to be rendered. Use the ``systematic search`` optimizer to generate
+the frame numbers (using a step of 1).
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:blender_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="434"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.10:</STRONG>
+Blender Dispatcher Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=369><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">blender-file</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>The blender file to render a frame of</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">scene</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>The scene name to render a frame from (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">output-path</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>The output directory where frames will be rendered to.
+		                       By default, the output directory is set to the
+		                       directory of the blender file. You can start the
+		                       output-path with <code>//</code> to indicate
+		                       ``relative to the blender file directory`` (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">format</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>The frame output format. Defaults to PNG (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">arguments</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>Additional arguments that will be appended to the
+		                     generated arguments for blender. (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">environment</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>Comma separated list of key=value environment variables
+		              to set in the environment in which to execute webots
+		              (optional)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=369>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html441"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html437"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html433"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html439"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html442"
+  HREF="node28.html">Practical Information and Examples</A>
+<B> Up:</B> <A NAME="tex2html438"
+  HREF="node24.html">Dispatchers</A>
+<B> Previous:</B> <A NAME="tex2html434"
+  HREF="node26.html">External</A>
+ &nbsp; <B>  <A NAME="tex2html440"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

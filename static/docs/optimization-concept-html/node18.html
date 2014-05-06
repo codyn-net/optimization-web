@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>SPSA</TITLE>
+<META NAME="description" CONTENT="SPSA">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html336"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html332"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html326"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html334"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html337"
+  HREF="node19.html">GA</A>
+<B> Up:</B> <A NAME="tex2html333"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html327"
+  HREF="node17.html">ADPSO</A>
+ &nbsp; <B>  <A NAME="tex2html335"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00443000000000000000">
+SPSA</A>
+</H2>
+Simultaneous Perturbation Stochastic Approximation is an efficient,
+popular, stochastic gradient descend method [<A
+ HREF="node40.html#spall_multivariate_1992">SpallSpall1992</A>]. It
+can be defined by:
+
+<P>
+<BR>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray*}
+\hat{\theta}_{k + 1} & = & \hat{\theta}_k - a_k \hat{g}_k(\hat{\theta}_k) \\
+	\hat{g}_{ki}(\hat{\theta}_k) & = & \frac{y(\hat{\theta}_k + c_k \Delta_k) -
+	                                         y(\hat{\theta}_k - c_k \Delta_k)}{2 c_k}
+\end{eqnarray*}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG
+ WIDTH="35" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$\displaystyle \hat{\theta}_{k + 1}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
+ WIDTH="98" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$\displaystyle \hat{\theta}_k - a_k \hat{g}_k(\hat{\theta}_k)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$\displaystyle \hat{g}_{ki}(\hat{\theta}_k)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
+ WIDTH="210" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$\displaystyle \frac{y(\hat{\theta}_k + c_k \Delta_k) -
+y(\hat{\theta}_k - c_k \Delta_k)}{2 c_k}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+With <!-- MATH
+ $\hat{\theta}_k$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \hat{\theta}_k$"></SPAN> the solution estimation at iteration <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$ a_k$"></SPAN> a learning
+rate, <!-- MATH
+ $\hat{g}_k(\hat{\theta}_k)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$ \hat{g}_k(\hat{\theta}_k)$"></SPAN> the estimation of the gradient at
+<!-- MATH
+ $\hat{\theta}_k$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \hat{\theta}_k$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ y$"></SPAN> the objective function, <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ c_k$"></SPAN> a perturbation rate and
+<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$ \Delta_k$"></SPAN> the randomized perturbation vector.
+
+<P>
+The current implementation performs this two-sided perturbation to estimate the
+gradient with the perturbation vector <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$ \Delta_k$"></SPAN> drawn from a Bernoulli <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ \pm$"></SPAN>
+distribution to satisfy convergence conditions.
+
+<P>
+Table <A HREF="#tab:spsa_settings">3.6</A> lists the settings available for this optimizer.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:spsa_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="327"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.6:</STRONG>
+SPSA Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=340><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">learning-rate</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The learning rate <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$ a_k$"></SPAN> used to update the
+		                         new solution according to the current gradient
+		                         estimation. You can use a mathematical
+		                         expression for this setting and use the
+		                         variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to indicate the current iteration
+		                         number</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">perturbation-rate</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The rate <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ c_k$"></SPAN> with which to perturbate the
+		                             solution to estimate the gradient. You
+		                             can use a mathematical expression for this
+		                             setting and use the variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to
+		                             indicate the current iteration number</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">epsilon</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The normalized maximum parameter step size. You
+		                    can use a mathematical expression for this
+		                    setting and use the variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to indicate the
+		                    current iteration number</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">boundary-condition</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Indicates how parameter boundaries
+		                              should be handled. There are three
+		                              possible settings: <SPAN  CLASS="textit">None</SPAN>
+		                              (does not contrain the parameter
+		                              space), <SPAN  CLASS="textit">StickResult</SPAN> (only
+		                              constrains the actual solution to
+		                              be within the parameter boundaries)
+		                              and <SPAN  CLASS="textit">StickAll</SPAN> (constrains
+		                              both the actual position and the
+		                              perturbed solutions to be within
+		                              the parameter boundaries).</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html336"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html332"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html326"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html334"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html337"
+  HREF="node19.html">GA</A>
+<B> Up:</B> <A NAME="tex2html333"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html327"
+  HREF="node17.html">ADPSO</A>
+ &nbsp; <B>  <A NAME="tex2html335"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

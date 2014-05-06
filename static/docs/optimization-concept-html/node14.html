@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>XML description</TITLE>
+<META NAME="description" CONTENT="XML description">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html283"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html279"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html275"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html281"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html284"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Up:</B> <A NAME="tex2html280"
+  HREF="node13.html">optirunner</A>
+<B> Previous:</B> <A NAME="tex2html276"
+  HREF="node13.html">optirunner</A>
+ &nbsp; <B>  <A NAME="tex2html282"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00431000000000000000">
+XML description</A>
+</H2>
+The XML description of a job consists of a few distinct sections. The basic
+element is <code>job</code>:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="314" HEIGHT="193" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;?xml version=''1.0'' encoding=''UTF-8'' ?&gt;
+\pa...
+...&gt;{TOKEN}&lt;/token&gt;
+&lt;asynchronous-storage/&gt;
+&lt;!- Rest -&gt;
+&lt;/job&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+A job should always have a name. The name is used to generate the file name
+in which results are written. The <code>priority</code>, <code>timeout</code>,
+<code>token</code> and <code>asynchronous-storage</code> elements are all <SPAN  CLASS="textit">optional</SPAN>
+and specify:
+
+<P>
+
+<UL>
+<LI><code>priority</code>: the priority level at which you want to run the
+	job. This value defaults to 1 if unspecified. Higher priority jobs get
+	proportionally more time on the cluster (on average).
+</LI>
+<LI><code>timeout</code>: timeout indicating the maximum allowed time for
+	a task to run. Note that this is measuring <SPAN  CLASS="textit">real time</SPAN> and is
+	only used as a safety mechanism for badly behaving dispatchers. You
+	almost never have to specify this and is used mostly as a hack to not
+	get jobs stuck in never ending tasks.
+</LI>
+<LI><code>token</code>: an authentication token for the job. See also
+	section <A HREF="node32.html#sec:tokens">4.2.2</A> for more information on authentication tokens.
+</LI>
+<LI><code>asynchronous-storage</code>: when specified, the SQLite database
+	is written to disk in asynchronous mode. This can result in significantly
+	faster optimizations for tasks that are very shortlived. Note however
+	that using asynchronous storage can lead to data loss in case of
+	unexpected failures (power outage). The default is to use synchronous
+	storage.
+</LI>
+</UL>
+
+<P>
+The remainder of the job description consists of
+the <code>optimizer</code>, <code>boundaries</code>, <code>parameters</code> and <code>dispatcher</code>
+elements defined inside the job element.
+
+<P>
+The <code>optimizer</code> element describes the type of optimization algorithm to
+use and any settings that correspond to that particular optimization algorithm.
+For example:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="363" HEIGHT="80" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer name=''{NAME}''&gt;
+&lt;setting name=''{...
+...g&gt;
+&lt;setting name=''{SETTING 2}''&gt;{VAL}&lt;/setting&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+The name attribute identifies the optimization algorithm (for example 'pso').
+The settings set settings specific to the optimization algorithm. When you
+for example use <SPAN  CLASS="textit">PSO</SPAN>, these settings include the maximum allowed
+particle velocity and different coefficients used in the algorithm. There are
+some settings available for all optimization algorithms, for more information
+see section <A HREF="node15.html#sec:optimization">3.4</A>.
+
+<P>
+The <code>boundaries</code> element specifies a set of boundary definitions (minimum
+and maximum values) which are used in the <code>parameters</code> element. An example
+boundaries definition:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="777" HEIGHT="170" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer&gt;
+&lt;!- ... -&gt;
+&lt;boundaries&gt;
+&lt;boun...
+...-initial=''{VAL}''/&gt;
+&lt;/boundaries&gt;
+&lt;!- ... -&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+Each boundary is named, and has a minimum and a maximum value. The name is
+used in the parameter definition to reference a specific boundary. The
+<code>min-initial</code> and <code>max-initial</code> attributes are <SPAN  CLASS="textit">optional</SPAN> and
+specify respectively the minimum and maximum value to which the initial
+population should be initialized (for population based algorithms).
+
+<P>
+The <code>parameters</code> element specifies the set of open parameters to be
+optimized. An example definition:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="517" HEIGHT="170" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer&gt;
+&lt;!- ... -&gt;
+&lt;parameters&gt;
+&lt;para...
+...'{BOUNDARY NAME}''/&gt;
+&lt;/parameters&gt;
+&lt;!- ... -&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+Each parameter is named, and specifies by which boundary its value is bound.
+
+<P>
+In addition to specifying boundaries in a separate section so that they can
+be reused, you can also write boundary values in a more concise and simpler
+format directly in the parameter specification:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="785" HEIGHT="170" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer&gt;
+&lt;!- ... -&gt;
+&lt;parameters&gt;
+&lt;para...
+...-initial=''{VAL}''/&gt;
+&lt;/parameters&gt;
+&lt;!- ... -&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+The optimization framework currently does not support the concept of vectors
+or arrays for parameters. Some tasks however are more easily defined using
+these concepts (for example, think of weights for a neural network). To
+somewhat ease the specification of such repeated parameters, the following
+syntax (note the <code>repeat</code> attribute) can be used:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="314" HEIGHT="147" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer&gt;
+&lt;!- ... -&gt;
+&lt;parameters&gt;
+&lt;para...
+...'' repeat=''1-10''/&gt;
+&lt;/parameters&gt;
+&lt;!- ... -&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+This will generate 10 parameters with the names p1 to p10. The specified range
+can only contain simple integers (min and max) and these numbers are simply
+appended to the specified name. All other attributes (min, max, etc.) can still
+be used.
+
+<P>
+The last element in the optimizer node is the <code>fitness</code> element.
+This can be used if you have
+multiple objectives in your fitness function. By default, if you do not specify
+this element, the first fitness value the dispatcher returns is used.
+Dispatchers can return multiple fitness values if there are multiple objectives
+to be used for optimization. In this case, it can be useful to be able to
+define a mathematical expression combining these different values in a single
+fitness value. As such, you can adjust the way you combine these different
+objectives without having to modify the dispatcher. An example fitness
+description:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="476" HEIGHT="215" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer&gt;
+&lt;!- ... -&gt;
+&lt;fitness&gt;
+&lt;express...
+...{EXPRESSION}&lt;/variable&gt;
+&lt;/fitness&gt;
+&lt;!- ... -&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+The <code>expression</code> element in the <code>fitness</code> element describes the main
+fitness expression to be evaluated. This expression can be a mathematical
+expression consistent with most programming languages syntax (operators and
+a small set of functions such as log, sin, etc.). The dispatcher will return
+a dictionary (name <!-- MATH
+ $\rightarrow$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rightarrow$"></SPAN> fitness) of fitness values, and you can refer
+to such a value by using the name in the expression.
+
+<P>
+Additionally, you can add any number of variables in the fitness description
+containing a mathematical expression. You can refer to these variables from
+any expression as well. This can be convenient to specify some weights or
+constants which you can later modify easily.
+
+<P>
+The <code>dispatcher</code> element describes the dispatcher and dispatcher settings
+to be used to evaluate a solution generated by the optimization algorithm. The
+specific settings depend on the type of dispatcher used. An example definition:
+
+<P>
+
+<BR>
+<IMG
+ WIDTH="379" HEIGHT="80" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;dispatcher name=''{NAME}''&gt;
+&lt;setting name=''...
+... &lt;setting name=''{SETTING 2}''&gt;{VALUE}&lt;/setting&gt;
+&lt;/dispatcher&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+The dispatcher name can be either a simple name, in which case it will be
+looked up in the system directory for optimization dispatchers (this is where
+system dispatchers such as the webots dispatcher are installed). On the other
+hand, you can also specify an absolute path to a dispatcher executable here.
+
+<P>
+The settings are specific per dispatcher, and are documented separately. Note
+that any number of additional settings can be specified here, custom to your
+specific job. For instance, using the webots dispatcher, you can retrieve any
+additional settings in your webots controller, and configure the simulation
+environment accordingly.
+
+<P>
+A full XML job description example:
+
+<P>
+<BR>
+<IMG
+ WIDTH="574" HEIGHT="556" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;?xml version=''1.0'' encoding=''utf-8''?&gt;
+\par...
+...
+&lt;setting name=''max-time''&gt;10&lt;/setting&gt;
+&lt;/dispatcher&gt;
+&lt;/job&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html283"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html279"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html275"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html281"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html284"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Up:</B> <A NAME="tex2html280"
+  HREF="node13.html">optirunner</A>
+<B> Previous:</B> <A NAME="tex2html276"
+  HREF="node13.html">optirunner</A>
+ &nbsp; <B>  <A NAME="tex2html282"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

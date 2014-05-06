@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- vi:ex:ts=4:et -->
+
+<html>
+<head>
+    <title>optimization<%= " &mdash; #{title}" if respond_to? :title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+    </script>
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="styles/default.css" rel="stylesheet" type="text/css">
+
+    <% var(:styles, []).each do |style| %>
+    <link href="styles/<%= style %>.css" rel="stylesheet" type="text/css">
+    <% end %>
+
+    <script type="text/javascript" src="javascript/application.js">
+    </script>
+
+    <% var(:scripts, []).each do |script| %>
+    <script type="text/javascript" src="javascript/<%= script %>.js">
+    </script>
+    <% end %>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                optimization
+            </div>
+            <div id="menubar">
+                <ul>
+                    <li><a href="index.html">Optimization</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="example.html">Example</a></li>
+                    <li><a href="download.html">Download</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">

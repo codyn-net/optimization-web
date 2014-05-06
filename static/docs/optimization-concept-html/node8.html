@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Software</TITLE>
+<META NAME="description" CONTENT="Software">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html197"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html193"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html187"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html195"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html198"
+  HREF="node9.html">Security</A>
+<B> Up:</B> <A NAME="tex2html194"
+  HREF="node6.html">Implementation</A>
+<B> Previous:</B> <A NAME="tex2html188"
+  HREF="node7.html">Communication</A>
+ &nbsp; <B>  <A NAME="tex2html196"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00320000000000000000">
+Software</A>
+</H1>
+There are two major parts of software developed for the framework. The first
+part is the lower level backbone of the framework consisting of the
+<SPAN  CLASS="textit">server</SPAN> and <SPAN  CLASS="textit">workstation</SPAN> layers. These layers are implemented in
+C++. Common functionality reused in the different components of these layers
+is provided in a separate C++ library. The developed applications are:
+
+<P>
+
+<UL>
+<LI>master (<SPAN  CLASS="textit">server</SPAN> layer): the master distribution process which
+	distributes task to workstations
+</LI>
+<LI>worker (<SPAN  CLASS="textit">workstation</SPAN> layer): the process that accepts tasks
+	and executes the appropriate dispatcher
+</LI>
+<LI>dispatcher (<SPAN  CLASS="textit">workstation</SPAN> layer): the dispatchers that
+	evaluate a specific task
+</LI>
+</UL>
+
+<P>
+The <SPAN  CLASS="textit">user</SPAN> layer on the other hand has been implemented in C# (using
+``<SPAN  CLASS="textit">mono</SPAN>'' the open source version of the .NET framework). It consists of a
+.NET library containing classes with which optimizers can be easily implemented,
+and an application which can run jobs specified using XML. The C# language
+was chosen for this layer because it is easy to learn, modern, powerful,
+cross-platform and reduces the time needed to implement new optimization
+algorithms.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

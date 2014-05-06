@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>External</TITLE>
+<META NAME="description" CONTENT="External">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html431"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html427"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html421"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html429"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html432"
+  HREF="node27.html">Blender</A>
+<B> Up:</B> <A NAME="tex2html428"
+  HREF="node24.html">Dispatchers</A>
+<B> Previous:</B> <A NAME="tex2html422"
+  HREF="node25.html">Webots</A>
+ &nbsp; <B>  <A NAME="tex2html430"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00482000000000000000">
+External</A>
+</H2>
+The external dispatcher can be used to launch external processes that will
+handle the dispatch request. This can be seen as a very general dispatcher that
+abstract some parts of the optimization framework so that it becomes easier
+to write custom dispatchers. One example of using the external dispatcher is
+to evaluate a job in MATLAB. See table <A HREF="#tab:external_settings">3.9</A> for
+the dispatcher settings.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:external_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="414"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.9:</STRONG>
+External Dispatcher Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=340><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">path</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Path to the executable to use for evaluating the task</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">arguments</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Arguments to provide to the executable</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">working-directory</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The working directory in which to execute
+		                             the external process</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">mode</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The mode in which to describe and receive the task
+		                description. Can be either <code>protobuf</code> or
+		                <code>text</code>. The <code>protobuf</code> mode will send protobuf
+		                encoded messages, just as through the rest of the
+		                framework. The <code>text</code> mode will send tasks
+		                encoded in a simple text format. The default is
+		                <code>protobuf</code> (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">environment</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Comma separated list of key=value environment variables
+		              to set in the environment in which to execute webots
+		              (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">persistent</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Optional argument indicating the TCP port number
+		                      to connect to to dispatch the task. You can use
+		                      this if starting the environment in which you
+		                      evaluate a task is expensive. If this is specified,
+		                      the executable will be started the first time, and
+		                      given the environment variable
+		                      <code>OPTIMIZATION_EXTERNAL_PERSISTENT</code>, which
+		                      contains the port number on which the external
+		                      process should listen for tasks.</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">startup-delay</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Specifies the number of seconds after which a
+		                         connection should be established when the
+		                         persistent executable is first launched (only
+		                         relevant for persistent mode, optional)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html431"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html427"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html421"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html429"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html432"
+  HREF="node27.html">Blender</A>
+<B> Up:</B> <A NAME="tex2html428"
+  HREF="node24.html">Dispatchers</A>
+<B> Previous:</B> <A NAME="tex2html422"
+  HREF="node25.html">Webots</A>
+ &nbsp; <B>  <A NAME="tex2html430"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

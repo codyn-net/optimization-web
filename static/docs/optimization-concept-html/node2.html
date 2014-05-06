@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Conceptual Overview</TITLE>
+<META NAME="description" CONTENT="Conceptual Overview">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="concept.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html121"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html117"
+  HREF="concept.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html111"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html119"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html122"
+  HREF="node3.html">User Layer</A>
+<B> Up:</B> <A NAME="tex2html118"
+  HREF="concept.html">Optimization Framework Conceptual Overview</A>
+<B> Previous:</B> <A NAME="tex2html112"
+  HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A NAME="tex2html120"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00200000000000000000">
+Conceptual Overview</A>
+</H1>
+Figure <A HREF="#fig:overview">1.1</A> shows a schematic overview of the optimization
+framework. There are three distinct layers (user, server and workstation)
+in the system. The <SPAN  CLASS="textit">user</SPAN> layer runs the actual optimization process
+which will produce tasks that have to be evaluated. These tasks are passed
+to the <SPAN  CLASS="textit">server</SPAN> layer which queues them in a task queue. The
+<SPAN  CLASS="textit">server</SPAN> acts as a central hub to distribute any tasks it receives
+to the available workstations. A <SPAN  CLASS="textit">workstation</SPAN> in turn receives a
+single task from the <SPAN  CLASS="textit">server</SPAN> and executes it. When the task has been
+evaluated, the result is sent back to the <SPAN  CLASS="textit">user</SPAN> through the
+<SPAN  CLASS="textit">server</SPAN> layer. The different layers can run on a single PC, but can
+also be placed on different networked PCs. See section <A HREF="node6.html#sec:implementation">2</A>
+for more information on the implementation of the different layers and
+communication protocols.
+
+<P>
+The overall concept of the framework is such that no specific
+restrictions are placed on the type of optimization algorithm or the manner
+in which a task has to be evaluated. Therefore, the framework can easily be
+used for many different and concurrent tasks.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:overview"></A><A NAME="38"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1.1:</STRONG>
+Schematic overview of the optimization framework architecture</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>	</TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html123"
+  HREF="node3.html">User Layer</A>
+<LI><A NAME="tex2html124"
+  HREF="node4.html">Server Layer</A>
+<LI><A NAME="tex2html125"
+  HREF="node5.html">Workstation Layer</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html121"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html117"
+  HREF="concept.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html111"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html119"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html122"
+  HREF="node3.html">User Layer</A>
+<B> Up:</B> <A NAME="tex2html118"
+  HREF="concept.html">Optimization Framework Conceptual Overview</A>
+<B> Previous:</B> <A NAME="tex2html112"
+  HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A NAME="tex2html120"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

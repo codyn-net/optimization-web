@@ -1,0 +1,520 @@
+<html>
+  <head>
+    <title>Optimization.Random</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Random">Random  Class</h1>
+    <p class="Summary" id="T:Optimization.Random:Summary">Random number generator.</p>
+    <div id="T:Optimization.Random:Signature">
+      <div class="Signature">public class  <b>Random</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Random:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Random:Docs:Remarks')">
+          <span id="T:Optimization.Random:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Random:Docs:Remarks">Convenient object to generate random numbers. This is
+	basically just <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Random">Random</a> but extended with
+	some useful methods.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Random:Docs:Version Information')">
+          <span id="T:Optimization.Random:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Random:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Random">Random</a>
+                    </b>()</div>
+                </td>
+                <td>Create new Random object.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Random(System.Int32)">Random</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
+                </td>
+                <td>Create new Random object.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Random(System.Random)">Random</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Random">Random</a>)</div>
+                </td>
+                <td>Create new random number generator from existing generator.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Random.NextDouble">NextDouble</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote>Generate next random number.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Random.Range(System.Double,System.Double)">Range</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote>Generate a random number in a specific range.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Random.Seed(System.Int32)">Seed</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>Seed the random number generator.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Random:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Random">
+          <a href="javascript:toggle_display('C:Optimization.Random:member')">
+            <span id="C:Optimization.Random:member:toggle">⊟</span> Random Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Random:member">
+          <p class="Summary">Create new Random object.</p>
+          <div class="Signature">public  <b>Random</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random:Remarks')">
+              <span id="C:Optimization.Random:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random:Remarks">Create new Random object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random:Version Information')">
+              <span id="C:Optimization.Random:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Optimization.Random(System.Int32)">
+          <a href="javascript:toggle_display('C:Optimization.Random(System.Int32):member')">
+            <span id="C:Optimization.Random(System.Int32):member:toggle">⊟</span> Random Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Random(System.Int32):member">
+          <p class="Summary">Create new Random object.</p>
+          <div class="Signature">public  <b>Random</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> seed)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random(System.Int32):Parameters')">
+              <span id="C:Optimization.Random(System.Int32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>seed</i>
+              </dt>
+              <dd>The seed.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random(System.Int32):Remarks')">
+              <span id="C:Optimization.Random(System.Int32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random(System.Int32):Remarks">Create a new Random object and seed the random number generator. 
+	Use this if you need to have reproducible sequence of random numbers.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random(System.Int32):Version Information')">
+              <span id="C:Optimization.Random(System.Int32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random(System.Int32):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Optimization.Random(System.Random)">
+          <a href="javascript:toggle_display('C:Optimization.Random(System.Random):member')">
+            <span id="C:Optimization.Random(System.Random):member:toggle">⊟</span> Random Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Random(System.Random):member">
+          <p class="Summary">Create new random number generator from existing generator.</p>
+          <div class="Signature">public  <b>Random</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Random">Random</a> rnd)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random(System.Random):Parameters')">
+              <span id="C:Optimization.Random(System.Random):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random(System.Random):Parameters">
+            <dl>
+              <dt>
+                <i>rnd</i>
+              </dt>
+              <dd>Existing random number generator.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random(System.Random):Remarks')">
+              <span id="C:Optimization.Random(System.Random):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random(System.Random):Remarks">Creates a new random number generator using an existing
+        generator.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Random(System.Random):Version Information')">
+              <span id="C:Optimization.Random(System.Random):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Random(System.Random):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Random.NextDouble">
+          <a href="javascript:toggle_display('M:Optimization.Random.NextDouble:member')">
+            <span id="M:Optimization.Random.NextDouble:member:toggle">⊟</span> NextDouble Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Random.NextDouble:member">
+          <p class="Summary">Generate next random number.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>NextDouble</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.NextDouble:Returns')">
+              <span id="M:Optimization.Random.NextDouble:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.NextDouble:Returns">The next random number.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.NextDouble:Remarks')">
+              <span id="M:Optimization.Random.NextDouble:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.NextDouble:Remarks">Generate and return the next random number.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.NextDouble:Version Information')">
+              <span id="M:Optimization.Random.NextDouble:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.NextDouble:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Random.Range(System.Double,System.Double)">
+          <a href="javascript:toggle_display('M:Optimization.Random.Range(System.Double,System.Double):member')">
+            <span id="M:Optimization.Random.Range(System.Double,System.Double):member:toggle">⊟</span> Range Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Random.Range(System.Double,System.Double):member">
+          <p class="Summary">Generate a random number in a specific range.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Range</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> min, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> max)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Range(System.Double,System.Double):Parameters')">
+              <span id="M:Optimization.Random.Range(System.Double,System.Double):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Range(System.Double,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>min</i>
+              </dt>
+              <dd>Minimum range.</dd>
+              <dt>
+                <i>max</i>
+              </dt>
+              <dd>Maximum range.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Range(System.Double,System.Double):Returns')">
+              <span id="M:Optimization.Random.Range(System.Double,System.Double):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Range(System.Double,System.Double):Returns">A random number.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Range(System.Double,System.Double):Remarks')">
+              <span id="M:Optimization.Random.Range(System.Double,System.Double):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Range(System.Double,System.Double):Remarks">Generate a random number in a specific range.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Range(System.Double,System.Double):Version Information')">
+              <span id="M:Optimization.Random.Range(System.Double,System.Double):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Range(System.Double,System.Double):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Random.Seed(System.Int32)">
+          <a href="javascript:toggle_display('M:Optimization.Random.Seed(System.Int32):member')">
+            <span id="M:Optimization.Random.Seed(System.Int32):member:toggle">⊟</span> Seed Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Random.Seed(System.Int32):member">
+          <p class="Summary">Seed the random number generator.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Seed</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> seed)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Seed(System.Int32):Parameters')">
+              <span id="M:Optimization.Random.Seed(System.Int32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Seed(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>seed</i>
+              </dt>
+              <dd>The seed.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Seed(System.Int32):Remarks')">
+              <span id="M:Optimization.Random.Seed(System.Int32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Seed(System.Int32):Remarks">Use this if you need to have reproducible sequence of random numbers.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Random.Seed(System.Int32):Version Information')">
+              <span id="M:Optimization.Random.Seed(System.Int32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Random.Seed(System.Int32):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

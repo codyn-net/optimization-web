@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Systematic Search</TITLE>
+<META NAME="description" CONTENT="Systematic Search">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html358"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html354"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html350"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html356"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html359"
+  HREF="node21.html">optirooter</A>
+<B> Up:</B> <A NAME="tex2html355"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html351"
+  HREF="node19.html">GA</A>
+ &nbsp; <B>  <A NAME="tex2html357"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00445000000000000000">
+Systematic Search</A>
+</H2>
+The systematic search optimizer is not an optimization algorithm, but instead
+performs a systematic parameter search on a range of parameters. This is an
+example of how the distribution of tasks by the framework can be used for
+purposes other than strictly optimizations.
+
+<P>
+This optimizer extends the job XML description so that you can specify the
+range for each parameter to explore systematically instead of just the upper
+and lower boundary as done normally. An example description:
+
+<P>
+<BR>
+<IMG
+ WIDTH="582" HEIGHT="147" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="\begin{lstlisting}[language=xml]
+&lt;optimizer&gt;
+&lt;!- ... -&gt;
+&lt;parameters&gt;
+&lt;para...
+... max=''{MAX}'' steps=''{STEPS}''/&gt;
+&lt;/parameters&gt;
+&lt;/optimizer&gt;
+\end{lstlisting}">
+<BR>
+
+<P>
+You can specify ranges in two different ways, either by specifying the step
+size explicitly (first parameter in the example) or by specifying the number of
+steps that should be explored (second parameter in the example). In the second case
+the step size will be automatically calculated.
+
+<P>
+There are no additional settings for the systematic search. The default
+<SPAN  CLASS="textit">population-size</SPAN> setting determines the batch size in which
+solutions are sent to the <code>optimaster</code>. You should set this to a
+sensible value (around 200/300 or something).
+
+<P>
+<BR><HR>
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

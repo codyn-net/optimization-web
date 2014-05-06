@@ -1,0 +1,536 @@
+<html>
+  <head>
+    <title>Optimization.Dispatcher.Internal.Dispatcher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Dispatcher.Internal Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Dispatcher.Internal.Dispatcher">Dispatcher  Class</h1>
+    <p class="Summary" id="T:Optimization.Dispatcher.Internal.Dispatcher:Summary">Internal dispatcher base class.</p>
+    <div id="T:Optimization.Dispatcher.Internal.Dispatcher:Signature">
+      <div class="Signature">public abstract class  <b>Dispatcher</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Dispatcher.Internal.Dispatcher:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Dispatcher.Internal.Dispatcher:Docs:Remarks')">
+          <span id="T:Optimization.Dispatcher.Internal.Dispatcher:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Dispatcher.Internal.Dispatcher:Docs:Remarks">The internal dispatcher base class. Internal dispatchers are
+    derived from this base class. The internal dispatcher can be used to
+    dispatch simple tasks locally without going through the whole framework.
+    The optimization will be run entirely within the application. This can
+    be useful for evaluating algorithms on numerical problems for example.
+    See for a generic implementation of an internal dispatcher see
+    <a href="../Optimization.Dispatcher.Internal/Internal.html">Optimization.Dispatcher.Internal.Internal</a>.
+
+    Implementations need to implement at least
+    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Optimization.Dispatcher.Internal.Evaluate</a>.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Dispatcher.Internal.Dispatcher:Docs:Version Information')">
+          <span id="T:Optimization.Dispatcher.Internal.Dispatcher:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Dispatcher.Internal.Dispatcher:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Dispatcher.Internal.Dispatcher">Dispatcher</a>
+                    </b>()</div>
+                </td>
+                <td>Default constructor.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Dispatcher.Internal.Dispatcher.Job">Job</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Job.html">Job</a>
+                  </i>. The job.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution)">Evaluate</a>
+                  </b>(<a href="../Optimization/Solution.html">Solution</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a></nobr><blockquote>Evaluate solution.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type)">GetDescription</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Dispatcher description.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type)">GetName</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Dispatcher name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job)">Initialize</a>
+                  </b>(<a href="../Optimization/Job.html">Job</a>)<blockquote>Initialize dispatcher.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Dispatcher.Internal.Dispatcher:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Dispatcher.Internal.Dispatcher">
+          <a href="javascript:toggle_display('C:Optimization.Dispatcher.Internal.Dispatcher:member')">
+            <span id="C:Optimization.Dispatcher.Internal.Dispatcher:member:toggle">⊟</span> Dispatcher Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Dispatcher.Internal.Dispatcher:member">
+          <p class="Summary">Default constructor.</p>
+          <div class="Signature">public  <b>Dispatcher</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Dispatcher.Internal.Dispatcher:Remarks')">
+              <span id="C:Optimization.Dispatcher.Internal.Dispatcher:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Dispatcher.Internal.Dispatcher:Remarks">Default constructor.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Dispatcher.Internal.Dispatcher:Version Information')">
+              <span id="C:Optimization.Dispatcher.Internal.Dispatcher:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Dispatcher.Internal.Dispatcher:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):member')">
+            <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):member:toggle">⊟</span> Evaluate Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):member">
+          <p class="Summary">Evaluate solution.</p>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> <b>Evaluate</b> (<a href="../Optimization/Solution.html">Optimization.Solution</a> solution)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>The solution.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Returns')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Returns">A dictionary of fitness values.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Remarks">Evaluate a solution. This is the main method that needs to
+        be implemented by all internal dispatchers. The result is a dictionary
+        containing one or more fitness values.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Evaluate(Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):member')">
+            <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):member:toggle">⊟</span> GetDescription Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):member">
+          <p class="Summary">Dispatcher description.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetDescription</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> type)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Parameters')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The dispatcher type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Returns')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Returns">Dispatcher description.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Remarks')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Remarks">Get the dispatcher description.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Version Information')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetDescription(System.Type):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):member')">
+            <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):member:toggle">⊟</span> GetName Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):member">
+          <p class="Summary">Dispatcher name.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> type)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Parameters')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>Dispatcher type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Returns')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Returns">Dispatcher name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Remarks')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Remarks">Get the dispatcher name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Version Information')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.GetName(System.Type):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):member')">
+            <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):member:toggle">⊟</span> Initialize Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):member">
+          <p class="Summary">Initialize dispatcher.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Initialize</b> (<a href="../Optimization/Job.html">Optimization.Job</a> job)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Parameters')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Parameters">
+            <dl>
+              <dt>
+                <i>job</i>
+              </dt>
+              <dd>The job.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Remarks')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Remarks">Initialize the dispatcher for the given job.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Version Information')">
+              <span id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Internal.Dispatcher.Initialize(Optimization.Job):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Dispatcher.Internal.Dispatcher.Job">
+          <a href="javascript:toggle_display('P:Optimization.Dispatcher.Internal.Dispatcher.Job:member')">
+            <span id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:member:toggle">⊟</span> Job Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:member">
+          <p class="Summary">The job.</p>
+          <div class="Signature">public <a href="../Optimization/Job.html">Optimization.Job</a> <b>Job</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Internal.Dispatcher.Job:Value')">
+              <span id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:Value">The job.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Internal.Dispatcher.Job:Remarks')">
+              <span id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:Remarks">Get the job.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Internal.Dispatcher.Job:Version Information')">
+              <span id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Internal.Dispatcher.Job:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher.Internal<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

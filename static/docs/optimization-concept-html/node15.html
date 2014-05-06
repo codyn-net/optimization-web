@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Optimization Algorithms</TITLE>
+<META NAME="description" CONTENT="Optimization Algorithms">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html295"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html291"
+  HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html285"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html293"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html296"
+  HREF="node16.html">PSO</A>
+<B> Up:</B> <A NAME="tex2html292"
+  HREF="node10.html">Applications and Tools</A>
+<B> Previous:</B> <A NAME="tex2html286"
+  HREF="node14.html">XML description</A>
+ &nbsp; <B>  <A NAME="tex2html294"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00440000000000000000"></A><A NAME="sec:optimization"></A>
+<BR>
+Optimization Algorithms
+</H1>
+The optimization algorithms currently implemented are:
+Particle Swarm Optimization (PSO), Adaptive Diversity Particle Swarm Optimization (ADPSO),
+Genetic Algorithms (GA), Simultaneous Perturbation Stochastic Approximation (SPSA)
+and Systematic Search (Systematic).
+
+<P>
+These are available from the <code>optimizers2-sharp</code> library. When using
+<code>optirunner</code>, you can list the available optimization algorithms and
+their settings using the <code>--list</code> command line option. There are a few
+settings common to all optimization algorithms (although some might not apply
+to all algorithms). Table <A HREF="#tab:general_settings">3.3</A> lists these settings.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:general_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="222"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.3:</STRONG>
+Optimization Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=340><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">population-size</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The population size (applies to
+		                           population based methods and has
+		                           a special meaning for the
+		                           <SPAN  CLASS="textit">SPSA</SPAN> and <SPAN  CLASS="textit">Systematic</SPAN>
+		                           algorithms).</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">max-iterations</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The maximum number of iterations to
+		                          run the optimization (does not apply
+		                          to <SPAN  CLASS="textit">Systematic</SPAN>).</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">convergence-threshold</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>If specified, adds an
+		                                 additional stopping criterion
+		                                 which is based on measurement
+		                                 of convergence. If the
+		                                 convergence is below the
+		                                 threshold, the optimization
+		                                 will be stopped. Convergence
+		                                 is measured by:
+			<P><!-- MATH
+ \begin{displaymath}
+|\max_{i \in W}{f_i(\mathbf{x})} - \min_{i \in W}{f_i(\mathbf{x})}|
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="167" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle \vert\max_{i \in W}{f_i(\mathbf{x})} - \min_{i \in W}{f_i(\mathbf{x})}\vert
+$">
+</DIV><P></P>
+
+<P>
+Where <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ W$"></SPAN> is the set of the last
+			<SPAN  CLASS="textit">convergence-window</SPAN> iterations and <!-- MATH
+ $f_i(\mathbf{x})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ f_i(\mathbf{x})$"></SPAN>
+			is the best fitness in iteration <SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$ i$"></SPAN>.</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">convergence-window</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The window (iterations) over which
+		                              to measure convergence.</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">min-iterations</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The minimum number of iterations to
+		                          run before the convergence stopping
+		                          criterion is used.</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+Each of the available algorithms and their settings will be briefly described.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html297"
+  HREF="node16.html">PSO</A>
+<LI><A NAME="tex2html298"
+  HREF="node17.html">ADPSO</A>
+<LI><A NAME="tex2html299"
+  HREF="node18.html">SPSA</A>
+<LI><A NAME="tex2html300"
+  HREF="node19.html">GA</A>
+<LI><A NAME="tex2html301"
+  HREF="node20.html">Systematic Search</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html295"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html291"
+  HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html285"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html293"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html296"
+  HREF="node16.html">PSO</A>
+<B> Up:</B> <A NAME="tex2html292"
+  HREF="node10.html">Applications and Tools</A>
+<B> Previous:</B> <A NAME="tex2html286"
+  HREF="node14.html">XML description</A>
+ &nbsp; <B>  <A NAME="tex2html294"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,71 @@
+<%= template 'templates/header.html', :title => 'Example' %>
+
+<% markdown do %>
+
+# Optimization example
+Download: [example.tar.gz](example.tar.gz)
+
+## Description
+This example uses the optimization framework to optimize a specific
+behavior of a robot (the e-puck) in webots. It is a very simple example
+which should be easy to understand and explain the general principles of
+using the framework.
+
+The behavior optimized in this example is to have the e-puck drive a
+single, full circle in a specific amount of time. This can of course
+be solved analytically very easily, but it also serves as a nice example
+for optimization.
+
+The fitness function used to optimize on this behavior contains two separate
+objectives.
+
+1. **Maximize** the traveled distance (or radius)
+2. **Minimize** the distance to the original starting position of the robot after *N* seconds
+
+One way to combine these two objectives in a single fitness value can be:
+
+    Maximum distance - End distance to origin
+
+This will nicely converge on a solution that maximizes the maximum distance,
+and minimizes the end distance to the origin.
+
+## Running the example
+To run the example locally on your computer, you can follow the following
+steps:
+
+1. Modify *jobs/example.xml* to set the absolute path to the webots world on your computer (*webots/worlds/example.wbt*)
+2. Compile the two webots controllers in *webots/controllers/*
+3. Start one `optimaster`
+4. Start at least one `optiworker`
+5. Run `optirunner jobs/example.xml`
+
+Steps 1 and 2 only have to be done once.
+
+After the job is finished, you can use `optiextractor` to open the
+results database (*jobs/example.db.1*) and inspect the results. If
+you run the optimization in webots batch mode (the default), you can
+use the 'override' section of the optiextractor to set the webots mode
+to "run" so that you can actually see the result. If you than replay the
+best solution you should see the e-puck robot making one full circle
+in the amount of time specified in the job.
+
+## Changing optimization parameters
+You can play with the parameters in the job description. For example, you
+can see what happens when you change the number of particles, or iterations
+of the PSO. You can also easily change the maximum allowed speed for each
+wheel, or change the fitness function in the job file. Then rerun the job
+and inspect the results.
+
+## Package contents
+ * jobs/
+   * example.xml - *Example job description*
+ * webots/
+   * controllers/
+     * example/ - *The e-puck robot controller*
+     * supervisor/ - *The supervisor controller managing the optimization mode*
+   * worlds/
+     * example.wbt - *Example world file*
+
+<% end %>
+
+<%= template 'templates/footer.html' %>

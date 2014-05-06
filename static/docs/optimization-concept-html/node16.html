@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>PSO</TITLE>
+<META NAME="description" CONTENT="PSO">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html312"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html308"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html302"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html310"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html313"
+  HREF="node17.html">ADPSO</A>
+<B> Up:</B> <A NAME="tex2html309"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html303"
+  HREF="node15.html">Optimization Algorithms</A>
+ &nbsp; <B>  <A NAME="tex2html311"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00441000000000000000">
+PSO</A>
+</H2>
+The particle swarm optimization is a very elegant, simple and fairly recent
+optimization algorithm [<A
+ HREF="node40.html#kennedy_pso_1995">Kennedy  EberhartKennedy  Eberhart1995</A>,<A
+ HREF="node40.html#clerc_pse_2002">Clerc  KennedyClerc  Kennedy2002</A>]. It is
+loosely based on the notion of swarm/flocking behavior. The basic algorithm
+behind the optimization can be described by:
+
+<P>
+<BR>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray*}
+v_{ij}(t + 1) & = & \chi (v_{ij}(t) + R_1 \varphi_1 (P_{ij} - x_{ij}(t)) + R_2 \varphi_2 (P_b - x_{ij}(t))) \\
+	\chi & = & \dfrac{2k}{|2 - \varphi - \sqrt{\varphi^2 - 4\varphi}|} \\
+	\varphi & = & \varphi_1 + \varphi_2 > 4
+\end{eqnarray*}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle v_{ij}(t + 1)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
+ WIDTH="354" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \chi (v_{ij}(t) + R_1 \varphi_1 (P_{ij} - x_{ij}(t)) + R_2 \varphi_2 (P_b - x_{ij}(t)))$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \chi$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
+ WIDTH="145" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \dfrac{2k}{\vert 2 - \varphi - \sqrt{\varphi^2 - 4\varphi}\vert}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\displaystyle \varphi$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
+ WIDTH="88" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$\displaystyle \varphi_1 + \varphi_2 &gt; 4$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+It performs particularly well on real-valued problems with single single
+objectives. Table <A HREF="#tab:pso_settings">3.4</A> lists the settings available for this
+optimization algorithm.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:pso_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="261"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.4:</STRONG>
+PSO Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=340><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">max-velocity</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The maximum particle velocity as a fraction of
+		                        the parameter space</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">cognitive-factor</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The PSO cognitive factor as described in the
+		                            literature (<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$ \varphi_1$"></SPAN>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">social-factor</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The PSO social factor as described in the
+		                         literature (<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$ \varphi_2$"></SPAN>)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">constriction</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The velocity update constriction as described
+		                        in the literature (<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \chi$"></SPAN>).</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">boundary-condition</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The action to take when particles reach
+		                              the parameter boundaries (<code>None</code>,
+		                              <code>Stick</code> or <code>Bounce</code>). The
+		                              default is <code>Bounce</code>.</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">boundary-damping</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>A velocity damping factor when the boundary
+		                            condition is <code>Bounce</code>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html312"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html308"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html302"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html310"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html313"
+  HREF="node17.html">ADPSO</A>
+<B> Up:</B> <A NAME="tex2html309"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html303"
+  HREF="node15.html">Optimization Algorithms</A>
+ &nbsp; <B>  <A NAME="tex2html311"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

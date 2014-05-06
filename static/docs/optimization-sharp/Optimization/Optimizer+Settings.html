@@ -1,0 +1,490 @@
+<html>
+  <head>
+    <title>Optimization.Optimizer.Settings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Optimizer.Settings">Optimizer.Settings  Class</h1>
+    <p class="Summary" id="T:Optimization.Optimizer.Settings:Summary">Optimizer settings class.</p>
+    <div id="T:Optimization.Optimizer.Settings:Signature">
+      <div class="Signature">public class  <b>Optimizer.Settings</b> : <a href="../Optimization/Settings.html">Settings</a></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Optimizer.Settings:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Optimizer.Settings:Docs:Remarks')">
+          <span id="T:Optimization.Optimizer.Settings:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Optimizer.Settings:Docs:Remarks">
+        <p>Class which stores optimizer settings. The default class specifies two
+    settings (<a href="../Optimization/Optimizer+Settings.html#F:Optimization.Optimizer.Settings.MaxIterations">Optimization.Optimizer.Settings.MaxIterations</a> and
+    <a href="../Optimization/Optimizer+Settings.html#F:Optimization.Optimizer.Settings.PopulationSize">Optimization.Optimizer.Settings.PopulationSize</a>).</p>
+        <p>If you want to add additional settings, you need to subclass this class
+    and add the settings as public fields. This way they can be automatically found
+    and filled from for instance a XML file.</p>
+        <p>If you would like to change the name used for serialization/deserialization,
+    you can use the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Optimization.SettingAttribute</a> attribute on the
+    your setting field. This attribute can also be used to easily specify a default
+    value for the setting.</p>
+        <p>If you create a subclass of <a href="../Optimization/Optimizer+Settings.html">Optimization.Optimizer.Settings</a> it
+    will be automatically used by the optimizer (see <a href="../Optimization/Optimizer.html">Optimization.Optimizer</a>).
+    </p>
+      </blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Optimizer.Settings:Docs:Version Information')">
+          <span id="T:Optimization.Optimizer.Settings:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Optimizer.Settings:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Optimization/Settings.html">Settings</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Optimizer.Settings">Optimizer.Settings</a>
+                    </b>()</div>
+                </td>
+                <td>Default constructor.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Fields')">
+            <span id="Public Fields:toggle">⊟</span> Public Fields</a>
+        </h3>
+        <blockquote id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Optimizer.Settings.ConvergenceThreshold">ConvergenceThreshold</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Convergence threshold.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Optimizer.Settings.ConvergenceWindow">ConvergenceWindow</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Convergence window.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Optimizer.Settings.MaxIterations">MaxIterations</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. The maximum number of iterations.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Optimizer.Settings.MinIterations">MinIterations</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Minimum number of iterations.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Optimizer.Settings.PopulationSize">PopulationSize</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. Population size setting.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Optimizer.Settings:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Optimizer.Settings">
+          <a href="javascript:toggle_display('C:Optimization.Optimizer.Settings:member')">
+            <span id="C:Optimization.Optimizer.Settings:member:toggle">⊟</span> Optimizer.Settings Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Optimizer.Settings:member">
+          <p class="Summary">Default constructor.</p>
+          <div class="Signature">public  <b>Optimizer.Settings</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Optimizer.Settings:Remarks')">
+              <span id="C:Optimization.Optimizer.Settings:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Optimizer.Settings:Remarks">Create a new settings object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Optimizer.Settings:Version Information')">
+              <span id="C:Optimization.Optimizer.Settings:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Optimizer.Settings:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Optimizer.Settings.ConvergenceThreshold">
+          <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.ConvergenceThreshold:member')">
+            <span id="F:Optimization.Optimizer.Settings.ConvergenceThreshold:member:toggle">⊟</span> ConvergenceThreshold Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Optimizer.Settings.ConvergenceThreshold:member">
+          <p class="Summary">Convergence threshold.</p>
+          <div class="Signature">[Optimization.Attributes.Setting("convergence-threshold", 0, Description="Threshold on minimum change in the objective function improvement over convergence-window measurements")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ConvergenceThreshold</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.ConvergenceThreshold:Remarks')">
+              <span id="F:Optimization.Optimizer.Settings.ConvergenceThreshold:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.ConvergenceThreshold:Remarks">Threshold on minimum change in the object function improvement
+        over the last convergence-window number of iterations.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.ConvergenceThreshold:Version Information')">
+              <span id="F:Optimization.Optimizer.Settings.ConvergenceThreshold:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.ConvergenceThreshold:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Optimizer.Settings.ConvergenceWindow">
+          <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.ConvergenceWindow:member')">
+            <span id="F:Optimization.Optimizer.Settings.ConvergenceWindow:member:toggle">⊟</span> ConvergenceWindow Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Optimizer.Settings.ConvergenceWindow:member">
+          <p class="Summary">Convergence window.</p>
+          <div class="Signature">[Optimization.Attributes.Setting("convergence-window", 10, Description="Window over which to measure fitness improvement for convergence")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ConvergenceWindow</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.ConvergenceWindow:Remarks')">
+              <span id="F:Optimization.Optimizer.Settings.ConvergenceWindow:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.ConvergenceWindow:Remarks">Window of iterations over which to measure fitness improvement.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.ConvergenceWindow:Version Information')">
+              <span id="F:Optimization.Optimizer.Settings.ConvergenceWindow:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.ConvergenceWindow:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Optimizer.Settings.MaxIterations">
+          <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.MaxIterations:member')">
+            <span id="F:Optimization.Optimizer.Settings.MaxIterations:member:toggle">⊟</span> MaxIterations Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Optimizer.Settings.MaxIterations:member">
+          <p class="Summary">The maximum number of iterations.</p>
+          <div class="Signature">[Optimization.Attributes.Setting("max-iterations", 60, Description="Maximum number of iterations")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>MaxIterations</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.MaxIterations:Remarks')">
+              <span id="F:Optimization.Optimizer.Settings.MaxIterations:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.MaxIterations:Remarks">This setting indicates the maximum number of iterations to run
+	the optimization.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.MaxIterations:Version Information')">
+              <span id="F:Optimization.Optimizer.Settings.MaxIterations:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.MaxIterations:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Optimizer.Settings.MinIterations">
+          <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.MinIterations:member')">
+            <span id="F:Optimization.Optimizer.Settings.MinIterations:member:toggle">⊟</span> MinIterations Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Optimizer.Settings.MinIterations:member">
+          <p class="Summary">Minimum number of iterations.</p>
+          <div class="Signature">[Optimization.Attributes.Setting("min-iterations", 20, Description="Minimum number of iterations before calculating convergence")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MinIterations</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.MinIterations:Remarks')">
+              <span id="F:Optimization.Optimizer.Settings.MinIterations:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.MinIterations:Remarks">Minimum number of iterations before using the convergence
+        calculation as a threshold.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.MinIterations:Version Information')">
+              <span id="F:Optimization.Optimizer.Settings.MinIterations:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.MinIterations:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Optimizer.Settings.PopulationSize">
+          <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.PopulationSize:member')">
+            <span id="F:Optimization.Optimizer.Settings.PopulationSize:member:toggle">⊟</span> PopulationSize Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Optimizer.Settings.PopulationSize:member">
+          <p class="Summary">Population size setting.</p>
+          <div class="Signature">[Optimization.Attributes.Setting("population-size", 30, Description="Solution population size")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>PopulationSize</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.PopulationSize:Remarks')">
+              <span id="F:Optimization.Optimizer.Settings.PopulationSize:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.PopulationSize:Remarks">This setting determines the initial population size.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Optimizer.Settings.PopulationSize:Version Information')">
+              <span id="F:Optimization.Optimizer.Settings.PopulationSize:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Optimizer.Settings.PopulationSize:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

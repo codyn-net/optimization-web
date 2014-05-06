@@ -1,0 +1,125 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Clerc%
+\ \BBA {} Kennedy%
+}{%
+Clerc%
+\ \BBA {} Kennedy%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+clerc_pse_2002}
+\APACinsertmetastar {%
+clerc_pse_2002}%
+\begin{APACrefauthors}%
+Clerc, M.%
+\BCBT {}\ \BBA {} Kennedy, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The particle swarm - explosion, stability, and
+  convergence in a multidimensional complex space} {The particle swarm -
+  explosion, stability, and convergence in a multidimensional complex
+  space}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Evolutionary Computation, IEEE Transactions
+  on}{6}{1}{58--73}.
+\newblock
+\begin{APACrefURL}
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=985692}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kennedy%
+\ \BBA {} Eberhart%
+}{%
+Kennedy%
+\ \BBA {} Eberhart%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+kennedy_pso_1995}
+\APACinsertmetastar {%
+kennedy_pso_1995}%
+\begin{APACrefauthors}%
+Kennedy, J.%
+\BCBT {}\ \BBA {} Eberhart, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Particle swarm optimization} {Particle swarm
+  optimization}.{\BBCQ}
+\newblock
+\BIn{} (\BVOL~4, \BPGS\ 1942--1948 vol.4).
+\newblock
+\begin{APACrefURL}
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=488968}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Monson%
+\ \BBA {} Seppi%
+}{%
+Monson%
+\ \BBA {} Seppi%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+monson_ad_2006}
+\APACinsertmetastar {%
+monson_ad_2006}%
+\begin{APACrefauthors}%
+Monson, C\BPBI K.%
+\BCBT {}\ \BBA {} Seppi, K\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Adaptive diversity in PSO} {Adaptive diversity in
+  pso}.{\BBCQ}
+\newblock
+\BIn{} (\BPGS\ 59--66).
+\newblock
+\APACaddressPublisher{Seattle, Washington, USA}{ACM}.
+\newblock
+\begin{APACrefURL} \url{http://portal.acm.org/citation.cfm?id=1144006}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Spall%
+}{%
+Spall%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+spall_multivariate_1992}
+\APACinsertmetastar {%
+spall_multivariate_1992}%
+\begin{APACrefauthors}%
+Spall, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multivariate stochastic approximation using a
+  simultaneous perturbation gradient approximation} {Multivariate stochastic
+  approximation using a simultaneous perturbation gradient
+  approximation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{{IEEE} Transactions on Automatic
+  Control}{37}{3}{332--341}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/9.119632} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

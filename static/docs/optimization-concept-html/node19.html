@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>GA</TITLE>
+<META NAME="description" CONTENT="GA">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html348"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html344"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html338"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html346"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html349"
+  HREF="node20.html">Systematic Search</A>
+<B> Up:</B> <A NAME="tex2html345"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html339"
+  HREF="node18.html">SPSA</A>
+ &nbsp; <B>  <A NAME="tex2html347"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00444000000000000000">
+GA</A>
+</H2>
+This optimizer implements the well known standard implementation of
+Genetic Algorithms. Table <A HREF="#tab:ga_settings">3.7</A> lists the settings available
+for this optimizer.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:ga_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="347"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.7:</STRONG>
+GA Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=340><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">selection</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The type of selection mechanism to use to make
+		                     new populations. Available are ``Tournament'' and
+		                     ``RouletteWheel''. Tournament selection is the
+		                     default</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">tournament-size</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The number of individuals to use for
+		                           tournament selection. Applies only when
+		                           selection is ``Tournament''</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">tournament-probability</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Probability with which an individual
+		                                  is selected from a tournament:
+		                                  <!-- MATH
+ $p (1 - p)^i$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$ p (1 - p)^i$"></SPAN> with <SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$ i$"></SPAN> the individual
+		                                  order. You can use a mathematical
+		                                  expression for this setting and use
+		                                  the variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to indicate the
+		                                  current iteration number. Applies only
+		                                  when selection is ``Tournament''</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">mutation-probability</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The probability with which to mutate an
+		                                individual. You can use a mathematical
+		                                expression for this setting and use
+		                                the variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to indicate the
+		                                current iteration number</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">mutation-rate</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The maximum amount of mutation as a fraction
+		                         of the parameter space. You can use a mathematical
+		                         expression for this setting and use
+		                         the variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to indicate the
+		                         current iteration number</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">crossover-probability</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The probability with which to use
+		                                 cross-over to create a new individual
+		                                 from two selected parent individuals.
+		                                 You can use a mathematical
+		                                 expression for this setting and use
+		                                 the variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ k$"></SPAN> to indicate the
+		                                 current iteration number</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+The GA implementation supports both real valued as discrete valued parameters.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html348"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html344"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html338"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html346"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html349"
+  HREF="node20.html">Systematic Search</A>
+<B> Up:</B> <A NAME="tex2html345"
+  HREF="node15.html">Optimization Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html339"
+  HREF="node18.html">SPSA</A>
+ &nbsp; <B>  <A NAME="tex2html347"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

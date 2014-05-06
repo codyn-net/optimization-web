@@ -1,0 +1,736 @@
+<html>
+  <head>
+    <title>Optimization.Dispatcher.Webots</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Dispatcher Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Dispatcher.Webots">Webots  Class</h1>
+    <p class="Summary" id="T:Optimization.Dispatcher.Webots:Summary">Webots controller class.</p>
+    <div id="T:Optimization.Dispatcher.Webots:Signature">
+      <div class="Signature">public class  <b>Webots</b> : <a href="../Optimization.Dispatcher/Dispatcher.html">Dispatcher</a></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Dispatcher.Webots:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Dispatcher.Webots:Docs:Remarks')">
+          <span id="T:Optimization.Dispatcher.Webots:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Dispatcher.Webots:Docs:Remarks">This class can be used in a webots controller in conjunction with
+    the webots dispatcher. It provides convenient functions to retrieve the
+    task description the robot should evaluate. This class is a singleton
+    and as such is easily accessible from anywhere within your controller
+    application. Additionally, you can easily check on this object if your
+    controller is running in optimization mode or not. Thus, you can write
+    a single controller which can work both in and out of optimziation mode.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Dispatcher.Webots:Docs:Version Information')">
+          <span id="T:Optimization.Dispatcher.Webots:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Dispatcher.Webots:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Optimization.Dispatcher/Dispatcher.html">Dispatcher</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Instance">Instance</a>
+                  </b>()<nobr> : <a href="../Optimization.Dispatcher/Webots.html">Webots</a></nobr><blockquote>Get the webots dispatcher interface singleton instance.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double})">Respond</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a>)<blockquote>Send a response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Respond(System.Double)">Respond</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<blockquote>Send a response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double})">Respond</a>
+                  </b>(<a href="../Optimization.Messages/Response+StatusType.html">Optimization.Messages.Response.StatusType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a>)<blockquote>Send a response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String})">Respond</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a>)<blockquote>Send a response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String})">Respond</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a>)<blockquote>Send response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String})">Respond</a>
+                  </b>(<a href="../Optimization.Messages/Response+StatusType.html">Optimization.Messages.Response.StatusType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a>)<blockquote>Send response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.RespondFail">RespondFail</a>
+                  </b>()<blockquote>Send failure response to the worker.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response)">Response</a>
+                  </b>(<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a>)<blockquote>Send a response to the worker.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Protected Methods')">
+            <span id="Protected Methods:toggle">⊟</span> Protected Methods</a>
+        </h3>
+        <blockquote id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.RequestStream">RequestStream</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>Get the stream to read the request from.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Webots.RunTask">RunTask</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Run task.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Dispatcher.Webots:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Optimization.Dispatcher.Webots.Instance">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Instance:member')">
+            <span id="M:Optimization.Dispatcher.Webots.Instance:member:toggle">⊟</span> Instance Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Instance:member">
+          <p class="Summary">Get the webots dispatcher interface singleton instance.</p>
+          <div class="Signature">public static <a href="../Optimization.Dispatcher/Webots.html">Webots</a> <b>Instance</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Instance:Returns')">
+              <span id="M:Optimization.Dispatcher.Webots.Instance:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Instance:Returns">The singleton instance.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Instance:Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Instance:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Instance:Remarks">Get the webots dispatcher interface singleton instance. You can
+        use the implicit bool operator to check if you are actually in
+        optimization mode or not.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Instance:Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Instance:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Instance:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.RequestStream">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RequestStream:member')">
+            <span id="M:Optimization.Dispatcher.Webots.RequestStream:member:toggle">⊟</span> RequestStream Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.RequestStream:member">
+          <p class="Summary">Get the stream to read the request from.</p>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>RequestStream</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RequestStream:Returns')">
+              <span id="M:Optimization.Dispatcher.Webots.RequestStream:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RequestStream:Returns">The stream to read the request from.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RequestStream:Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.RequestStream:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RequestStream:Remarks">This is an implementation detail. The structure to read requests
+        is the same as that of dispatchers, and the <a href="../Optimization.Dispatcher/Dispatcher.html">Optimization.Dispatcher.Dispatcher</a> functionality is reused by this
+        class.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RequestStream:Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.RequestStream:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RequestStream:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double})">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):member:toggle">⊟</span> Respond Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):member">
+          <p class="Summary">Send a response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Respond</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> fitness)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters">
+            <dl>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>The fitness map.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks">Send a fitness map response to the worker. Use this if you
+        want to write multiple fitnesses, or if you want to give your fitness
+        value a specific name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Respond(System.Double)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double):member:toggle">⊟</span> Respond Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Respond(System.Double):member">
+          <p class="Summary">Send a response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Respond</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> fitness)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>The fitness.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Double):Remarks">Send a single fitness to the worker. Use this if you want
+        to write a single fitness value. By default this will be received by
+        the worker with the name "value".</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Double):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double})">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):member:toggle">⊟</span> Respond Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):member">
+          <p class="Summary">Send a response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Respond</b> (<a href="../Optimization.Messages/Response+StatusType.html">Optimization.Messages.Response.StatusType</a> status, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> fitness)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters">
+            <dl>
+              <dt>
+                <i>status</i>
+              </dt>
+              <dd>Response status.</dd>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>Response fitness map.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks">Send a response to the worker. Use this to send a specific
+        status to the worker. Normally you don't need to use this function
+        directly.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String})">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):member:toggle">⊟</span> Respond Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):member">
+          <p class="Summary">Send a response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Respond</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> fitness, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a> data)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Parameters">
+            <dl>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>Fitness map.</dd>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>Additional data map.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Remarks">Send a set of fitnesses and additional data to the worker. Use
+        this method to send additional data to the worker which gets recorded
+        in the results database.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String})">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):member:toggle">⊟</span> Respond Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):member">
+          <p class="Summary">Send response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Respond</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> fitness, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a> data)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Parameters">
+            <dl>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>The fitness.</dd>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>Additional data map.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Remarks">Send a single fitness response with additional data to the
+        worker. Use this method to send a single fitness to the worker (with
+        the default name "value") and some additional data which will be
+        recorded in the results database.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(System.Double,System.Collections.Generic.Dictionary{System.String,System.String}):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String})">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):member:toggle">⊟</span> Respond Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):member">
+          <p class="Summary">Send response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Respond</b> (<a href="../Optimization.Messages/Response+StatusType.html">Optimization.Messages.Response.StatusType</a> status, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> fitness, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a> data)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Parameters">
+            <dl>
+              <dt>
+                <i>status</i>
+              </dt>
+              <dd>Response status.</dd>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>Response fitness.</dd>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>Additional data.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Remarks">Use this to send the status, fitness and data to the worker.
+        You normally don't need to be able to set the status explicitly.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Respond(Optimization.Messages.Response.StatusType,System.Collections.Generic.Dictionary{System.String,System.Double},System.Collections.Generic.Dictionary{System.String,System.String}):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.RespondFail">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RespondFail:member')">
+            <span id="M:Optimization.Dispatcher.Webots.RespondFail:member:toggle">⊟</span> RespondFail Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.RespondFail:member">
+          <p class="Summary">Send failure response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RespondFail</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RespondFail:Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.RespondFail:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RespondFail:Remarks">Send a failure response to the worker. Use this method if
+        the task failed to evaluate properly.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RespondFail:Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.RespondFail:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RespondFail:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):member')">
+            <span id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):member:toggle">⊟</span> Response Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):member">
+          <p class="Summary">Send a response to the worker.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Response</b> (<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a> response)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Parameters')">
+              <span id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Parameters">
+            <dl>
+              <dt>
+                <i>response</i>
+              </dt>
+              <dd>The response.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Remarks">This is the most low level way of sending a response. You will
+        have to construct the correct response message by yourself. Usually
+        some of the other methods provided are more convenient.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.Response(Optimization.Messages.Response):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Webots.RunTask">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RunTask:member')">
+            <span id="M:Optimization.Dispatcher.Webots.RunTask:member:toggle">⊟</span> RunTask Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Webots.RunTask:member">
+          <p class="Summary">Run task.</p>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>RunTask</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RunTask:Returns')">
+              <span id="M:Optimization.Dispatcher.Webots.RunTask:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RunTask:Returns">True if the task evaluated successfully.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RunTask:Remarks')">
+              <span id="M:Optimization.Dispatcher.Webots.RunTask:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RunTask:Remarks">Run the task. This is currently not used.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Webots.RunTask:Version Information')">
+              <span id="M:Optimization.Dispatcher.Webots.RunTask:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Webots.RunTask:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

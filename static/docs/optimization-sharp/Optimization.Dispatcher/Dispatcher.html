@@ -1,0 +1,940 @@
+<html>
+  <head>
+    <title>Optimization.Dispatcher.Dispatcher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Dispatcher Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Dispatcher.Dispatcher">Dispatcher  Class</h1>
+    <p class="Summary" id="T:Optimization.Dispatcher.Dispatcher:Summary">Dispatcher class.</p>
+    <div id="T:Optimization.Dispatcher.Dispatcher:Signature">
+      <div class="Signature">public abstract class  <b>Dispatcher</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Dispatcher.Dispatcher:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Dispatcher.Dispatcher:Docs:Remarks')">
+          <span id="T:Optimization.Dispatcher.Dispatcher:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Dispatcher.Dispatcher:Docs:Remarks">The dispatcher class can be used to implement dispatcher
+    applications that evaluate a specific task.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Dispatcher.Dispatcher:Docs:Version Information')">
+          <span id="T:Optimization.Dispatcher.Dispatcher:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Dispatcher.Dispatcher:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Dispatcher.Dispatcher">Dispatcher</a>
+                    </b>()</div>
+                </td>
+                <td>Create new dispatcher.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div><i>default property</i></div><div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Dispatcher.Dispatcher.Item(System.String)">Item</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Get a setting by name.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Dispatcher.Dispatcher.Parameters">Parameters</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Parameter&gt;</a>
+                  </i>. List of parameters.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Dispatcher.Dispatcher.RequestAvailable">RequestAvailable</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Get whether a request is available.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Dispatcher.Dispatcher.Settings">Settings</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a>
+                  </i>. Dispatcher settings.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Dispatcher.Dispatcher.Task">Task</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization.Messages/Task.html">Optimization.Messages.Task</a>
+                  </i>. The task.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String)">ContainsParameter</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Get whether a certain parameter is available.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String)">ContainsSetting</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Get whether a certain setting is available.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String)">ParameterByName</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Optimization/Parameter.html">Parameter</a></nobr><blockquote>Get a parameter by name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.Run">Run</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Run the dispatcher.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String)">Setting&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <i title="Setting value type.">T</i></nobr><blockquote>Convenient method to get the value of a setting and automatically
+        convert it to a certain type.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Protected Methods')">
+            <span id="Protected Methods:toggle">⊟</span> Protected Methods</a>
+        </h3>
+        <blockquote id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.RequestStream">RequestStream</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>Get the stream from which to read the request.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.RunTask">RunTask</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Run the task.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response)">WriteResponse</a>
+                  </b>(<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Write a response to the worker.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Operators')">
+            <span id="Public Operators:toggle">⊟</span> Public Operators</a>
+        </h3>
+        <blockquote id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean">Conversion to System.Boolean</a>
+                  </b>(Implicit)</td>
+                <td>Implicit conversion to bool.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Dispatcher.Dispatcher:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Dispatcher.Dispatcher">
+          <a href="javascript:toggle_display('C:Optimization.Dispatcher.Dispatcher:member')">
+            <span id="C:Optimization.Dispatcher.Dispatcher:member:toggle">⊟</span> Dispatcher Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Dispatcher.Dispatcher:member">
+          <p class="Summary">Create new dispatcher.</p>
+          <div class="Signature">public  <b>Dispatcher</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Dispatcher.Dispatcher:Remarks')">
+              <span id="C:Optimization.Dispatcher.Dispatcher:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Dispatcher.Dispatcher:Remarks">Create new dispatcher.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Dispatcher.Dispatcher:Version Information')">
+              <span id="C:Optimization.Dispatcher.Dispatcher:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Dispatcher.Dispatcher:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):member:toggle">⊟</span> ContainsParameter Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):member">
+          <p class="Summary">Get whether a certain parameter is available.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ContainsParameter</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>The parameter name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Returns">Wether a certain parameter is available.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Remarks">Use this method to check if a certain parameter is available.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsParameter(System.String):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):member:toggle">⊟</span> ContainsSetting Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):member">
+          <p class="Summary">Get whether a certain setting is available.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ContainsSetting</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> str)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>str</i>
+              </dt>
+              <dd>The setting name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Returns">Whether a certain setting is available.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Remarks">Use this method to check if a certain setting is available.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ContainsSetting(System.String):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Dispatcher.Dispatcher.Item(System.String)">
+          <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Item(System.String):member')">
+            <span id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):member:toggle">⊟</span> Item Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):member">
+          <p class="Summary">Get a setting by name.</p>
+          <div class="Signature">
+            <p>
+              <i>This is the default property for this class.</i>
+            </p>public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key] { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Item(System.String):Parameters')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>The setting name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Item(System.String):Value')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Value">The setting value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Item(System.String):Remarks')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Remarks">Get a setting by name. This will return null if the setting
+        is not found.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Item(System.String):Version Information')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Item(System.String):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:member:toggle">⊟</span> Conversion Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:member">
+          <p class="Summary">Implicit conversion to bool.</p>
+          <div class="Signature">public static implicit operator <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> (<a href="../Optimization.Dispatcher/Dispatcher.html">Dispatcher</a> dispatcher)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Parameters">
+            <dl>
+              <dt>
+                <i>dispatcher</i>
+              </dt>
+              <dd>The dispatcher object.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Returns">True if the dispatcher has received the task request.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Remarks">Use this method to check if a task request has been received.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.op_Implicit(Optimization.Dispatcher.Dispatcher)~System.Boolean:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):member:toggle">⊟</span> ParameterByName Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):member">
+          <p class="Summary">Get a parameter by name.</p>
+          <div class="Signature">public <a href="../Optimization/Parameter.html">Optimization.Parameter</a> <b>ParameterByName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>The parameter name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Returns">The parameter, or null if parameter could not be found.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Remarks">Get a parameter by name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.ParameterByName(System.String):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Dispatcher.Dispatcher.Parameters">
+          <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Parameters:member')">
+            <span id="P:Optimization.Dispatcher.Dispatcher.Parameters:member:toggle">⊟</span> Parameters Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Dispatcher.Dispatcher.Parameters:member">
+          <p class="Summary">List of parameters.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Optimization.Parameter&gt;</a> <b>Parameters</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Parameters:Value')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Parameters:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Parameters:Value">List of parameters.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Parameters:Remarks')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Parameters:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Parameters:Remarks">Get a list of all the parameters.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Parameters:Version Information')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Parameters:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Parameters:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable">
+          <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.RequestAvailable:member')">
+            <span id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:member:toggle">⊟</span> RequestAvailable Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:member">
+          <p class="Summary">Get whether a request is available.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>RequestAvailable</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Value')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Value">True if a request is available, false otherwise.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Remarks')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Remarks">Check whether a request has been received.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Version Information')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.RequestAvailable:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.RequestStream">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RequestStream:member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.RequestStream:member:toggle">⊟</span> RequestStream Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.RequestStream:member">
+          <p class="Summary">Get the stream from which to read the request.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>RequestStream</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RequestStream:Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.RequestStream:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.RequestStream:Returns">The stream from which to read the request.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RequestStream:Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.RequestStream:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.RequestStream:Remarks">By default, this will return a stream to the standard input
+        of the process. Subclasses can override this to get the request data
+        from somewhere else.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RequestStream:Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.RequestStream:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.RequestStream:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.Run">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Run:member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.Run:member:toggle">⊟</span> Run Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.Run:member">
+          <p class="Summary">Run the dispatcher.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Run</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Run:Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Run:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Run:Returns">True if the dispatcher finished evaluating the task
+        successfully, false otherwise.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Run:Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Run:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Run:Remarks">Run the dispatcher. This will first read the request and when
+        successfully read, run <a href="javascript:alert(&quot;Documentation not found.&quot;)">Dipatcher.RunTask</a>.
+        Implementations should usually only need to implement
+        <a href="javascript:alert(&quot;Documentation not found.&quot;)">Dipatcher.RunTask</a>.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Run:Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Run:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Run:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.RunTask">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RunTask:member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.RunTask:member:toggle">⊟</span> RunTask Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.RunTask:member">
+          <p class="Summary">Run the task.</p>
+          <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>RunTask</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RunTask:Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.RunTask:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.RunTask:Returns">True if the task was evaluated successfully.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RunTask:Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.RunTask:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.RunTask:Remarks">Implementations must implement this method which does the
+        actual task evaluation.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.RunTask:Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.RunTask:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.RunTask:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):member:toggle">⊟</span> Setting&lt;T&gt; Generic Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):member">
+          <p class="Summary">Convenient method to get the value of a setting and automatically
+        convert it to a certain type.</p>
+          <div class="Signature">public <i title="Setting value type.">T</i> <b>Setting&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Type Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Type Parameters:toggle">⊟</span> Type Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>Setting value type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Setting name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Returns">The setting value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Remarks">Use this to easily convert settings to a specific type. Settings
+        are transmitted as strings, but often you have settings that contain
+        double values for example.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.Setting``1(System.String):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Dispatcher.Dispatcher.Settings">
+          <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Settings:member')">
+            <span id="P:Optimization.Dispatcher.Dispatcher.Settings:member:toggle">⊟</span> Settings Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Dispatcher.Dispatcher.Settings:member">
+          <p class="Summary">Dispatcher settings.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, string&gt;</a> <b>Settings</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Settings:Value')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Settings:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Settings:Value">Dispatcher settings.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Settings:Remarks')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Settings:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Settings:Remarks">The dispatcher settings. These settings will be send
+        along with the task request to the dispatcher process.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Settings:Version Information')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Settings:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Settings:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Dispatcher.Dispatcher.Task">
+          <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Task:member')">
+            <span id="P:Optimization.Dispatcher.Dispatcher.Task:member:toggle">⊟</span> Task Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Dispatcher.Dispatcher.Task:member">
+          <p class="Summary">The task.</p>
+          <div class="Signature">public <a href="../Optimization.Messages/Task.html">Optimization.Messages.Task</a> <b>Task</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Task:Value')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Task:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Task:Value">The task.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Task:Remarks')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Task:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Task:Remarks">Get the task to be dispatched.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Dispatcher.Dispatcher.Task:Version Information')">
+              <span id="P:Optimization.Dispatcher.Dispatcher.Task:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Dispatcher.Dispatcher.Task:Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response)">
+          <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):member')">
+            <span id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):member:toggle">⊟</span> WriteResponse Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):member">
+          <p class="Summary">Write a response to the worker.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>WriteResponse</b> (<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a> response)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Parameters')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Parameters">
+            <dl>
+              <dt>
+                <i>response</i>
+              </dt>
+              <dd>The response to write.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Returns')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Returns">True if the response was written successfully.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Remarks')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Remarks">Use this method to write a response back to the worker after
+        you have evaluated a task.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Version Information')">
+              <span id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Dispatcher.Dispatcher.WriteResponse(Optimization.Messages.Response):Version Information">
+            <b>Namespace: </b>Optimization.Dispatcher<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>optimaster</TITLE>
+<META NAME="description" CONTENT="optimaster">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html248"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html244"
+  HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html238"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html246"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html249"
+  HREF="node12.html">optiworker</A>
+<B> Up:</B> <A NAME="tex2html245"
+  HREF="node10.html">Applications and Tools</A>
+<B> Previous:</B> <A NAME="tex2html239"
+  HREF="node10.html">Applications and Tools</A>
+ &nbsp; <B>  <A NAME="tex2html247"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00410000000000000000"></A><A NAME="app:optimaster"></A>
+<BR>
+optimaster
+</H1>
+The <code>optimaster</code> application represents the server layer of the framework. It
+acts as a distribution center for optimization process. You can specify some
+options for the <code>optimaster</code> using a configuration file in <code>/etc/optimaster.conf</code>.
+An example configuration file is present in
+<code>/usr/share/optimaster/optimaster.conf.ex</code>. The available configuration
+settings are listed in table <A HREF="#tab:optimaster_configuration">3.1</A>.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:optimaster_configuration"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="110"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.1:</STRONG>
+optimaster Configuration</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=283><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">discovery namespace</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>the discovery namespace identifies
+		                               to which discovery namespace the
+		                               <code>optimaster</code> belongs. You can use this
+		                               namespace to separate different
+		                               <code>optimaster</code> and <code>optiworker</code> processes.
+		                               By default, the <code>optimaster</code> will set
+		                               the namespace to the user name of the
+		                               current user.</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">discovery address</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>the address (IP:port) on which to
+		                             broadcast and listen for discovery
+		                             messages (usually a multicast address).</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=113><SPAN  CLASS="textit">listen address</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>the address (IP:port) on which to
+		                          listen for incoming optimizer connections.</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html248"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html244"
+  HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html238"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html246"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html249"
+  HREF="node12.html">optiworker</A>
+<B> Up:</B> <A NAME="tex2html245"
+  HREF="node10.html">Applications and Tools</A>
+<B> Previous:</B> <A NAME="tex2html239"
+  HREF="node10.html">Applications and Tools</A>
+ &nbsp; <B>  <A NAME="tex2html247"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

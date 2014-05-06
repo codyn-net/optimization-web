@@ -1,0 +1,473 @@
+<html>
+  <head>
+    <title>Optimization.Storage.Records.Boundary</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Storage.Records Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Storage.Records.Boundary">Boundary  Class</h1>
+    <p class="Summary" id="T:Optimization.Storage.Records.Boundary:Summary">Boundary record.</p>
+    <div id="T:Optimization.Storage.Records.Boundary:Signature">
+      <div class="Signature">public class  <b>Boundary</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Storage.Records.Boundary:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Storage.Records.Boundary:Docs:Remarks')">
+          <span id="T:Optimization.Storage.Records.Boundary:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Storage.Records.Boundary:Docs:Remarks">Boundary storage record.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Storage.Records.Boundary:Docs:Version Information')">
+          <span id="T:Optimization.Storage.Records.Boundary:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Storage.Records.Boundary:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Storage.Records.Boundary">Boundary</a>
+                    </b>()</div>
+                </td>
+                <td>Default constructor.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Fields')">
+            <span id="Public Fields:toggle">⊟</span> Public Fields</a>
+        </h3>
+        <blockquote id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Storage.Records.Boundary.Max">Max</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The maximum.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Storage.Records.Boundary.MaxInitial">MaxInitial</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The initial population maximum.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Storage.Records.Boundary.Min">Min</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The minimum.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Storage.Records.Boundary.MinInitial">MinInitial</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The initial population minimum.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Storage.Records.Boundary.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The name.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Storage.Records.Boundary:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Storage.Records.Boundary">
+          <a href="javascript:toggle_display('C:Optimization.Storage.Records.Boundary:member')">
+            <span id="C:Optimization.Storage.Records.Boundary:member:toggle">⊟</span> Boundary Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Storage.Records.Boundary:member">
+          <p class="Summary">Default constructor.</p>
+          <div class="Signature">public  <b>Boundary</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Storage.Records.Boundary:Remarks')">
+              <span id="C:Optimization.Storage.Records.Boundary:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Storage.Records.Boundary:Remarks">Default constructor.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Storage.Records.Boundary:Version Information')">
+              <span id="C:Optimization.Storage.Records.Boundary:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Storage.Records.Boundary:Version Information">
+            <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Storage.Records.Boundary.Max">
+          <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Max:member')">
+            <span id="F:Optimization.Storage.Records.Boundary.Max:member:toggle">⊟</span> Max Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Storage.Records.Boundary.Max:member">
+          <p class="Summary">The maximum.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Max</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Max:Remarks')">
+              <span id="F:Optimization.Storage.Records.Boundary.Max:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.Max:Remarks">The maximum.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Max:Version Information')">
+              <span id="F:Optimization.Storage.Records.Boundary.Max:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.Max:Version Information">
+            <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Storage.Records.Boundary.MaxInitial">
+          <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.MaxInitial:member')">
+            <span id="F:Optimization.Storage.Records.Boundary.MaxInitial:member:toggle">⊟</span> MaxInitial Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Storage.Records.Boundary.MaxInitial:member">
+          <p class="Summary">The initial population maximum.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MaxInitial</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.MaxInitial:Remarks')">
+              <span id="F:Optimization.Storage.Records.Boundary.MaxInitial:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.MaxInitial:Remarks">The initial population maximum.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.MaxInitial:Version Information')">
+              <span id="F:Optimization.Storage.Records.Boundary.MaxInitial:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.MaxInitial:Version Information">
+            <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Storage.Records.Boundary.Min">
+          <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Min:member')">
+            <span id="F:Optimization.Storage.Records.Boundary.Min:member:toggle">⊟</span> Min Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Storage.Records.Boundary.Min:member">
+          <p class="Summary">The minimum.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Min</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Min:Remarks')">
+              <span id="F:Optimization.Storage.Records.Boundary.Min:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.Min:Remarks">The minimum.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Min:Version Information')">
+              <span id="F:Optimization.Storage.Records.Boundary.Min:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.Min:Version Information">
+            <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Storage.Records.Boundary.MinInitial">
+          <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.MinInitial:member')">
+            <span id="F:Optimization.Storage.Records.Boundary.MinInitial:member:toggle">⊟</span> MinInitial Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Storage.Records.Boundary.MinInitial:member">
+          <p class="Summary">The initial population minimum.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MinInitial</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.MinInitial:Remarks')">
+              <span id="F:Optimization.Storage.Records.Boundary.MinInitial:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.MinInitial:Remarks">The initial population minimum.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.MinInitial:Version Information')">
+              <span id="F:Optimization.Storage.Records.Boundary.MinInitial:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.MinInitial:Version Information">
+            <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Storage.Records.Boundary.Name">
+          <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Name:member')">
+            <span id="F:Optimization.Storage.Records.Boundary.Name:member:toggle">⊟</span> Name Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Storage.Records.Boundary.Name:member">
+          <p class="Summary">The name.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Name:Remarks')">
+              <span id="F:Optimization.Storage.Records.Boundary.Name:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.Name:Remarks">The name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Storage.Records.Boundary.Name:Version Information')">
+              <span id="F:Optimization.Storage.Records.Boundary.Name:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Storage.Records.Boundary.Name:Version Information">
+            <b>Namespace: </b>Optimization.Storage.Records<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

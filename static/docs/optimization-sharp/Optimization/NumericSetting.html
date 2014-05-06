@@ -1,0 +1,470 @@
+<html>
+  <head>
+    <title>Optimization.NumericSetting</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.NumericSetting">NumericSetting  Class</h1>
+    <p class="Summary" id="T:Optimization.NumericSetting:Summary">Numeric setting.</p>
+    <div id="T:Optimization.NumericSetting:Signature">
+      <div class="Signature">public class  <b>NumericSetting</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.NumericSetting:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.NumericSetting:Docs:Remarks')">
+          <span id="T:Optimization.NumericSetting:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.NumericSetting:Docs:Remarks">A simple class to hold and convert a numeric setting.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.NumericSetting:Docs:Version Information')">
+          <span id="T:Optimization.NumericSetting:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.NumericSetting:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.NumericSetting">NumericSetting</a>
+                    </b>()</div>
+                </td>
+                <td>Create a new numeric setting.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.NumericSetting(System.Double)">NumericSetting</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)</div>
+                </td>
+                <td>Create a new numeric setting with a value.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.NumericSetting(System.String)">NumericSetting</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>Create a new numeric setting with a value.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.NumericSetting.Representation">Representation</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. String representation of the numeric value.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.NumericSetting.Value">Value</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. Numeric value.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.NumericSetting:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.NumericSetting">
+          <a href="javascript:toggle_display('C:Optimization.NumericSetting:member')">
+            <span id="C:Optimization.NumericSetting:member:toggle">⊟</span> NumericSetting Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.NumericSetting:member">
+          <p class="Summary">Create a new numeric setting.</p>
+          <div class="Signature">public  <b>NumericSetting</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting:Remarks')">
+              <span id="C:Optimization.NumericSetting:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting:Remarks">Create a new numeric setting.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting:Version Information')">
+              <span id="C:Optimization.NumericSetting:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Optimization.NumericSetting(System.Double)">
+          <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.Double):member')">
+            <span id="C:Optimization.NumericSetting(System.Double):member:toggle">⊟</span> NumericSetting Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.NumericSetting(System.Double):member">
+          <p class="Summary">Create a new numeric setting with a value.</p>
+          <div class="Signature">public  <b>NumericSetting</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> val)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.Double):Parameters')">
+              <span id="C:Optimization.NumericSetting(System.Double):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>The value.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.Double):Remarks')">
+              <span id="C:Optimization.NumericSetting(System.Double):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting(System.Double):Remarks">Create a new numeric setting with a value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.Double):Version Information')">
+              <span id="C:Optimization.NumericSetting(System.Double):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting(System.Double):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Optimization.NumericSetting(System.String)">
+          <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.String):member')">
+            <span id="C:Optimization.NumericSetting(System.String):member:toggle">⊟</span> NumericSetting Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.NumericSetting(System.String):member">
+          <p class="Summary">Create a new numeric setting with a value.</p>
+          <div class="Signature">public  <b>NumericSetting</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> val)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.String):Parameters')">
+              <span id="C:Optimization.NumericSetting(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>The value.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.String):Remarks')">
+              <span id="C:Optimization.NumericSetting(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting(System.String):Remarks">Create a new numeric setting with a value. The value is a
+        string representation of a numeric value and can be a mathematical
+        expression including constants such as pi.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.NumericSetting(System.String):Version Information')">
+              <span id="C:Optimization.NumericSetting(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.NumericSetting(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.NumericSetting.Representation">
+          <a href="javascript:toggle_display('P:Optimization.NumericSetting.Representation:member')">
+            <span id="P:Optimization.NumericSetting.Representation:member:toggle">⊟</span> Representation Property</a>
+        </h3>
+        <blockquote id="P:Optimization.NumericSetting.Representation:member">
+          <p class="Summary">String representation of the numeric value.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Representation</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.NumericSetting.Representation:Value')">
+              <span id="P:Optimization.NumericSetting.Representation:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.NumericSetting.Representation:Value">String representation of the numeric value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.NumericSetting.Representation:Remarks')">
+              <span id="P:Optimization.NumericSetting.Representation:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.NumericSetting.Representation:Remarks">Get the string representation of the numeric value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.NumericSetting.Representation:Version Information')">
+              <span id="P:Optimization.NumericSetting.Representation:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.NumericSetting.Representation:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.NumericSetting.Value">
+          <a href="javascript:toggle_display('P:Optimization.NumericSetting.Value:member')">
+            <span id="P:Optimization.NumericSetting.Value:member:toggle">⊟</span> Value Property</a>
+        </h3>
+        <blockquote id="P:Optimization.NumericSetting.Value:member">
+          <p class="Summary">Numeric value.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Value</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.NumericSetting.Value:Value')">
+              <span id="P:Optimization.NumericSetting.Value:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.NumericSetting.Value:Value">Numeric value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.NumericSetting.Value:Remarks')">
+              <span id="P:Optimization.NumericSetting.Value:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.NumericSetting.Value:Remarks">Get the numeric value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.NumericSetting.Value:Version Information')">
+              <span id="P:Optimization.NumericSetting.Value:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.NumericSetting.Value:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

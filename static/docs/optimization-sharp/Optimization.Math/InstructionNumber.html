@@ -1,0 +1,402 @@
+<html>
+  <head>
+    <title>Optimization.Math.InstructionNumber</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Math Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Math.InstructionNumber">InstructionNumber  Class</h1>
+    <p class="Summary" id="T:Optimization.Math.InstructionNumber:Summary">Instruction number.</p>
+    <div id="T:Optimization.Math.InstructionNumber:Signature">
+      <div class="Signature">public class  <b>InstructionNumber</b> : <a href="../Optimization.Math/Instruction.html">Instruction</a></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Math.InstructionNumber:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Math.InstructionNumber:Docs:Remarks')">
+          <span id="T:Optimization.Math.InstructionNumber:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Math.InstructionNumber:Docs:Remarks">Instruction representing a single number. When executed it will
+    simply push the number on the stack.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Math.InstructionNumber:Docs:Version Information')">
+          <span id="T:Optimization.Math.InstructionNumber:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Math.InstructionNumber:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Optimization.Math/Instruction.html">Instruction</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Math.InstructionNumber(System.Double)">InstructionNumber</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)</div>
+                </td>
+                <td>Default constructor.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Fields')">
+            <span id="Public Fields:toggle">⊟</span> Public Fields</a>
+        </h3>
+        <blockquote id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Optimization.Math.InstructionNumber.Value">Value</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. The value.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object})">Execute</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Stack`1">Stack&lt;double&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a>)<blockquote>Execute the instruction.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Math.InstructionNumber:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Math.InstructionNumber(System.Double)">
+          <a href="javascript:toggle_display('C:Optimization.Math.InstructionNumber(System.Double):member')">
+            <span id="C:Optimization.Math.InstructionNumber(System.Double):member:toggle">⊟</span> InstructionNumber Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Math.InstructionNumber(System.Double):member">
+          <p class="Summary">Default constructor.</p>
+          <div class="Signature">public  <b>InstructionNumber</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> val)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Math.InstructionNumber(System.Double):Parameters')">
+              <span id="C:Optimization.Math.InstructionNumber(System.Double):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Math.InstructionNumber(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>The value.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Math.InstructionNumber(System.Double):Remarks')">
+              <span id="C:Optimization.Math.InstructionNumber(System.Double):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Math.InstructionNumber(System.Double):Remarks">Create new number instruction.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Math.InstructionNumber(System.Double):Version Information')">
+              <span id="C:Optimization.Math.InstructionNumber(System.Double):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Math.InstructionNumber(System.Double):Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object})">
+          <a href="javascript:toggle_display('M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):member')">
+            <span id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):member:toggle">⊟</span> Execute Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):member">
+          <p class="Summary">Execute the instruction.</p>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Execute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Stack`1">Stack&lt;double&gt;</a> stack, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a> context)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Parameters')">
+              <span id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Parameters">
+            <dl>
+              <dt>
+                <i>stack</i>
+              </dt>
+              <dd>The execution stack.</dd>
+              <dt>
+                <i>context</i>
+              </dt>
+              <dd>The execution context.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Remarks')">
+              <span id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Remarks">Executing the number instruction will push the number value
+        on the execution stack.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Version Information')">
+              <span id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.InstructionNumber.Execute(System.Collections.Generic.Stack{System.Double},System.Collections.Generic.Dictionary{System.String,System.Object}):Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Optimization.Math.InstructionNumber.Value">
+          <a href="javascript:toggle_display('F:Optimization.Math.InstructionNumber.Value:member')">
+            <span id="F:Optimization.Math.InstructionNumber.Value:member:toggle">⊟</span> Value Field</a>
+        </h3>
+        <blockquote id="F:Optimization.Math.InstructionNumber.Value:member">
+          <p class="Summary">The value.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Value</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Math.InstructionNumber.Value:Remarks')">
+              <span id="F:Optimization.Math.InstructionNumber.Value:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Math.InstructionNumber.Value:Remarks">The value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('F:Optimization.Math.InstructionNumber.Value:Version Information')">
+              <span id="F:Optimization.Math.InstructionNumber.Value:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="F:Optimization.Math.InstructionNumber.Value:Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

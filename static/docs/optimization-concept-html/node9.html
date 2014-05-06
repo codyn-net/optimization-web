@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Security</TITLE>
+<META NAME="description" CONTENT="Security">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html207"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html203"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html199"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html205"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html208"
+  HREF="node10.html">Applications and Tools</A>
+<B> Up:</B> <A NAME="tex2html204"
+  HREF="node6.html">Implementation</A>
+<B> Previous:</B> <A NAME="tex2html200"
+  HREF="node8.html">Software</A>
+ &nbsp; <B>  <A NAME="tex2html206"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00330000000000000000"></A><A NAME="sec:security"></A>
+<BR>
+Security
+</H1>
+To support a multi-user environment, the framework can be configured such that
+dispatcher processes will be executed under user privileges. When this
+functionality is enabled, the <SPAN  CLASS="textit">worker</SPAN> will execute a separate process
+that authenticates the task, and if authenticated, executes the dispatcher with
+the privileges of the owner of the task. The authentication is based on
+a challenge/response mechanisms such that the authentication key of the user
+is always send encoded over the network. After successful authentication, the
+credentials are confirmed with the permissions to execute the dispatcher
+process in question, before dropping to the user credentials. As such, even
+if the key would be retrieved, only executables that belong to the user
+to whom the key was given can be executed.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

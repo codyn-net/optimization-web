@@ -1,0 +1,1232 @@
+<html>
+  <head>
+    <title>Optimization.Fitness</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Fitness">Fitness  Class</h1>
+    <p class="Summary" id="T:Optimization.Fitness:Summary">Fitness expression class.</p>
+    <div id="T:Optimization.Fitness:Signature">
+      <div class="Signature">public class  <b>Fitness</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ICloneable">ICloneable</a></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Fitness:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Fitness:Docs:Remarks')">
+          <span id="T:Optimization.Fitness:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Fitness:Docs:Remarks">Class that represents a solution fitness. This class has two
+    basic modes of operation. In the most simple cases, the fitness can
+    be a single value in which case you can simply set the value of the
+    fitness object (see <a href="../Optimization/Fitness.html#P:Optimization.Fitness.Value">Fitness.Value</a>).
+    However, the fitness can also be calculated using
+    a mathematical expression using multi modal fitness values as received
+    from evaluating a solution. You can do this by calling
+    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Optimization.Math.Expression.Parse</a> on the 
+    <a href="../Optimization/Fitness.html#P:Optimization.Fitness.Expression">Fitness.Expression</a> fitness expression.
+    Then you can add additional variables (which can be single values, or
+    mathematical expressions themselves) to be used as a context for
+    evaluating the fitness expression. This is mostly useful for
+    separating different constants in your expressions, or defining
+    subexpressions. Then, when you request the fitness value, the expression
+    will be evaluated with the combined context of variables, and the
+    solution fitness dictionary.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Fitness:Docs:Version Information')">
+          <span id="T:Optimization.Fitness:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Fitness:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Fitness">Fitness</a>
+                    </b>()</div>
+                </td>
+                <td>Create new fitness.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.CompareMode">CompareMode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a>
+                  </i>. Fitness compare mode.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Context">Context</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a>
+                  </i>. The fitness context.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Expression">Expression</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Biorob.Math.Expression</a>
+                  </i>. The mathematical expression to evaluate.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                    <i>default property</i>
+                  </div>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Item(System.String)">Item</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. Access solution fitness values.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Unknowns">Unknowns</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[]</i>. Get unknowns.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Value">Value</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                  </i>. Fitness value.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Values">Values</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a>
+                  </i>. Solution fitness values.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Fitness.Variables">Variables</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, Fitness.Variable&gt;</a>
+                  </i>. Variables.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode)">AddVariable</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a>)<blockquote>Add a fitness variable.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.Clear">Clear</a>
+                  </b>()<blockquote>Clear fitness.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.Clone">Clone</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></nobr><blockquote>Create a clone of the fitness object.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness)">Compare</a>
+                  </b>(<a href="../Optimization/Fitness.html">Fitness</a>, <a href="../Optimization/Fitness.html">Fitness</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Compare two fitnesses.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double)">CompareByMode</a>
+                  </b>(<a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Compare two values based on a fitness mode.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode)">ModeAsString</a>
+                  </b>(<a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Fitness mode as string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.ModeFromString(System.String)">ModeFromString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a></nobr><blockquote>Fitness mode from string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.Parse(System.String)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Parse fitness expression.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.RemoveVariable(System.String)">RemoveVariable</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Remove variable.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.Reset">Reset</a>
+                  </b>()<blockquote>Reset fitness.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Fitness.Update">Update</a>
+                  </b>()<blockquote>Update.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Operators')">
+            <span id="Public Operators:toggle">⊟</span> Public Operators</a>
+        </h3>
+        <blockquote id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness)">GreaterThan</a>
+                  </b>(<a href="../Optimization/Fitness.html">Fitness</a>, <a href="../Optimization/Fitness.html">Fitness</a>)</td>
+                <td>Compare two fitnesses.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness)">LessThan</a>
+                  </b>(<a href="../Optimization/Fitness.html">Fitness</a>, <a href="../Optimization/Fitness.html">Fitness</a>)</td>
+                <td>Compare two fitnesses.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Fitness:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Fitness">
+          <a href="javascript:toggle_display('C:Optimization.Fitness:member')">
+            <span id="C:Optimization.Fitness:member:toggle">⊟</span> Fitness Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Fitness:member">
+          <p class="Summary">Create new fitness.</p>
+          <div class="Signature">public  <b>Fitness</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Fitness:Remarks')">
+              <span id="C:Optimization.Fitness:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Fitness:Remarks">Create new fitness.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Fitness:Version Information')">
+              <span id="C:Optimization.Fitness:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Fitness:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):member')">
+            <span id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):member:toggle">⊟</span> AddVariable Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):member">
+          <p class="Summary">Add a fitness variable.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddVariable</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> expression, <a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a> mode)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Parameters')">
+              <span id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Varialbe name.</dd>
+              <dt>
+                <i>expression</i>
+              </dt>
+              <dd>Variable fitness expression.</dd>
+              <dt>
+                <i>mode</i>
+              </dt>
+              <dd>Variable fitness mode.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Remarks')">
+              <span id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Remarks">Add a fitness variable.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Version Information')">
+              <span id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.AddVariable(System.String,System.String,Optimization.Fitness.Mode):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.Clear">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.Clear:member')">
+            <span id="M:Optimization.Fitness.Clear:member:toggle">⊟</span> Clear Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.Clear:member">
+          <p class="Summary">Clear fitness.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Clear:Remarks')">
+              <span id="M:Optimization.Fitness.Clear:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Clear:Remarks">Clear fitness.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Clear:Version Information')">
+              <span id="M:Optimization.Fitness.Clear:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Clear:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.Clone">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.Clone:member')">
+            <span id="M:Optimization.Fitness.Clone:member:toggle">⊟</span> Clone Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.Clone:member">
+          <p class="Summary">Create a clone of the fitness object.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>Clone</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Clone:Returns')">
+              <span id="M:Optimization.Fitness.Clone:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Clone:Returns">A new fitness object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Clone:Remarks')">
+              <span id="M:Optimization.Fitness.Clone:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Clone:Remarks">This creates a clone of the fitness object. Note that only
+        the solution fitness values are copied using a deep copy, the 
+        mathematical expression and the expression variables are copied
+        by reference.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Clone:Version Information')">
+              <span id="M:Optimization.Fitness.Clone:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Clone:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):member')">
+            <span id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):member:toggle">⊟</span> Compare Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):member">
+          <p class="Summary">Compare two fitnesses.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Compare</b> (<a href="../Optimization/Fitness.html">Fitness</a> a, <a href="../Optimization/Fitness.html">Fitness</a> b)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Parameters')">
+              <span id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>Fitness.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>Fitness.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Returns')">
+              <span id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Returns">How fitness a compares to fitness b.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Remarks')">
+              <span id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Remarks">Compare two fitness objects given their fitness modes. Returns
+        1 if a is better than b, -1 if b is better than a and 0 if both are
+        equal.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Version Information')">
+              <span id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Compare(Optimization.Fitness,Optimization.Fitness):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):member')">
+            <span id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):member:toggle">⊟</span> CompareByMode Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):member">
+          <p class="Summary">Compare two values based on a fitness mode.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>CompareByMode</b> (<a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a> mode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> a, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> b)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Parameters')">
+              <span id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>mode</i>
+              </dt>
+              <dd>The fitness mode.</dd>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>Value.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>Value.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Returns')">
+              <span id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Returns">How a compares to b.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Remarks')">
+              <span id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Remarks">Compares two values given the specified fitness mode. Returns
+        1 if a is better than b, -1 if b is better than a and 0 if both are
+        equal.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Version Information')">
+              <span id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.CompareByMode(Optimization.Fitness.Mode,System.Double,System.Double):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.CompareMode">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.CompareMode:member')">
+            <span id="P:Optimization.Fitness.CompareMode:member:toggle">⊟</span> CompareMode Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.CompareMode:member">
+          <p class="Summary">Fitness compare mode.</p>
+          <div class="Signature">public static <a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a> <b>CompareMode</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.CompareMode:Value')">
+              <span id="P:Optimization.Fitness.CompareMode:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.CompareMode:Value">The fitness compare mode.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.CompareMode:Remarks')">
+              <span id="P:Optimization.Fitness.CompareMode:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.CompareMode:Remarks">The fitness compare mode.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.CompareMode:Version Information')">
+              <span id="P:Optimization.Fitness.CompareMode:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.CompareMode:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Context">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Context:member')">
+            <span id="P:Optimization.Fitness.Context:member:toggle">⊟</span> Context Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Context:member">
+          <p class="Summary">The fitness context.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a> <b>Context</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Context:Value')">
+              <span id="P:Optimization.Fitness.Context:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Context:Value">The fitness context.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Context:Remarks')">
+              <span id="P:Optimization.Fitness.Context:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Context:Remarks">Get the fitness context. This contains all the variables of
+        the fitness and can be used to evaluate the fitness expression.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Context:Version Information')">
+              <span id="P:Optimization.Fitness.Context:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Context:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Expression">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Expression:member')">
+            <span id="P:Optimization.Fitness.Expression:member:toggle">⊟</span> Expression Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Expression:member">
+          <p class="Summary">The mathematical expression to evaluate.</p>
+          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">Biorob.Math.Expression</a> <b>Expression</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Expression:Value')">
+              <span id="P:Optimization.Fitness.Expression:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Expression:Value">Mathematical expression.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Expression:Remarks')">
+              <span id="P:Optimization.Fitness.Expression:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Expression:Remarks">The mathematical expression to evaluate (when set) to
+        calculate the fitness value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Expression:Version Information')">
+              <span id="P:Optimization.Fitness.Expression:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Expression:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Item(System.String)">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Item(System.String):member')">
+            <span id="P:Optimization.Fitness.Item(System.String):member:toggle">⊟</span> Item Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Item(System.String):member">
+          <p class="Summary">Access solution fitness values.</p>
+          <div class="Signature">
+            <p>
+              <i>This is the default property for this class.</i>
+            </p>public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key] { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Item(System.String):Parameters')">
+              <span id="P:Optimization.Fitness.Item(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Item(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>Fitness name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Item(System.String):Value')">
+              <span id="P:Optimization.Fitness.Item(System.String):Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Item(System.String):Value">Fitness value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Item(System.String):Remarks')">
+              <span id="P:Optimization.Fitness.Item(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Item(System.String):Remarks">Access solution fitness value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Item(System.String):Version Information')">
+              <span id="P:Optimization.Fitness.Item(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Item(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):member')">
+            <span id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):member:toggle">⊟</span> ModeAsString Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):member">
+          <p class="Summary">Fitness mode as string.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ModeAsString</b> (<a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a> mode)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Parameters')">
+              <span id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Parameters">
+            <dl>
+              <dt>
+                <i>mode</i>
+              </dt>
+              <dd>The fitness mode.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Returns')">
+              <span id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Returns">Fitness mode as string.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Remarks')">
+              <span id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Remarks">Get the fitness mode as string.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Version Information')">
+              <span id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeAsString(Optimization.Fitness.Mode):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.ModeFromString(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.ModeFromString(System.String):member')">
+            <span id="M:Optimization.Fitness.ModeFromString(System.String):member:toggle">⊟</span> ModeFromString Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.ModeFromString(System.String):member">
+          <p class="Summary">Fitness mode from string.</p>
+          <div class="Signature">public static <a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a> <b>ModeFromString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mode)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeFromString(System.String):Parameters')">
+              <span id="M:Optimization.Fitness.ModeFromString(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeFromString(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>mode</i>
+              </dt>
+              <dd>Fitness mode.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeFromString(System.String):Returns')">
+              <span id="M:Optimization.Fitness.ModeFromString(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeFromString(System.String):Returns">Fitness mode.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeFromString(System.String):Remarks')">
+              <span id="M:Optimization.Fitness.ModeFromString(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeFromString(System.String):Remarks">Get a fitness mode from a string.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.ModeFromString(System.String):Version Information')">
+              <span id="M:Optimization.Fitness.ModeFromString(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.ModeFromString(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):member')">
+            <span id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):member:toggle">⊟</span> op_GreaterThan Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):member">
+          <p class="Summary">Compare two fitnesses.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> operator&gt; (<a href="../Optimization/Fitness.html">Fitness</a> first, <a href="../Optimization/Fitness.html">Fitness</a> second)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Parameters')">
+              <span id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Parameters">
+            <dl>
+              <dt>
+                <i>first</i>
+              </dt>
+              <dd>Fitness.</dd>
+              <dt>
+                <i>second</i>
+              </dt>
+              <dd>Fitness.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Returns')">
+              <span id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Returns">.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Remarks')">
+              <span id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Remarks">Compare two fitnesses.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Version Information')">
+              <span id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_GreaterThan(Optimization.Fitness,Optimization.Fitness):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):member')">
+            <span id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):member:toggle">⊟</span> op_LessThan Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):member">
+          <p class="Summary">Compare two fitnesses.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> operator&lt; (<a href="../Optimization/Fitness.html">Fitness</a> first, <a href="../Optimization/Fitness.html">Fitness</a> second)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Parameters')">
+              <span id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Parameters">
+            <dl>
+              <dt>
+                <i>first</i>
+              </dt>
+              <dd>Fitness.</dd>
+              <dt>
+                <i>second</i>
+              </dt>
+              <dd>Fitness.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Returns')">
+              <span id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Returns">true if <i>first</i> is greater than 
+        <i>second</i>.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Remarks')">
+              <span id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Remarks">Compare two fitnesses.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Version Information')">
+              <span id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.op_LessThan(Optimization.Fitness,Optimization.Fitness):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.Parse(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.Parse(System.String):member')">
+            <span id="M:Optimization.Fitness.Parse(System.String):member:toggle">⊟</span> Parse Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.Parse(System.String):member">
+          <p class="Summary">Parse fitness expression.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> expression)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Parse(System.String):Parameters')">
+              <span id="M:Optimization.Fitness.Parse(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Parse(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>expression</i>
+              </dt>
+              <dd>Expression.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Parse(System.String):Returns')">
+              <span id="M:Optimization.Fitness.Parse(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Parse(System.String):Returns">Whether parsing was successful.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Parse(System.String):Remarks')">
+              <span id="M:Optimization.Fitness.Parse(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Parse(System.String):Remarks">Parse a fitness expression.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Parse(System.String):Version Information')">
+              <span id="M:Optimization.Fitness.Parse(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Parse(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.RemoveVariable(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.RemoveVariable(System.String):member')">
+            <span id="M:Optimization.Fitness.RemoveVariable(System.String):member:toggle">⊟</span> RemoveVariable Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.RemoveVariable(System.String):member">
+          <p class="Summary">Remove variable.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveVariable</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.RemoveVariable(System.String):Parameters')">
+              <span id="M:Optimization.Fitness.RemoveVariable(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.RemoveVariable(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Variable name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.RemoveVariable(System.String):Remarks')">
+              <span id="M:Optimization.Fitness.RemoveVariable(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.RemoveVariable(System.String):Remarks">Remove a varable.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.RemoveVariable(System.String):Version Information')">
+              <span id="M:Optimization.Fitness.RemoveVariable(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.RemoveVariable(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.Reset">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.Reset:member')">
+            <span id="M:Optimization.Fitness.Reset:member:toggle">⊟</span> Reset Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.Reset:member">
+          <p class="Summary">Reset fitness.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Reset:Remarks')">
+              <span id="M:Optimization.Fitness.Reset:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Reset:Remarks">Resetting the fitness will remove any solution values
+        previously set.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Reset:Version Information')">
+              <span id="M:Optimization.Fitness.Reset:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Reset:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Unknowns">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Unknowns:member')">
+            <span id="P:Optimization.Fitness.Unknowns:member:toggle">⊟</span> Unknowns Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Unknowns:member">
+          <p class="Summary">Get unknowns.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] <b>Unknowns</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Unknowns:Value')">
+              <span id="P:Optimization.Fitness.Unknowns:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Unknowns:Value">List of unknowns.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Unknowns:Remarks')">
+              <span id="P:Optimization.Fitness.Unknowns:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Unknowns:Remarks">Get a list of unknown variables in the fitness expression.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Unknowns:Version Information')">
+              <span id="P:Optimization.Fitness.Unknowns:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Unknowns:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Fitness.Update">
+          <a href="javascript:toggle_display('M:Optimization.Fitness.Update:member')">
+            <span id="M:Optimization.Fitness.Update:member:toggle">⊟</span> Update Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Fitness.Update:member">
+          <p class="Summary">Update.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Update:Remarks')">
+              <span id="M:Optimization.Fitness.Update:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Update:Remarks">Update the fitness.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Fitness.Update:Version Information')">
+              <span id="M:Optimization.Fitness.Update:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Fitness.Update:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Value">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Value:member')">
+            <span id="P:Optimization.Fitness.Value:member:toggle">⊟</span> Value Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Value:member">
+          <p class="Summary">Fitness value.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Value</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Value:Value')">
+              <span id="P:Optimization.Fitness.Value:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Value:Value">Fitness value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Value:Remarks')">
+              <span id="P:Optimization.Fitness.Value:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Value:Remarks">Get or set the final fitness value.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Value:Version Information')">
+              <span id="P:Optimization.Fitness.Value:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Value:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Values">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Values:member')">
+            <span id="P:Optimization.Fitness.Values:member:toggle">⊟</span> Values Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Values:member">
+          <p class="Summary">Solution fitness values.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> <b>Values</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Values:Value')">
+              <span id="P:Optimization.Fitness.Values:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Values:Value">Fitness values.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Values:Remarks')">
+              <span id="P:Optimization.Fitness.Values:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Values:Remarks">Fitness values as evaluated for the solution. These values
+        are used as part of the context to evaluate the mathematical
+        expression that computes the fitness.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Values:Version Information')">
+              <span id="P:Optimization.Fitness.Values:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Values:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Fitness.Variables">
+          <a href="javascript:toggle_display('P:Optimization.Fitness.Variables:member')">
+            <span id="P:Optimization.Fitness.Variables:member:toggle">⊟</span> Variables Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Fitness.Variables:member">
+          <p class="Summary">Variables.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, Fitness.Variable&gt;</a> <b>Variables</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Variables:Value')">
+              <span id="P:Optimization.Fitness.Variables:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Variables:Value">Variables.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Variables:Remarks')">
+              <span id="P:Optimization.Fitness.Variables:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Variables:Remarks">Variables used in the context to evaluate the mathematical
+        expression.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Fitness.Variables:Version Information')">
+              <span id="P:Optimization.Fitness.Variables:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Fitness.Variables:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

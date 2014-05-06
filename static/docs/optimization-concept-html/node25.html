@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Webots</TITLE>
+<META NAME="description" CONTENT="Webots">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node26.html">
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html419"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html415"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html409"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html417"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html420"
+  HREF="node26.html">External</A>
+<B> Up:</B> <A NAME="tex2html416"
+  HREF="node24.html">Dispatchers</A>
+<B> Previous:</B> <A NAME="tex2html410"
+  HREF="node24.html">Dispatchers</A>
+ &nbsp; <B>  <A NAME="tex2html418"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00481000000000000000">
+Webots</A>
+</H2>
+The webots dispatcher can be used to evaluate solutions in webots. The
+dispatcher will launch a webots process for each task it receives and runs
+the world file specified in the dispatcher settings. In your controller, you
+can make use of the optimization::Webots class (see liboptimization API
+documentation for more information) to extract the task description and setup
+your controller accordingly. The specific dispatcher settings for the webots
+dispatcher are listed in table <A HREF="#tab:webots_settings">3.8</A>.
+
+<P>
+Sometimes it might be necessary to change the world file according to your task
+description. To this end, a special setting is available (<SPAN  CLASS="textit">worldBuilderPath</SPAN>)
+which specifies an executable that will dynamically build the webots world
+file to use instead of specifying it in the <SPAN  CLASS="textit">world</SPAN> setting. The
+world builder executable will be executed before the webots process is executed
+and will receive the task description on <code>standard in</code>
+(just as for the dispatcher). It should then generate the world file and
+write the path to this world file on <code>standard out</code>. It can be useful
+to use the optimization::Dispatcher class (see liboptimization API
+documentation) to extract the task description. Note that if you use several
+worker processes, you should take care to generate unique world file names.
+The world files will be automatically removed after the task has been run.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:webots_settings"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="388"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 3.8:</STRONG>
+Webots Dispatcher Settings</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=340><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">mode</SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The mode in which to run webots (defaults to <SPAN  CLASS="textit">run</SPAN>):
+		
+<UL>
+<LI><SPAN  CLASS="textit">run</SPAN>: start webots graphically and start running simulation
+</LI>
+<LI><SPAN  CLASS="textit">stop</SPAN>: start webots graphically but do not start running simulation
+</LI>
+<LI><SPAN  CLASS="textit">batch</SPAN>: start webots in batch mode (<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ &lt;$"></SPAN> 6.1.6)
+</LI>
+<LI><SPAN  CLASS="textit">minimize</SPAN>: start webots in minimize mode (<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$ &gt;=$"></SPAN> 6.1.6)
+		
+</LI>
+</UL></TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">world</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Absolute path to the webots world to run (required
+		                 unless worldBuilderPath is used). In secure mode, the
+		                 world must be owned by the user and must be in
+		the users' home directory</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">webotsPath</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Path to the webots executable to use (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">webotsVersion</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>The specific webots version to use. By
+		                         default, the latest available webots
+		                         version installed on the cluster is
+		                         used. This version is occasionally
+		                         updated (announced on the biorob mailing
+		                         list). Currently available versions are:
+		                         6.1.5, 6.3.1, 6.3.3, 6.3.4 and 6.4.1
+		                         (this list can be out of date) (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">environment</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Comma separated list of key=value environment variables
+		              to set in the environment in which to execute webots
+		              (optional)</TD>
+</TR>
+<TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textit">worldBuilderPath</SPAN></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>Path to the world builder to use to build to world
+		                   before executing webots (optional)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=340>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html419"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html415"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html409"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html417"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html420"
+  HREF="node26.html">External</A>
+<B> Up:</B> <A NAME="tex2html416"
+  HREF="node24.html">Dispatchers</A>
+<B> Previous:</B> <A NAME="tex2html410"
+  HREF="node24.html">Dispatchers</A>
+ &nbsp; <B>  <A NAME="tex2html418"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

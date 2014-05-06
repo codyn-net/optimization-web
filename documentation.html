@@ -1,0 +1,19 @@
+<%= template 'templates/header.html', :title => 'Documentation' %>
+
+<% markdown do %>
+
+## Conceptual design overview
+For more information on the conceptual design, architecture and various components of the framework, please
+see [optimization concept](docs/optimization-concept-html/index.html) online, or download [concept.pdf](docs/concept.pdf).
+
+## liboptimization API reference
+For the API reference of liboptimization, the C++ library which provides various useful classes to implement
+components of the framework, see the [liboptimization API reference](docs/liboptimization/index.html) online.
+
+## liboptimization C# API reference
+For the API reference of the C# library which is used on the client side to implement optimization algorithms,
+please see [liboptimization C# API reference](docs/optimization-sharp/index.html).
+
+<% end %>
+
+<%= template 'templates/footer.html' %>

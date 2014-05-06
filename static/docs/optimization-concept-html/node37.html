@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Common pitfalls</TITLE>
+<META NAME="description" CONTENT="Common pitfalls">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node38.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html577"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html573"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html569"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html575"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html578"
+  HREF="node38.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html574"
+  HREF="node30.html">Distributing Jobs</A>
+<B> Previous:</B> <A NAME="tex2html570"
+  HREF="node36.html">Local storage</A>
+ &nbsp; <B>  <A NAME="tex2html576"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00527000000000000000">
+Common pitfalls</A>
+</H2>
+A common pitfall is wrong versions or architectures of binaries and shared
+libraries, or the unavailability of a shared library. Be sure to check the
+architecture for which your binaries are compiled (32 bits or 64 bits). You
+can do this by issueing the command <code>file</code> on your binaries (or shared
+libraries). Furthermore, always check if all the linked libraries can be found
+on the target systems. You can do this using the command <code>ldd</code>. This
+command will list all the shared libraries a binary links against, and should
+tell you whether some of them could not be found. You can login to
+<code>biorobcn-gw</code> to test whether or not everything can
+be found correctly. Be aware though, your login environment might not be the
+same as the environment in which the job is executed (be sure to check for
+custom libraries that they can also be found when running the job!).
+
+<P>
+Note for <SPAN  CLASS="textbf">Webots</SPAN> jobs: be sure to check <SPAN  CLASS="textbf">all</SPAN> your controllers
+and your possible plugin. <code>ldd</code> will always report libController.so and
+libCppController.so to not be found, but this is normal since they will be
+linked correctly by webots.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html577"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html573"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html569"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html575"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html578"
+  HREF="node38.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html574"
+  HREF="node30.html">Distributing Jobs</A>
+<B> Previous:</B> <A NAME="tex2html570"
+  HREF="node36.html">Local storage</A>
+ &nbsp; <B>  <A NAME="tex2html576"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

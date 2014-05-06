@@ -1,0 +1,702 @@
+<html>
+  <head>
+    <title>Optimization.Connection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Connection">Connection  Class</h1>
+    <p class="Summary" id="T:Optimization.Connection:Summary">Master connection class.</p>
+    <div id="T:Optimization.Connection:Signature">
+      <div class="Signature">public class  <b>Connection</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Connection:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Connection:Docs:Remarks')">
+          <span id="T:Optimization.Connection:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Connection:Docs:Remarks">This class manages the connection from the optimizer to the
+    master. It implements some convenient methods for sending and receiving
+    protobuf messages. Receiving messages is done asynchronously and
+    when new messages have been received, the 
+    <a href="../Optimization/Connection.html#E:Optimization.Connection.OnCommunicationReceived">Connection.OnCommunicationReceived</a> will
+    be fired. Note that event handlers will run in the receive thread and
+    not the main thread and care should be taken to prevent problems with
+    accessing data from multiple threads. This class has a convenient
+    method to send all the solutions of the current iteration of a job
+    at once (<a href="../Optimization/Connection.html#M:Optimization.Connection.Send``1(Optimization.Job{``0})">Connection.Send``1(Job&lt;``0&gt;)</a>).
+    </blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Connection:Docs:Version Information')">
+          <span id="T:Optimization.Connection:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Connection:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Connection">Connection</a>
+                    </b>()</div>
+                </td>
+                <td>Create new connection.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.Connect(System.String,System.Int32)">Connect</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Connect to the master process.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.Disconnect">Disconnect</a>
+                  </b>()<blockquote>Disconnect connection.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode)">FitnessType</a>
+                  </b>(<a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a>)<nobr> : <a href="../Optimization.Messages/Identify+Fitness+Type.html">Optimization.Messages.Identify.Fitness.Type</a></nobr><blockquote>Get a fitness type from a fitness mode.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.Identify(Optimization.Job)">Identify</a>
+                  </b>(<a href="../Optimization/Job.html">Job</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Identify a job to the optimaster.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.Progress(Optimization.Job)">Progress</a>
+                  </b>(<a href="../Optimization/Job.html">Job</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Sends a progress report to the master.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.Send(Optimization.Job)">Send</a>
+                  </b>(<a href="../Optimization/Job.html">Job</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Send all solutions in a job as a batch to the master.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Connection.Send(Optimization.Messages.Communication)">Send</a>
+                  </b>(<a href="../Optimization.Messages/Communication.html">Optimization.Messages.Communication</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Send communication message to the master.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Events')">
+            <span id="Public Events:toggle">⊟</span> Public Events</a>
+        </h3>
+        <blockquote id="Public Events">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Connection.OnClosed">OnClosed</a>
+                  </b>
+                </td>
+                <td>Fired when connection is closed.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Connection.OnCommunicationReceived">OnCommunicationReceived</a>
+                  </b>
+                </td>
+                <td>Fired when new communication is received.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Connection:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Connection">
+          <a href="javascript:toggle_display('C:Optimization.Connection:member')">
+            <span id="C:Optimization.Connection:member:toggle">⊟</span> Connection Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Connection:member">
+          <p class="Summary">Create new connection.</p>
+          <div class="Signature">public  <b>Connection</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Connection:Remarks')">
+              <span id="C:Optimization.Connection:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Connection:Remarks">Create new connection.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Connection:Version Information')">
+              <span id="C:Optimization.Connection:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Connection:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.Connect(System.String,System.Int32)">
+          <a href="javascript:toggle_display('M:Optimization.Connection.Connect(System.String,System.Int32):member')">
+            <span id="M:Optimization.Connection.Connect(System.String,System.Int32):member:toggle">⊟</span> Connect Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.Connect(System.String,System.Int32):member">
+          <p class="Summary">Connect to the master process.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Connect(System.String,System.Int32):Parameters')">
+              <span id="M:Optimization.Connection.Connect(System.String,System.Int32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Connect(System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>host</i>
+              </dt>
+              <dd>The master host.</dd>
+              <dt>
+                <i>port</i>
+              </dt>
+              <dd>The master port.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Connect(System.String,System.Int32):Returns')">
+              <span id="M:Optimization.Connection.Connect(System.String,System.Int32):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Connect(System.String,System.Int32):Returns">true if a connection is established, false otherwise.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Connect(System.String,System.Int32):Remarks')">
+              <span id="M:Optimization.Connection.Connect(System.String,System.Int32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Connect(System.String,System.Int32):Remarks">Create a new connection to the master process.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Connect(System.String,System.Int32):Version Information')">
+              <span id="M:Optimization.Connection.Connect(System.String,System.Int32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Connect(System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.Disconnect">
+          <a href="javascript:toggle_display('M:Optimization.Connection.Disconnect:member')">
+            <span id="M:Optimization.Connection.Disconnect:member:toggle">⊟</span> Disconnect Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.Disconnect:member">
+          <p class="Summary">Disconnect connection.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Disconnect</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Disconnect:Remarks')">
+              <span id="M:Optimization.Connection.Disconnect:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Disconnect:Remarks">Disconnect connection.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Disconnect:Version Information')">
+              <span id="M:Optimization.Connection.Disconnect:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Disconnect:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode)">
+          <a href="javascript:toggle_display('M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):member')">
+            <span id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):member:toggle">⊟</span> FitnessType Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):member">
+          <p class="Summary">Get a fitness type from a fitness mode.</p>
+          <div class="Signature">public <a href="../Optimization.Messages/Identify+Fitness+Type.html">Optimization.Messages.Identify.Fitness.Type</a> <b>FitnessType</b> (<a href="../Optimization/Fitness+Mode.html">Fitness.Mode</a> mode)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Parameters')">
+              <span id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Parameters">
+            <dl>
+              <dt>
+                <i>mode</i>
+              </dt>
+              <dd>The fitness mode.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Returns')">
+              <span id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Returns">The fitness type.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Remarks')">
+              <span id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Remarks">Get a fitness type from a fitness mode.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Version Information')">
+              <span id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.FitnessType(Optimization.Fitness.Mode):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.Identify(Optimization.Job)">
+          <a href="javascript:toggle_display('M:Optimization.Connection.Identify(Optimization.Job):member')">
+            <span id="M:Optimization.Connection.Identify(Optimization.Job):member:toggle">⊟</span> Identify Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.Identify(Optimization.Job):member">
+          <p class="Summary">Identify a job to the optimaster.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Identify</b> (<a href="../Optimization/Job.html">Job</a> job)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Identify(Optimization.Job):Parameters')">
+              <span id="M:Optimization.Connection.Identify(Optimization.Job):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Identify(Optimization.Job):Parameters">
+            <dl>
+              <dt>
+                <i>job</i>
+              </dt>
+              <dd>The job.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Identify(Optimization.Job):Returns')">
+              <span id="M:Optimization.Connection.Identify(Optimization.Job):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Identify(Optimization.Job):Returns">Whether the job could be successfully identified.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Identify(Optimization.Job):Remarks')">
+              <span id="M:Optimization.Connection.Identify(Optimization.Job):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Identify(Optimization.Job):Remarks">Identifies the given job to the master.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Identify(Optimization.Job):Version Information')">
+              <span id="M:Optimization.Connection.Identify(Optimization.Job):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Identify(Optimization.Job):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Connection.OnClosed">
+          <a href="javascript:toggle_display('E:Optimization.Connection.OnClosed:member')">
+            <span id="E:Optimization.Connection.OnClosed:member:toggle">⊟</span> OnClosed Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Connection.OnClosed:member">
+          <p class="Summary">Fired when connection is closed.</p>
+          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler">EventHandler</a> <b>OnClosed</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Connection.OnClosed:Remarks')">
+              <span id="E:Optimization.Connection.OnClosed:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Connection.OnClosed:Remarks">Fired when the connection to the master process is closed.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Connection.OnClosed:Version Information')">
+              <span id="E:Optimization.Connection.OnClosed:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Connection.OnClosed:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Connection.OnCommunicationReceived">
+          <a href="javascript:toggle_display('E:Optimization.Connection.OnCommunicationReceived:member')">
+            <span id="E:Optimization.Connection.OnCommunicationReceived:member:toggle">⊟</span> OnCommunicationReceived Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Connection.OnCommunicationReceived:member">
+          <p class="Summary">Fired when new communication is received.</p>
+          <div class="Signature">public event <a href="../Optimization/Connection+CommunicationReceivedHandler.html">Connection.CommunicationReceivedHandler</a> <b>OnCommunicationReceived</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Connection.OnCommunicationReceived:Remarks')">
+              <span id="E:Optimization.Connection.OnCommunicationReceived:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Connection.OnCommunicationReceived:Remarks">Fired when new communication messages have been received. Note
+        that event handlers will run in a separate thread and not on the
+        main thread. Care should be taken in accessing data from multiple
+        threads.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Connection.OnCommunicationReceived:Version Information')">
+              <span id="E:Optimization.Connection.OnCommunicationReceived:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Connection.OnCommunicationReceived:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.Progress(Optimization.Job)">
+          <a href="javascript:toggle_display('M:Optimization.Connection.Progress(Optimization.Job):member')">
+            <span id="M:Optimization.Connection.Progress(Optimization.Job):member:toggle">⊟</span> Progress Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.Progress(Optimization.Job):member">
+          <p class="Summary">Sends a progress report to the master.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Progress</b> (<a href="../Optimization/Job.html">Job</a> job)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Progress(Optimization.Job):Parameters')">
+              <span id="M:Optimization.Connection.Progress(Optimization.Job):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Progress(Optimization.Job):Parameters">
+            <dl>
+              <dt>
+                <i>job</i>
+              </dt>
+              <dd>The job.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Progress(Optimization.Job):Returns')">
+              <span id="M:Optimization.Connection.Progress(Optimization.Job):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Progress(Optimization.Job):Returns">Whether the progress report was successfully sent.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Progress(Optimization.Job):Remarks')">
+              <span id="M:Optimization.Connection.Progress(Optimization.Job):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Progress(Optimization.Job):Remarks">Sends a progress report to the master.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Progress(Optimization.Job):Version Information')">
+              <span id="M:Optimization.Connection.Progress(Optimization.Job):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Progress(Optimization.Job):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.Send(Optimization.Job)">
+          <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Job):member')">
+            <span id="M:Optimization.Connection.Send(Optimization.Job):member:toggle">⊟</span> Send Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.Send(Optimization.Job):member">
+          <p class="Summary">Send all solutions in a job as a batch to the master.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Send</b> (<a href="../Optimization/Job.html">Job</a> job)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Job):Parameters')">
+              <span id="M:Optimization.Connection.Send(Optimization.Job):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Job):Parameters">
+            <dl>
+              <dt>
+                <i>job</i>
+              </dt>
+              <dd>The job.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Job):Returns')">
+              <span id="M:Optimization.Connection.Send(Optimization.Job):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Job):Returns">true if the batch was send successfully, false otherwise.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Job):Remarks')">
+              <span id="M:Optimization.Connection.Send(Optimization.Job):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Job):Remarks">Send all the solutions in the current population of the
+        optimizer of the supplied job as a batch message to the master.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Job):Version Information')">
+              <span id="M:Optimization.Connection.Send(Optimization.Job):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Job):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Connection.Send(Optimization.Messages.Communication)">
+          <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Messages.Communication):member')">
+            <span id="M:Optimization.Connection.Send(Optimization.Messages.Communication):member:toggle">⊟</span> Send Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Connection.Send(Optimization.Messages.Communication):member">
+          <p class="Summary">Send communication message to the master.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Send</b> (<a href="../Optimization.Messages/Communication.html">Optimization.Messages.Communication</a> communication)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Messages.Communication):Parameters')">
+              <span id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Parameters">
+            <dl>
+              <dt>
+                <i>communication</i>
+              </dt>
+              <dd>Communication message to send.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Messages.Communication):Returns')">
+              <span id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Returns">true if the message was send successfully.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Messages.Communication):Remarks')">
+              <span id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Remarks">Send a communication message to the master process.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Connection.Send(Optimization.Messages.Communication):Version Information')">
+              <span id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Connection.Send(Optimization.Messages.Communication):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

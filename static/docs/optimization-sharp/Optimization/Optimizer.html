@@ -1,0 +1,2137 @@
+<html>
+  <head>
+    <title>Optimization.Optimizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Optimizer">Optimizer  Class</h1>
+    <p class="Summary" id="T:Optimization.Optimizer:Summary">Base optimizer class.</p>
+    <div id="T:Optimization.Optimizer:Signature">
+      <div class="Signature">public class  <b>Optimizer</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Solution&gt;</a></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Optimizer:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Optimizer:Docs:Remarks')">
+          <span id="T:Optimization.Optimizer:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Optimizer:Docs:Remarks">
+        <p>This class forms the basis of all optimizers. In itself it does
+    not provide an optimization, but it provides all the infrastructure to
+    make it easy to implement different optimization algorithms on top of this
+    class.</p>
+        <p>
+    There are a few key concepts to understand when implementing an optimizer
+    based on this class. The optimizer consists of the following objects:
+    <ol><li>A list of <a href="../Optimization/Solution.html">Optimization.Solution</a> which make up the
+      population</li><li>A <a href="../Optimization/Optimizer+Settings.html">Optimization.Optimizer.Settings</a> object providing
+      optimizer settings (such as maximum number of iterations and population
+      size)</li><li>A <a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a> object providing a way
+      to store the optimization results</li><li>Templates for the parameters and associated boundaries used in
+      the optimization process</li></ol></p>
+        <p>
+      When implementing a new optimizer, you might want to use a subclassed
+      settings class (<a href="../Optimization/Optimizer+Settings.html">Optimization.Optimizer.Settings</a>) (if you want to add some settings specific to your 
+      optimizer and/or a custom subclass of a
+      <a href="../Optimization/Solution.html">Optimization.Solution</a>. The optimizer class implements a
+      automatic discovery mechanism for finding subclasses of these two classes
+      and will use them if it finds them. Therefore, you only need to subclass
+      from for example <a href="../Optimization/Solution.html">Optimization.Solution</a> and this class
+      will be used to create solutions. This behavior can be overridden by
+      overriding the <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.CreateSettings">Optimizer.CreateSettings</a>
+      and <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.CreateSolution">Optimizer.CreateSolution</a> methods.
+      </p>
+        <p>
+      The usual optimization process usually consists of the following phases:
+      <ul><li>Create a new optimizer object</li><li>If needed, create a new storage object and assign it</li><li>Call <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Initialize">Optimizer.Initialize</a> to
+        initialize the initial population and the storage</li><li>Evaluate all the solutions in the population (this
+        should update the fitness of each solution)</li><li>Call <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Next">Optimizer.Next</a> to generate
+        a new population</li></ul>
+      Repeat running solutions in the population as long as
+      <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Next">Optimizer.Next</a> returns true. There is a
+      helper class which can drive this process for you, including
+      communicating with the master and dispatching the solutions (see 
+      <a href="../Optimization/Application.html">Optimization.Application</a>).
+    </p>
+        <p>
+      Subclasses of an optimizer usually only need to override certain methods.
+      It's useful to know what exactly happens when calling
+      <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Next">Optimizer.Next</a> so that you can override
+      the relevant methods.
+      <ol><li>Update the current best solution
+        (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.UpdateBest">Optimizer.UpdateBest</a>)</li><li>Save the current iteration in the storage
+        (<a href="../Optimization.Storage/Storage.html#M:Optimization.Storage.Storage.SaveIteration">Optimization.Storage.Storage.SaveIteration</a>)</li><li>Increment the current iteration
+        (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.IncreaseIteration">Optimizer.IncreaseIteration</a>)</li><li>Check if the optimization is finished
+        (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Finished">Optimizer.Finished</a>)</li><li>Create a new population 
+        (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Update">Optimizer.Update</a>)</li></ol></p>
+      </blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Optimizer:Docs:Version Information')">
+          <span id="T:Optimization.Optimizer:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Optimizer:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Optimizer">Optimizer</a>
+                    </b>()</div>
+                </td>
+                <td>Default constructor.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Best">Best</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Solution.html">Solution</a>
+                  </i>. Get the best best solution so far.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Boundaries">Boundaries</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Boundary&gt;</a>
+                  </i>. Get list of boundaries.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Configuration">Configuration</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Optimizer+Settings.html">Optimizer.Settings</a>
+                  </i>. Get optimizer configuration.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.CurrentIteration">CurrentIteration</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. The current iteration.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Description">Description</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Optimizer description.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Extensions">Extensions</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Extension&gt;</a>
+                  </i>. Extensions.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Fitness">Fitness</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Fitness.html">Fitness</a>
+                  </i>. The fitness object template.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The optimizer name.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Parameters">Parameters</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Parameter&gt;</a>
+                  </i>. Get parameters.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Population">Population</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Solution&gt;</a>
+                  </i>. Current population of solutions.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.State">State</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/State.html">State</a>
+                  </i>. Optimizer state.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Optimizer.Storage">Storage</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a>
+                  </i>. Storage object.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Add(Optimization.Solution)">Add</a>
+                  </b>(<a href="../Optimization/Solution.html">Solution</a>)<blockquote>Add a new solution to the optimizer.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.AddExtension(Optimization.Extension)">AddExtension</a>
+                  </b>(<a href="../Optimization/Extension.html">Extension</a>)<blockquote>Add extension.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Boundary(System.String)">Boundary</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Optimization/Boundary.html">Boundary</a></nobr><blockquote>Retrieve boundary by name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.CreateSolution(System.UInt32)">CreateSolution</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>)<nobr> : <a href="../Optimization/Solution.html">Solution</a></nobr><blockquote>Create a new solution.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer)">FromStorage</a>
+                  </b>(<a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a>, <a href="../Optimization.Storage.Records/Optimizer.html">Optimization.Storage.Records.Optimizer</a>)<blockquote>Restore optimizer from storage.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution)">FromStorage</a>
+                  </b>(<a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a>, <a href="../Optimization.Storage.Records/Optimizer.html">Optimization.Storage.Records.Optimizer</a>, <a href="../Optimization.Storage.Records/Solution.html">Optimization.Storage.Records.Solution</a>, <a href="../Optimization/Solution.html">Solution</a>)<blockquote>Restore solution from storage.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.FromXml(System.Xml.XmlNode)">FromXml</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Xml.XmlNode">System.Xml.XmlNode</a>)<blockquote>Load optimizer from XML.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.GetDescription(System.Type)">GetDescription</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Get optimizer description.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.GetEnumerator">GetEnumerator</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;Solution&gt;</a></nobr><blockquote>Get solution enumerator.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.GetName(System.Type)">GetName</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Get the optimizer name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.HasBoundary(System.String)">HasBoundary</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Check boundary existence.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.HasParameter(System.String)">HasParameter</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Check parameter existence.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Initialize">Initialize</a>
+                  </b>()<blockquote>Initialize optimizer.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.InitializePopulation">InitializePopulation</a>
+                  </b>()<blockquote>Initialize solution population.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Log(System.String,System.String)">Log</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Generic message logging.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Log(System.String,System.String,System.Object[])">Log</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote>Generic message logging.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Next">Next</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Create new optimization iteration.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Parameter(System.String)">Parameter</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Optimization/Parameter.html">Parameter</a></nobr><blockquote>Retrieve parameter by name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Remove(Optimization.Solution)">Remove</a>
+                  </b>(<a href="../Optimization/Solution.html">Solution</a>)<blockquote>Remove solution from the population.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Update">Update</a>
+                  </b>()<blockquote>Update the current population.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Update(Optimization.Solution)">Update</a>
+                  </b>(<a href="../Optimization/Solution.html">Solution</a>)<blockquote>Update the solution.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Protected Methods')">
+            <span id="Protected Methods:toggle">⊟</span> Protected Methods</a>
+        </h3>
+        <blockquote id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.AddBoundary(Optimization.Boundary)">AddBoundary</a>
+                  </b>(<a href="../Optimization/Boundary.html">Boundary</a>)<blockquote>Add boundary.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.AddParameter(Optimization.Parameter)">AddParameter</a>
+                  </b>(<a href="../Optimization/Parameter.html">Parameter</a>)<blockquote>Add parameter.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.CreateSettings">CreateSettings</a>
+                  </b>()<nobr> : <a href="../Optimization/Optimizer+Settings.html">Optimizer.Settings</a></nobr><blockquote>Create settings object.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.CreateState">CreateState</a>
+                  </b>()<nobr> : <a href="../Optimization/State.html">State</a></nobr><blockquote>Create state.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Finished">Finished</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Check whether the optimization is finished.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.IncrementIteration">IncrementIteration</a>
+                  </b>()<blockquote>Increment the current iteration.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.SaveIteration">SaveIteration</a>
+                  </b>()<blockquote>Save iteration to storage.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.Setup">Setup</a>
+                  </b>()<blockquote>Setup the optimizer.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Optimizer.UpdateBest">UpdateBest</a>
+                  </b>()<blockquote>Update the best solution so far.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Explicitly Implemented Interface Members')">
+            <span id="Explicitly Implemented Interface Members:toggle">⊟</span> Explicitly Implemented Interface Members</a>
+        </h3>
+        <blockquote id="Explicitly Implemented Interface Members">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator">
+                    <b>IEnumerable.GetEnumerator</b>
+                  </a>
+                </td>
+                <td>Get solution enumerator.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Optimizer:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Optimizer">
+          <a href="javascript:toggle_display('C:Optimization.Optimizer:member')">
+            <span id="C:Optimization.Optimizer:member:toggle">⊟</span> Optimizer Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Optimizer:member">
+          <p class="Summary">Default constructor.</p>
+          <div class="Signature">public  <b>Optimizer</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Optimizer:Remarks')">
+              <span id="C:Optimization.Optimizer:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Optimizer:Remarks">Create new optimizer object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Optimizer:Version Information')">
+              <span id="C:Optimization.Optimizer:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Optimizer:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Add(Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Add(Optimization.Solution):member')">
+            <span id="M:Optimization.Optimizer.Add(Optimization.Solution):member:toggle">⊟</span> Add Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Add(Optimization.Solution):member">
+          <p class="Summary">Add a new solution to the optimizer.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="../Optimization/Solution.html">Solution</a> solution)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Add(Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Optimizer.Add(Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Add(Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>The solution to add.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Add(Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Optimizer.Add(Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Add(Optimization.Solution):Remarks">Add a new solution to the population of solutions in the
+        optimizer. This can be useful if you want to generate an initial
+        population externally, or just want to add some solutions at
+        some point from your application.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Add(Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Optimizer.Add(Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Add(Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):member')">
+            <span id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):member:toggle">⊟</span> AddBoundary Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):member">
+          <p class="Summary">Add boundary.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddBoundary</b> (<a href="../Optimization/Boundary.html">Boundary</a> boundary)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Parameters')">
+              <span id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Parameters">
+            <dl>
+              <dt>
+                <i>boundary</i>
+              </dt>
+              <dd>Boundary.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Remarks')">
+              <span id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Remarks">Add a boundary to the optimizer.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Version Information')">
+              <span id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddBoundary(Optimization.Boundary):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.AddExtension(Optimization.Extension)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.AddExtension(Optimization.Extension):member')">
+            <span id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):member:toggle">⊟</span> AddExtension Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):member">
+          <p class="Summary">Add extension.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddExtension</b> (<a href="../Optimization/Extension.html">Extension</a> ext)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddExtension(Optimization.Extension):Parameters')">
+              <span id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):Parameters">
+            <dl>
+              <dt>
+                <i>ext</i>
+              </dt>
+              <dd>Extension.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddExtension(Optimization.Extension):Remarks')">
+              <span id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):Remarks">Add an extension to the optimizer.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddExtension(Optimization.Extension):Version Information')">
+              <span id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddExtension(Optimization.Extension):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.AddParameter(Optimization.Parameter):member')">
+            <span id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):member:toggle">⊟</span> AddParameter Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):member">
+          <p class="Summary">Add parameter.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddParameter</b> (<a href="../Optimization/Parameter.html">Parameter</a> parameter)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Parameters')">
+              <span id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Parameters">
+            <dl>
+              <dt>
+                <i>parameter</i>
+              </dt>
+              <dd>A Parameter.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Remarks')">
+              <span id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Remarks">Add parameter to the optimizer.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Version Information')">
+              <span id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.AddParameter(Optimization.Parameter):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Best">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Best:member')">
+            <span id="P:Optimization.Optimizer.Best:member:toggle">⊟</span> Best Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Best:member">
+          <p class="Summary">Get the best best solution so far.</p>
+          <div class="Signature">public <a href="../Optimization/Solution.html">Solution</a> <b>Best</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Best:Value')">
+              <span id="P:Optimization.Optimizer.Best:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Best:Value">The best solution so far.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Best:Remarks')">
+              <span id="P:Optimization.Optimizer.Best:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Best:Remarks">The optimizer keeps track of the best solution so far and
+        it can be accessed by this property.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Best:Version Information')">
+              <span id="P:Optimization.Optimizer.Best:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Best:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Boundaries">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Boundaries:member')">
+            <span id="P:Optimization.Optimizer.Boundaries:member:toggle">⊟</span> Boundaries Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Boundaries:member">
+          <p class="Summary">Get list of boundaries.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Boundary&gt;</a> <b>Boundaries</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Boundaries:Value')">
+              <span id="P:Optimization.Optimizer.Boundaries:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Boundaries:Value">The list of boundaries.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Boundaries:Remarks')">
+              <span id="P:Optimization.Optimizer.Boundaries:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Boundaries:Remarks">Get the list of boundaries registered on the optimizer.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Boundaries:Version Information')">
+              <span id="P:Optimization.Optimizer.Boundaries:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Boundaries:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Boundary(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Boundary(System.String):member')">
+            <span id="M:Optimization.Optimizer.Boundary(System.String):member:toggle">⊟</span> Boundary Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Boundary(System.String):member">
+          <p class="Summary">Retrieve boundary by name.</p>
+          <div class="Signature">public <a href="../Optimization/Boundary.html">Boundary</a> <b>Boundary</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Boundary(System.String):Parameters')">
+              <span id="M:Optimization.Optimizer.Boundary(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Boundary(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Boundary name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Boundary(System.String):Returns')">
+              <span id="M:Optimization.Optimizer.Boundary(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Boundary(System.String):Returns">The boundary.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Boundary(System.String):Remarks')">
+              <span id="M:Optimization.Optimizer.Boundary(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Boundary(System.String):Remarks">Get a boundary by name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Boundary(System.String):Version Information')">
+              <span id="M:Optimization.Optimizer.Boundary(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Boundary(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Configuration">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Configuration:member')">
+            <span id="P:Optimization.Optimizer.Configuration:member:toggle">⊟</span> Configuration Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Configuration:member">
+          <p class="Summary">Get optimizer configuration.</p>
+          <div class="Signature">public <a href="../Optimization/Optimizer+Settings.html">Optimizer.Settings</a> <b>Configuration</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Configuration:Value')">
+              <span id="P:Optimization.Optimizer.Configuration:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Configuration:Value">Optimizer configuration.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Configuration:Remarks')">
+              <span id="P:Optimization.Optimizer.Configuration:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Configuration:Remarks">The optimizer configuration contains settings which can easily
+        be set by a job. Default settings for optimizer include the maximum
+        number of iterations and the population size.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Configuration:Version Information')">
+              <span id="P:Optimization.Optimizer.Configuration:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Configuration:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.CreateSettings">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSettings:member')">
+            <span id="M:Optimization.Optimizer.CreateSettings:member:toggle">⊟</span> CreateSettings Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.CreateSettings:member">
+          <p class="Summary">Create settings object.</p>
+          <div class="Signature">protected virtual <a href="../Optimization/Optimizer+Settings.html">Optimizer.Settings</a> <b>CreateSettings</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSettings:Returns')">
+              <span id="M:Optimization.Optimizer.CreateSettings:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSettings:Returns">A settings object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSettings:Remarks')">
+              <span id="M:Optimization.Optimizer.CreateSettings:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSettings:Remarks">If you want to add some settings, you can subclass
+        the <a href="../Optimization/Optimizer+Settings.html">Optimization.Optimizer.Settings</a> class and override 
+        this function in your optimizer
+        to create an instance of this subclass. Note that the default
+        implementation of this method will try to locate any subclasses of
+        <a href="../Optimization/Optimizer+Settings.html">Optimization.Optimizer.Settings</a> and use it if found.
+        See <a href="../Optimization/Optimizer+Settings.html">Optimization.Optimizer.Settings</a> for more 
+        information on implementing your own settings class.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSettings:Version Information')">
+              <span id="M:Optimization.Optimizer.CreateSettings:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSettings:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.CreateSolution(System.UInt32)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSolution(System.UInt32):member')">
+            <span id="M:Optimization.Optimizer.CreateSolution(System.UInt32):member:toggle">⊟</span> CreateSolution Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.CreateSolution(System.UInt32):member">
+          <p class="Summary">Create a new solution.</p>
+          <div class="Signature">public virtual <a href="../Optimization/Solution.html">Solution</a> <b>CreateSolution</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> idx)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSolution(System.UInt32):Parameters')">
+              <span id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Parameters">
+            <dl>
+              <dt>
+                <i>idx</i>
+              </dt>
+              <dd>Solution id.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSolution(System.UInt32):Returns')">
+              <span id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Returns">A new solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSolution(System.UInt32):Remarks')">
+              <span id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Remarks">This function creates a new solution object. You can override
+        this to create a solution of a custom subclass. Note that the default
+        implementation will already look for subclasses of 
+        <a href="../Optimization/Solution.html">Optimization.Solution</a>, so you generally don't need to override this function.
+        See <a href="../Optimization/Solution.html">Optimization.Solution</a> for more information on implementing a custom
+        solution class.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateSolution(System.UInt32):Version Information')">
+              <span id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateSolution(System.UInt32):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.CreateState">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateState:member')">
+            <span id="M:Optimization.Optimizer.CreateState:member:toggle">⊟</span> CreateState Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.CreateState:member">
+          <p class="Summary">Create state.</p>
+          <div class="Signature">protected virtual <a href="../Optimization/State.html">State</a> <b>CreateState</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateState:Returns')">
+              <span id="M:Optimization.Optimizer.CreateState:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateState:Returns">New state.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateState:Remarks')">
+              <span id="M:Optimization.Optimizer.CreateState:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateState:Remarks">Create a new state. Override this method to create a custom
+        state subclass.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.CreateState:Version Information')">
+              <span id="M:Optimization.Optimizer.CreateState:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.CreateState:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.CurrentIteration">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.CurrentIteration:member')">
+            <span id="P:Optimization.Optimizer.CurrentIteration:member:toggle">⊟</span> CurrentIteration Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.CurrentIteration:member">
+          <p class="Summary">The current iteration.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>CurrentIteration</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.CurrentIteration:Value')">
+              <span id="P:Optimization.Optimizer.CurrentIteration:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.CurrentIteration:Value">The current iteration.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.CurrentIteration:Remarks')">
+              <span id="P:Optimization.Optimizer.CurrentIteration:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.CurrentIteration:Remarks">Represents the current optimization iteration.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.CurrentIteration:Version Information')">
+              <span id="P:Optimization.Optimizer.CurrentIteration:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.CurrentIteration:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Description">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Description:member')">
+            <span id="P:Optimization.Optimizer.Description:member:toggle">⊟</span> Description Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Description:member">
+          <p class="Summary">Optimizer description.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Description</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Description:Value')">
+              <span id="P:Optimization.Optimizer.Description:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Description:Value">Optimizer description.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Description:Remarks')">
+              <span id="P:Optimization.Optimizer.Description:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Description:Remarks">Get the optimizer description.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Description:Version Information')">
+              <span id="P:Optimization.Optimizer.Description:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Description:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Extensions">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Extensions:member')">
+            <span id="P:Optimization.Optimizer.Extensions:member:toggle">⊟</span> Extensions Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Extensions:member">
+          <p class="Summary">Extensions.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Extension&gt;</a> <b>Extensions</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Extensions:Value')">
+              <span id="P:Optimization.Optimizer.Extensions:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Extensions:Value">List of extensions.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Extensions:Remarks')">
+              <span id="P:Optimization.Optimizer.Extensions:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Extensions:Remarks">Get list of extensions associated with the optimizer.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Extensions:Version Information')">
+              <span id="P:Optimization.Optimizer.Extensions:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Extensions:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Finished">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Finished:member')">
+            <span id="M:Optimization.Optimizer.Finished:member:toggle">⊟</span> Finished Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Finished:member">
+          <p class="Summary">Check whether the optimization is finished.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Finished</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Finished:Returns')">
+              <span id="M:Optimization.Optimizer.Finished:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Finished:Returns">true if the optimization is finished, false otherwise.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Finished:Remarks')">
+              <span id="M:Optimization.Optimizer.Finished:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Finished:Remarks">Override this method to implement your own way of determining
+        when the optimization is finished. By default, there is a maximum
+        iteration set by the MaxIterations setting.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Finished:Version Information')">
+              <span id="M:Optimization.Optimizer.Finished:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Finished:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Fitness">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Fitness:member')">
+            <span id="P:Optimization.Optimizer.Fitness:member:toggle">⊟</span> Fitness Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Fitness:member">
+          <p class="Summary">The fitness object template.</p>
+          <div class="Signature">public <a href="../Optimization/Fitness.html">Fitness</a> <b>Fitness</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Fitness:Value')">
+              <span id="P:Optimization.Optimizer.Fitness:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Fitness:Value">The fitness object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Fitness:Remarks')">
+              <span id="P:Optimization.Optimizer.Fitness:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Fitness:Remarks">The fitness object template associated with the optimizer.
+        The fitness object is a template used by the solutions do calculate
+        the fitness value of the solution, using a mathematical expression.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Fitness:Version Information')">
+              <span id="P:Optimization.Optimizer.Fitness:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Fitness:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):member')">
+            <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):member:toggle">⊟</span> FromStorage Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):member">
+          <p class="Summary">Restore optimizer from storage.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>FromStorage</b> (<a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a> storage, <a href="../Optimization.Storage.Records/Optimizer.html">Optimization.Storage.Records.Optimizer</a> optimizer)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Parameters')">
+              <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Parameters">
+            <dl>
+              <dt>
+                <i>storage</i>
+              </dt>
+              <dd>The storage.</dd>
+              <dt>
+                <i>optimizer</i>
+              </dt>
+              <dd>The storage optimizer record.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Remarks')">
+              <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Remarks">Restore the optimizer state from storage.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Version Information')">
+              <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):member')">
+            <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):member:toggle">⊟</span> FromStorage Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):member">
+          <p class="Summary">Restore solution from storage.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>FromStorage</b> (<a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a> storage, <a href="../Optimization.Storage.Records/Optimizer.html">Optimization.Storage.Records.Optimizer</a> optimizer, <a href="../Optimization.Storage.Records/Solution.html">Optimization.Storage.Records.Solution</a> solution, <a href="../Optimization/Solution.html">Solution</a> sol)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>storage</i>
+              </dt>
+              <dd>The storage.</dd>
+              <dt>
+                <i>optimizer</i>
+              </dt>
+              <dd>The optimizer storage record.</dd>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>The solution storage record.</dd>
+              <dt>
+                <i>sol</i>
+              </dt>
+              <dd>The solution.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Remarks">Restore a solution from storage.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution,Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):member')">
+            <span id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):member:toggle">⊟</span> FromXml Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):member">
+          <p class="Summary">Load optimizer from XML.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>FromXml</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Xml.XmlNode">System.Xml.XmlNode</a> node)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Parameters')">
+              <span id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Parameters">
+            <dl>
+              <dt>
+                <i>node</i>
+              </dt>
+              <dd>XML node.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Remarks')">
+              <span id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Remarks">Load optimizer settings, paramaters and boundaries from XML.
+        Subclasses can override this and extract custom data from the XML. The
+        passed node is the optimizer root node.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Version Information')">
+              <span id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.FromXml(System.Xml.XmlNode):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.GetDescription(System.Type)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.GetDescription(System.Type):member')">
+            <span id="M:Optimization.Optimizer.GetDescription(System.Type):member:toggle">⊟</span> GetDescription Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.GetDescription(System.Type):member">
+          <p class="Summary">Get optimizer description.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetDescription</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> type)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetDescription(System.Type):Parameters')">
+              <span id="M:Optimization.Optimizer.GetDescription(System.Type):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetDescription(System.Type):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>Optimizer type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetDescription(System.Type):Returns')">
+              <span id="M:Optimization.Optimizer.GetDescription(System.Type):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetDescription(System.Type):Returns">The optimizer description, or null if there is no description
+        available.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetDescription(System.Type):Remarks')">
+              <span id="M:Optimization.Optimizer.GetDescription(System.Type):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetDescription(System.Type):Remarks">Gets the optimizer description from the
+        <a href="../Optimization.Attributes/OptimizerAttribute.html">Optimization.Attributes.OptimizerAttribute</a>.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetDescription(System.Type):Version Information')">
+              <span id="M:Optimization.Optimizer.GetDescription(System.Type):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetDescription(System.Type):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.GetEnumerator">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.GetEnumerator:member')">
+            <span id="M:Optimization.Optimizer.GetEnumerator:member:toggle">⊟</span> GetEnumerator Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.GetEnumerator:member">
+          <p class="Summary">Get solution enumerator.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;Solution&gt;</a> <b>GetEnumerator</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetEnumerator:Returns')">
+              <span id="M:Optimization.Optimizer.GetEnumerator:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetEnumerator:Returns">Solution enumerator.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetEnumerator:Remarks')">
+              <span id="M:Optimization.Optimizer.GetEnumerator:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetEnumerator:Remarks">Implements an enumerator which enumerates over the solutions
+        in the optimizer population.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetEnumerator:Version Information')">
+              <span id="M:Optimization.Optimizer.GetEnumerator:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetEnumerator:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.GetName(System.Type)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.GetName(System.Type):member')">
+            <span id="M:Optimization.Optimizer.GetName(System.Type):member:toggle">⊟</span> GetName Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.GetName(System.Type):member">
+          <p class="Summary">Get the optimizer name.</p>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> type)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetName(System.Type):Parameters')">
+              <span id="M:Optimization.Optimizer.GetName(System.Type):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetName(System.Type):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>Optimizer type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetName(System.Type):Returns')">
+              <span id="M:Optimization.Optimizer.GetName(System.Type):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetName(System.Type):Returns">The optimizer name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetName(System.Type):Remarks')">
+              <span id="M:Optimization.Optimizer.GetName(System.Type):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetName(System.Type):Remarks">Get the optimizer name (see 
+        <a href="../Optimization.Attributes/OptimizerAttribute.html">Optimization.Attributes.OptimizerAttribute</a>). If the
+        name is not set through an attribute, the class name is used.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.GetName(System.Type):Version Information')">
+              <span id="M:Optimization.Optimizer.GetName(System.Type):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.GetName(System.Type):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.HasBoundary(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.HasBoundary(System.String):member')">
+            <span id="M:Optimization.Optimizer.HasBoundary(System.String):member:toggle">⊟</span> HasBoundary Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.HasBoundary(System.String):member">
+          <p class="Summary">Check boundary existence.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>HasBoundary</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasBoundary(System.String):Parameters')">
+              <span id="M:Optimization.Optimizer.HasBoundary(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasBoundary(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Boundary name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasBoundary(System.String):Returns')">
+              <span id="M:Optimization.Optimizer.HasBoundary(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasBoundary(System.String):Returns">Whether the boundary exists.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasBoundary(System.String):Remarks')">
+              <span id="M:Optimization.Optimizer.HasBoundary(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasBoundary(System.String):Remarks">Check whether a given boundary exists.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasBoundary(System.String):Version Information')">
+              <span id="M:Optimization.Optimizer.HasBoundary(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasBoundary(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.HasParameter(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.HasParameter(System.String):member')">
+            <span id="M:Optimization.Optimizer.HasParameter(System.String):member:toggle">⊟</span> HasParameter Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.HasParameter(System.String):member">
+          <p class="Summary">Check parameter existence.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>HasParameter</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasParameter(System.String):Parameters')">
+              <span id="M:Optimization.Optimizer.HasParameter(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasParameter(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Parameter name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasParameter(System.String):Returns')">
+              <span id="M:Optimization.Optimizer.HasParameter(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasParameter(System.String):Returns">Whether the parameter exists.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasParameter(System.String):Remarks')">
+              <span id="M:Optimization.Optimizer.HasParameter(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasParameter(System.String):Remarks">Check whether a given parameter exists.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.HasParameter(System.String):Version Information')">
+              <span id="M:Optimization.Optimizer.HasParameter(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.HasParameter(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.IncrementIteration">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.IncrementIteration:member')">
+            <span id="M:Optimization.Optimizer.IncrementIteration:member:toggle">⊟</span> IncrementIteration Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.IncrementIteration:member">
+          <p class="Summary">Increment the current iteration.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>IncrementIteration</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.IncrementIteration:Remarks')">
+              <span id="M:Optimization.Optimizer.IncrementIteration:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.IncrementIteration:Remarks">This is usually called from <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Next">Optimizer.Next</a>
+        to increase the current iteration count.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.IncrementIteration:Version Information')">
+              <span id="M:Optimization.Optimizer.IncrementIteration:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.IncrementIteration:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Initialize">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Initialize:member')">
+            <span id="M:Optimization.Optimizer.Initialize:member:toggle">⊟</span> Initialize Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Initialize:member">
+          <p class="Summary">Initialize optimizer.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Initialize</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Initialize:Remarks')">
+              <span id="M:Optimization.Optimizer.Initialize:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Initialize:Remarks">Initialize the optimizer. This creates the initial population
+        by calling <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.InitializePopulation">Optimizer.InitializePopulation</a>.
+        It furthermore tells the storage that the optimization has begun. The
+        application should call this before starting the optimization process.
+        </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Initialize:Version Information')">
+              <span id="M:Optimization.Optimizer.Initialize:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Initialize:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.InitializePopulation">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.InitializePopulation:member')">
+            <span id="M:Optimization.Optimizer.InitializePopulation:member:toggle">⊟</span> InitializePopulation Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.InitializePopulation:member">
+          <p class="Summary">Initialize solution population.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>InitializePopulation</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.InitializePopulation:Remarks')">
+              <span id="M:Optimization.Optimizer.InitializePopulation:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.InitializePopulation:Remarks">Initialize the solution population. By default, this will
+        create a number of solutions according to the PopulationSize 
+        setting.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.InitializePopulation:Version Information')">
+              <span id="M:Optimization.Optimizer.InitializePopulation:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.InitializePopulation:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Log(System.String,System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String):member')">
+            <span id="M:Optimization.Optimizer.Log(System.String,System.String):member:toggle">⊟</span> Log Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Log(System.String,System.String):member">
+          <p class="Summary">Generic message logging.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Log</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> type, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> str)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String):Parameters')">
+              <span id="M:Optimization.Optimizer.Log(System.String,System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Log(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>Log type.</dd>
+              <dt>
+                <i>str</i>
+              </dt>
+              <dd>Log message.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String):Remarks')">
+              <span id="M:Optimization.Optimizer.Log(System.String,System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Log(System.String,System.String):Remarks">The default implementation will log the message in the storage
+        object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String):Version Information')">
+              <span id="M:Optimization.Optimizer.Log(System.String,System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Log(System.String,System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):member')">
+            <span id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):member:toggle">⊟</span> Log Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):member">
+          <p class="Summary">Generic message logging.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Log</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> type, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> format, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>Log type.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>Log message format.</dd>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>Format arguments.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Remarks">The default implementation will log the message in the storage
+        object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Log(System.String,System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Name">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Name:member')">
+            <span id="P:Optimization.Optimizer.Name:member:toggle">⊟</span> Name Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Name:member">
+          <p class="Summary">The optimizer name.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Name:Value')">
+              <span id="P:Optimization.Optimizer.Name:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Name:Value">The optimizer name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Name:Remarks')">
+              <span id="P:Optimization.Optimizer.Name:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Name:Remarks">Get the optimizer name. The name is derived from the class
+        name by default. If you want to specify an alternative name, you
+        can apply the <a href="../Optimization.Attributes/OptimizerAttribute.html">Optimization.Attributes.OptimizerAttribute</a>
+        to your optimizer subclass.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Name:Version Information')">
+              <span id="P:Optimization.Optimizer.Name:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Name:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Next">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Next:member')">
+            <span id="M:Optimization.Optimizer.Next:member:toggle">⊟</span> Next Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Next:member">
+          <p class="Summary">Create new optimization iteration.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Next</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Next:Returns')">
+              <span id="M:Optimization.Optimizer.Next:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Next:Returns">true if a new iteration was created, false if the optimization
+        is finished.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Next:Remarks')">
+              <span id="M:Optimization.Optimizer.Next:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Next:Remarks">Call this function when all the solutions in the current
+        iteration have been processed and their fitnesses updated. This method
+        will in turn:
+        <ol><li>Update the current best solution</li><li>Save the current iteration in the storage</li><li>Increment the current iteration (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.IncreaseIteration">Optimizer.IncreaseIteration</a>)</li><li>Check if the optimization is finished
+          (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Finished">Optimizer.Finished</a>)</li><li>Create a new population 
+          (<a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Update">Optimizer.Update</a>)</li></ol></blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Next:Version Information')">
+              <span id="M:Optimization.Optimizer.Next:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Next:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Parameter(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Parameter(System.String):member')">
+            <span id="M:Optimization.Optimizer.Parameter(System.String):member:toggle">⊟</span> Parameter Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Parameter(System.String):member">
+          <p class="Summary">Retrieve parameter by name.</p>
+          <div class="Signature">public <a href="../Optimization/Parameter.html">Parameter</a> <b>Parameter</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Parameter(System.String):Parameters')">
+              <span id="M:Optimization.Optimizer.Parameter(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Parameter(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Parameter name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Parameter(System.String):Returns')">
+              <span id="M:Optimization.Optimizer.Parameter(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Parameter(System.String):Returns">The parameter.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Parameter(System.String):Remarks')">
+              <span id="M:Optimization.Optimizer.Parameter(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Parameter(System.String):Remarks">Get a parameter by name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Parameter(System.String):Version Information')">
+              <span id="M:Optimization.Optimizer.Parameter(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Parameter(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Parameters">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Parameters:member')">
+            <span id="P:Optimization.Optimizer.Parameters:member:toggle">⊟</span> Parameters Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Parameters:member">
+          <p class="Summary">Get parameters.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Parameter&gt;</a> <b>Parameters</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Parameters:Value')">
+              <span id="P:Optimization.Optimizer.Parameters:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Parameters:Value">List of parameters.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Parameters:Remarks')">
+              <span id="P:Optimization.Optimizer.Parameters:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Parameters:Remarks">Get the list of parameters that serve as a template for 
+        parameters in the solutions.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Parameters:Version Information')">
+              <span id="P:Optimization.Optimizer.Parameters:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Parameters:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Population">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Population:member')">
+            <span id="P:Optimization.Optimizer.Population:member:toggle">⊟</span> Population Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Population:member">
+          <p class="Summary">Current population of solutions.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Solution&gt;</a> <b>Population</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Population:Value')">
+              <span id="P:Optimization.Optimizer.Population:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Population:Value">List of solutions.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Population:Remarks')">
+              <span id="P:Optimization.Optimizer.Population:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Population:Remarks">Get the current population of solutions.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Population:Version Information')">
+              <span id="P:Optimization.Optimizer.Population:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Population:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Remove(Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Remove(Optimization.Solution):member')">
+            <span id="M:Optimization.Optimizer.Remove(Optimization.Solution):member:toggle">⊟</span> Remove Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Remove(Optimization.Solution):member">
+          <p class="Summary">Remove solution from the population.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Remove</b> (<a href="../Optimization/Solution.html">Solution</a> solution)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Remove(Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Optimizer.Remove(Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Remove(Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>Solution.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Remove(Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Optimizer.Remove(Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Remove(Optimization.Solution):Remarks">Remove a solution from the current population.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Remove(Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Optimizer.Remove(Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Remove(Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.SaveIteration">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.SaveIteration:member')">
+            <span id="M:Optimization.Optimizer.SaveIteration:member:toggle">⊟</span> SaveIteration Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.SaveIteration:member">
+          <p class="Summary">Save iteration to storage.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SaveIteration</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.SaveIteration:Remarks')">
+              <span id="M:Optimization.Optimizer.SaveIteration:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.SaveIteration:Remarks">Save the current iteration to storage.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.SaveIteration:Version Information')">
+              <span id="M:Optimization.Optimizer.SaveIteration:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.SaveIteration:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Setup">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Setup:member')">
+            <span id="M:Optimization.Optimizer.Setup:member:toggle">⊟</span> Setup Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Setup:member">
+          <p class="Summary">Setup the optimizer.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Setup</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Setup:Remarks')">
+              <span id="M:Optimization.Optimizer.Setup:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Setup:Remarks">Setup the optimizer. This is called at the end of the
+        <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Initialize">Optimizer.Initialize</a> method and at
+        the end of the <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.FromStorage">Optimizer.FromStorage</a>
+        method. Override this to setup anything after the initialization of
+        the optimizer is complete.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Setup:Version Information')">
+              <span id="M:Optimization.Optimizer.Setup:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Setup:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.State">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.State:member')">
+            <span id="P:Optimization.Optimizer.State:member:toggle">⊟</span> State Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.State:member">
+          <p class="Summary">Optimizer state.</p>
+          <div class="Signature">public <a href="../Optimization/State.html">State</a> <b>State</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.State:Value')">
+              <span id="P:Optimization.Optimizer.State:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.State:Value">Optimizer state.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.State:Remarks')">
+              <span id="P:Optimization.Optimizer.State:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.State:Remarks">Get the optimizer state. The state contains certain state
+        information that is shared with the solutions, such as a random number
+        generator and the optimizer settings.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.State:Version Information')">
+              <span id="P:Optimization.Optimizer.State:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.State:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Optimizer.Storage">
+          <a href="javascript:toggle_display('P:Optimization.Optimizer.Storage:member')">
+            <span id="P:Optimization.Optimizer.Storage:member:toggle">⊟</span> Storage Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Optimizer.Storage:member">
+          <p class="Summary">Storage object.</p>
+          <div class="Signature">public <a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a> <b>Storage</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Storage:Value')">
+              <span id="P:Optimization.Optimizer.Storage:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Storage:Value">Storage object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Storage:Remarks')">
+              <span id="P:Optimization.Optimizer.Storage:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Storage:Remarks">Get or set the storage object used for storing the results.
+        A storage object will be created by default when the optimizer is
+        created, but if necessary you can assign a different one after
+        the optimizer is constructed.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Optimizer.Storage:Version Information')">
+              <span id="P:Optimization.Optimizer.Storage:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Optimizer.Storage:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:member')">
+            <span id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:member:toggle">⊟</span> System.Collections.IEnumerable.GetEnumerator Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:member">
+          <p class="Summary">Get solution enumerator.</p>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Returns')">
+              <span id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Returns">Solution enumerator.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Remarks')">
+              <span id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Remarks">Get enumerator which enumerates over the solutions in the
+        current population.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Version Information')">
+              <span id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.System#Collections#IEnumerable#GetEnumerator:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Update">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Update:member')">
+            <span id="M:Optimization.Optimizer.Update:member:toggle">⊟</span> Update Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Update:member">
+          <p class="Summary">Update the current population.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Update:Remarks')">
+              <span id="M:Optimization.Optimizer.Update:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Update:Remarks">Update the current solution population using the fitnesses
+        of each solution. This is usually called from the 
+        <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Next">Optimizer.Next</a> method and should not be
+        needed to be called by the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Update:Version Information')">
+              <span id="M:Optimization.Optimizer.Update:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Update:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.Update(Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.Update(Optimization.Solution):member')">
+            <span id="M:Optimization.Optimizer.Update(Optimization.Solution):member:toggle">⊟</span> Update Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.Update(Optimization.Solution):member">
+          <p class="Summary">Update the solution.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../Optimization/Solution.html">Solution</a> solution)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Update(Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Optimizer.Update(Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Update(Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>Solution to update.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Update(Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Optimizer.Update(Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Update(Optimization.Solution):Remarks">Convenient function to update a single solution. The
+        default implementation of 
+        <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Update">Optimizer.Update</a> will call this function
+        for each solution in the population. If this does not make sense for
+        your particular optimization, you should override
+        <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.Update">Optimizer.Update</a>.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.Update(Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Optimizer.Update(Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.Update(Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Optimizer.UpdateBest">
+          <a href="javascript:toggle_display('M:Optimization.Optimizer.UpdateBest:member')">
+            <span id="M:Optimization.Optimizer.UpdateBest:member:toggle">⊟</span> UpdateBest Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Optimizer.UpdateBest:member">
+          <p class="Summary">Update the best solution so far.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UpdateBest</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.UpdateBest:Remarks')">
+              <span id="M:Optimization.Optimizer.UpdateBest:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.UpdateBest:Remarks">Update the best solution by looking at the fitnesses of
+        all the solutions in the current population. This function is
+        called from <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.UpdateBest">Optimizer.UpdateBest</a> and 
+        should not have to be called by the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Optimizer.UpdateBest:Version Information')">
+              <span id="M:Optimization.Optimizer.UpdateBest:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Optimizer.UpdateBest:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

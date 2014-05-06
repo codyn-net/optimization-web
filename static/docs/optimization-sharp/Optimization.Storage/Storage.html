@@ -1,0 +1,1383 @@
+<html>
+  <head>
+    <title>Optimization.Storage.Storage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Storage Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Storage.Storage">Storage  Class</h1>
+    <p class="Summary" id="T:Optimization.Storage.Storage:Summary">Abstract optimization results storage.</p>
+    <div id="T:Optimization.Storage.Storage:Signature">
+      <div class="Signature">public class  <b>Storage</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Storage.Storage:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Storage.Storage:Docs:Remarks')">
+          <span id="T:Optimization.Storage.Storage:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Storage.Storage:Docs:Remarks">Abstract class for storing optimization results. You can subclass
+    this and implement/override the relevant functions to save results in
+    altnernative formats.</blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Storage.Storage:Docs:Version Information')">
+          <span id="T:Optimization.Storage.Storage:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Storage.Storage:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Storage.Storage(Optimization.Job)">Storage</a>
+                    </b>(<a href="../Optimization/Job.html">Job</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Storage.Storage.Job">Job</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Job.html">Job</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Storage.Storage.UnixTimeStamp">UnixTimeStamp</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Storage.Storage.Uri">Uri</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Uri where data should be saved.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.Begin">Begin</a>
+                  </b>()<blockquote>Begin optimization.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.Close">Close</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.End">End</a>
+                  </b>()<blockquote>End optimization.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.Log(System.String,System.String)">Log</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Log a message.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.Open">Open</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.Query(System.String,System.Object[])">Query</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[])">Query</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Optimization.Storage/Storage+RowCallback.html">Optimization.Storage.Storage.RowCallback</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[])">QueryFirst</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[]</nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[])">QueryValue</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.ReadIteration(System.Int32)">ReadIteration</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../Optimization.Storage.Records/Iteration.html">Optimization.Storage.Records.Iteration</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.ReadIterations">ReadIterations</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.ReadJob">ReadJob</a>
+                  </b>()<nobr> : <a href="../Optimization.Storage.Records/Job.html">Optimization.Storage.Records.Job</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.ReadLog">ReadLog</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Optimization.Storage.Records.Log&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32)">ReadSolution</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../Optimization.Storage.Records/Solution.html">Optimization.Storage.Records.Solution</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.ReadSolutions(System.Int64)">ReadSolutions</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.SaveActiveParameters">SaveActiveParameters</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.SaveIteration">SaveIteration</a>
+                  </b>()<blockquote>Save current iteration.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.SaveSettings">SaveSettings</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.SaveToken">SaveToken</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Operators')">
+            <span id="Public Operators:toggle">⊟</span> Public Operators</a>
+        </h3>
+        <blockquote id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean">Conversion to System.Boolean</a>
+                  </b>(Implicit)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Storage.Storage:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Storage.Storage(Optimization.Job)">
+          <a href="javascript:toggle_display('C:Optimization.Storage.Storage(Optimization.Job):member')">
+            <span id="C:Optimization.Storage.Storage(Optimization.Job):member:toggle">⊟</span> Storage Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Storage.Storage(Optimization.Job):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public  <b>Storage</b> (<a href="../Optimization/Job.html">Optimization.Job</a> job)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Storage.Storage(Optimization.Job):Parameters')">
+              <span id="C:Optimization.Storage.Storage(Optimization.Job):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Storage.Storage(Optimization.Job):Parameters">
+            <dl>
+              <dt>
+                <i>job</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Storage.Storage(Optimization.Job):Remarks')">
+              <span id="C:Optimization.Storage.Storage(Optimization.Job):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Storage.Storage(Optimization.Job):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Storage.Storage(Optimization.Job):Version Information')">
+              <span id="C:Optimization.Storage.Storage(Optimization.Job):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Storage.Storage(Optimization.Job):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.Begin">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Begin:member')">
+            <span id="M:Optimization.Storage.Storage.Begin:member:toggle">⊟</span> Begin Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.Begin:member">
+          <p class="Summary">Begin optimization.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Begin</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Begin:Remarks')">
+              <span id="M:Optimization.Storage.Storage.Begin:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Begin:Remarks">Called when the optimization is started.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Begin:Version Information')">
+              <span id="M:Optimization.Storage.Storage.Begin:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Begin:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.Close">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Close:member')">
+            <span id="M:Optimization.Storage.Storage.Close:member:toggle">⊟</span> Close Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.Close:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Close</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Close:Remarks')">
+              <span id="M:Optimization.Storage.Storage.Close:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Close:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Close:Version Information')">
+              <span id="M:Optimization.Storage.Storage.Close:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Close:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.End">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.End:member')">
+            <span id="M:Optimization.Storage.Storage.End:member:toggle">⊟</span> End Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.End:member">
+          <p class="Summary">End optimization.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>End</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.End:Remarks')">
+              <span id="M:Optimization.Storage.Storage.End:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.End:Remarks">Called when the optimization is finished.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.End:Version Information')">
+              <span id="M:Optimization.Storage.Storage.End:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.End:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Storage.Storage.Job">
+          <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Job:member')">
+            <span id="P:Optimization.Storage.Storage.Job:member:toggle">⊟</span> Job Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Storage.Storage.Job:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="../Optimization/Job.html">Optimization.Job</a> <b>Job</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Job:Value')">
+              <span id="P:Optimization.Storage.Storage.Job:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.Job:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Job:Remarks')">
+              <span id="P:Optimization.Storage.Storage.Job:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.Job:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Job:Version Information')">
+              <span id="P:Optimization.Storage.Storage.Job:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.Job:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.Log(System.String,System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Log(System.String,System.String):member')">
+            <span id="M:Optimization.Storage.Storage.Log(System.String,System.String):member:toggle">⊟</span> Log Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.Log(System.String,System.String):member">
+          <p class="Summary">Log a message.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Log</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> type, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> str)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Log(System.String,System.String):Parameters')">
+              <span id="M:Optimization.Storage.Storage.Log(System.String,System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Log(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>Log type.</dd>
+              <dt>
+                <i>str</i>
+              </dt>
+              <dd>Log message.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Log(System.String,System.String):Remarks')">
+              <span id="M:Optimization.Storage.Storage.Log(System.String,System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Log(System.String,System.String):Remarks">Called when a message should be logged. The log is mainly used
+        as a way for the user to look back and see if there where any problems
+        at some point.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Log(System.String,System.String):Version Information')">
+              <span id="M:Optimization.Storage.Storage.Log(System.String,System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Log(System.String,System.String):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:member')">
+            <span id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:member:toggle">⊟</span> Conversion Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public static implicit operator <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> (<a href="../Optimization.Storage/Storage.html">Storage</a> s)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Parameters')">
+              <span id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Returns')">
+              <span id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Remarks')">
+              <span id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Version Information')">
+              <span id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.op_Implicit(Optimization.Storage.Storage)~System.Boolean:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.Open">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Open:member')">
+            <span id="M:Optimization.Storage.Storage.Open:member:toggle">⊟</span> Open Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.Open:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Open</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Open:Returns')">
+              <span id="M:Optimization.Storage.Storage.Open:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Open:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Open:Remarks')">
+              <span id="M:Optimization.Storage.Storage.Open:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Open:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Open:Version Information')">
+              <span id="M:Optimization.Storage.Storage.Open:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Open:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.Query(System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,System.Object[]):member')">
+            <span id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):member:toggle">⊟</span> Query Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Query</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> s, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] parameters)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameters</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Returns')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):member')">
+            <span id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):member:toggle">⊟</span> Query Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Query</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> s, <a href="../Optimization.Storage/Storage+RowCallback.html">Storage.RowCallback</a> cb, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] parameters)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Parameters')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>cb</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameters</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Returns')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Remarks')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Version Information')">
+              <span id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.Query(System.String,Optimization.Storage.Storage.RowCallback,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):member')">
+            <span id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):member:toggle">⊟</span> QueryFirst Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] <b>QueryFirst</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> s, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] parameters)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameters</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Returns')">
+              <span id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryFirst(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):member')">
+            <span id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):member:toggle">⊟</span> QueryValue Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>QueryValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> s, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] parameters)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameters</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Returns')">
+              <span id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.QueryValue(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.ReadIteration(System.Int32)">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIteration(System.Int32):member')">
+            <span id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):member:toggle">⊟</span> ReadIteration Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="../Optimization.Storage.Records/Iteration.html">Optimization.Storage.Records.Iteration</a> <b>ReadIteration</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> iteration)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIteration(System.Int32):Parameters')">
+              <span id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>iteration</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIteration(System.Int32):Returns')">
+              <span id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIteration(System.Int32):Remarks')">
+              <span id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIteration(System.Int32):Version Information')">
+              <span id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIteration(System.Int32):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.ReadIterations">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIterations:member')">
+            <span id="M:Optimization.Storage.Storage.ReadIterations:member:toggle">⊟</span> ReadIterations Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.ReadIterations:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>ReadIterations</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIterations:Returns')">
+              <span id="M:Optimization.Storage.Storage.ReadIterations:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIterations:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIterations:Remarks')">
+              <span id="M:Optimization.Storage.Storage.ReadIterations:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIterations:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadIterations:Version Information')">
+              <span id="M:Optimization.Storage.Storage.ReadIterations:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadIterations:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.ReadJob">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadJob:member')">
+            <span id="M:Optimization.Storage.Storage.ReadJob:member:toggle">⊟</span> ReadJob Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.ReadJob:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="../Optimization.Storage.Records/Job.html">Optimization.Storage.Records.Job</a> <b>ReadJob</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadJob:Returns')">
+              <span id="M:Optimization.Storage.Storage.ReadJob:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadJob:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadJob:Remarks')">
+              <span id="M:Optimization.Storage.Storage.ReadJob:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadJob:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadJob:Version Information')">
+              <span id="M:Optimization.Storage.Storage.ReadJob:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadJob:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.ReadLog">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadLog:member')">
+            <span id="M:Optimization.Storage.Storage.ReadLog:member:toggle">⊟</span> ReadLog Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.ReadLog:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Optimization.Storage.Records.Log&gt;</a> <b>ReadLog</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadLog:Returns')">
+              <span id="M:Optimization.Storage.Storage.ReadLog:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadLog:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadLog:Remarks')">
+              <span id="M:Optimization.Storage.Storage.ReadLog:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadLog:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadLog:Version Information')">
+              <span id="M:Optimization.Storage.Storage.ReadLog:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadLog:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32)">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):member')">
+            <span id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):member:toggle">⊟</span> ReadSolution Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="../Optimization.Storage.Records/Solution.html">Optimization.Storage.Records.Solution</a> <b>ReadSolution</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> iteration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> id)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Parameters')">
+              <span id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>iteration</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>id</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Returns')">
+              <span id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Remarks')">
+              <span id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Version Information')">
+              <span id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolution(System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64)">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolutions(System.Int64):member')">
+            <span id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):member:toggle">⊟</span> ReadSolutions Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>ReadSolutions</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> iteration)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Parameters')">
+              <span id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Parameters">
+            <dl>
+              <dt>
+                <i>iteration</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Returns')">
+              <span id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Remarks')">
+              <span id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Version Information')">
+              <span id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.ReadSolutions(System.Int64):Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.SaveActiveParameters">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveActiveParameters:member')">
+            <span id="M:Optimization.Storage.Storage.SaveActiveParameters:member:toggle">⊟</span> SaveActiveParameters Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.SaveActiveParameters:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SaveActiveParameters</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveActiveParameters:Remarks')">
+              <span id="M:Optimization.Storage.Storage.SaveActiveParameters:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveActiveParameters:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveActiveParameters:Version Information')">
+              <span id="M:Optimization.Storage.Storage.SaveActiveParameters:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveActiveParameters:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.SaveIteration">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveIteration:member')">
+            <span id="M:Optimization.Storage.Storage.SaveIteration:member:toggle">⊟</span> SaveIteration Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.SaveIteration:member">
+          <p class="Summary">Save current iteration.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SaveIteration</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveIteration:Remarks')">
+              <span id="M:Optimization.Storage.Storage.SaveIteration:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveIteration:Remarks">Called when the current iteration of the optimiation should 
+        be saved.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveIteration:Version Information')">
+              <span id="M:Optimization.Storage.Storage.SaveIteration:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveIteration:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.SaveSettings">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveSettings:member')">
+            <span id="M:Optimization.Storage.Storage.SaveSettings:member:toggle">⊟</span> SaveSettings Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.SaveSettings:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SaveSettings</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveSettings:Remarks')">
+              <span id="M:Optimization.Storage.Storage.SaveSettings:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveSettings:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveSettings:Version Information')">
+              <span id="M:Optimization.Storage.Storage.SaveSettings:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveSettings:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Storage.Storage.SaveToken">
+          <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveToken:member')">
+            <span id="M:Optimization.Storage.Storage.SaveToken:member:toggle">⊟</span> SaveToken Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Storage.Storage.SaveToken:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SaveToken</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveToken:Remarks')">
+              <span id="M:Optimization.Storage.Storage.SaveToken:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveToken:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Storage.Storage.SaveToken:Version Information')">
+              <span id="M:Optimization.Storage.Storage.SaveToken:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Storage.Storage.SaveToken:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Storage.Storage.UnixTimeStamp">
+          <a href="javascript:toggle_display('P:Optimization.Storage.Storage.UnixTimeStamp:member')">
+            <span id="P:Optimization.Storage.Storage.UnixTimeStamp:member:toggle">⊟</span> UnixTimeStamp Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Storage.Storage.UnixTimeStamp:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>UnixTimeStamp</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.UnixTimeStamp:Value')">
+              <span id="P:Optimization.Storage.Storage.UnixTimeStamp:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.UnixTimeStamp:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.UnixTimeStamp:Remarks')">
+              <span id="P:Optimization.Storage.Storage.UnixTimeStamp:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.UnixTimeStamp:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.UnixTimeStamp:Version Information')">
+              <span id="P:Optimization.Storage.Storage.UnixTimeStamp:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.UnixTimeStamp:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Storage.Storage.Uri">
+          <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Uri:member')">
+            <span id="P:Optimization.Storage.Storage.Uri:member:toggle">⊟</span> Uri Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Storage.Storage.Uri:member">
+          <p class="Summary">Uri where data should be saved.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Uri</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Uri:Value')">
+              <span id="P:Optimization.Storage.Storage.Uri:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.Uri:Value">An uri.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Uri:Remarks')">
+              <span id="P:Optimization.Storage.Storage.Uri:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.Uri:Remarks">Get or set the uri at which data should be saved.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Storage.Storage.Uri:Version Information')">
+              <span id="P:Optimization.Storage.Storage.Uri:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Storage.Storage.Uri:Version Information">
+            <b>Namespace: </b>Optimization.Storage<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

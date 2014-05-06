@@ -1,0 +1,978 @@
+<html>
+  <head>
+    <title>Optimization.Solution</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Solution">Solution  Class</h1>
+    <p class="Summary" id="T:Optimization.Solution:Summary">Optimization solution class.</p>
+    <div id="T:Optimization.Solution:Signature">
+      <div class="Signature">public class  <b>Solution</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ICloneable">ICloneable</a></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Solution:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Solution:Docs:Remarks')">
+          <span id="T:Optimization.Solution:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Solution:Docs:Remarks">
+        <p>
+        The optimziation solution class represents a single solution,
+        (or individual in GA terms) in the population of solutions in the
+        optimizer. It consists of an id (<a href="../Optimization/Solution.html#P:Optimization.Solution.Id">Solution.Id</a>),
+        a set of parameters (<a href="../Optimization/Solution.html#P:Optimization.Solution.Parameters">Solution.Parameters</a>), 
+        a fitness (<a href="../Optimization/Solution.html#P:Optimization.Solution.Fitness">Solution.Fitness</a>) and a set of 
+        additional user defined data (<a href="../Optimization/Solution.html#P:Optimization.Solution.Data">Solution.Data</a>).
+      </p>
+        <p>
+        If needed, you can subclass the solution class to define your own
+        kind of solution class, which can be convenient if you would like
+        to put some of the logic of your optimization algorithm in the
+        solution class. The optimizer will automatically find any subclass
+        of the solution class and use it automatically to create new solutions.
+        If you however need explicit control over which solution class to
+        use, you should override <a href="../Optimization/Optimizer.html#M:Optimization.Optimizer.CreateSolution">Optimizer.CreateSolution</a>.
+        The solution class implements the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ICloneable">ICloneable</a> 
+        interface which makes a deep copy of the solution. If you subclass
+        the solution class, make sure you to override the 
+        <a href="../Optimization/Solution.html#M:Optimization.Solution.Clone">Solution.Clone</a> method to create a new
+        solution of your subclass. Furthermore, make sure to call
+        <a href="../Optimization/Solution.html#M:Optimization.Solution.Copy">Solution.Copy</a> on the new object to ensure
+        the solution correctly copies over its data from the original solution.
+        If you need your class to be able to be subclassed, you should
+        implement this copy mechanism too.
+      </p>
+      </blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Solution:Docs:Version Information')">
+          <span id="T:Optimization.Solution:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Solution:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Solution">Solution</a>
+                    </b>()</div>
+                </td>
+                <td>Create new solution.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State)">Solution</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>, <a href="../Optimization/Fitness.html">Fitness</a>, <a href="../Optimization/State.html">State</a>)</div>
+                </td>
+                <td>Create new solution.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Solution.Data">Data</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a>
+                  </i>. User defined data.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Solution.Fitness">Fitness</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Fitness.html">Fitness</a>
+                  </i>. The fitness.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Solution.Id">Id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. The id.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Solution.Parameters">Parameters</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Parameter&gt;</a>
+                  </i>. List of solution parameters.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Solution.State">State</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/State.html">State</a>
+                  </i>. Get solution optimization state.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Add(Optimization.Parameter)">Add</a>
+                  </b>(<a href="../Optimization/Parameter.html">Parameter</a>)<blockquote>Add a new parameter to the solution.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Add(System.String,System.Double,System.Double)">Add</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="../Optimization/Parameter.html">Parameter</a></nobr><blockquote>Add a new parameter to the solution.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Clone">Clone</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></nobr><blockquote>Clone (deep copy) the current solution.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Copy(Optimization.Solution)">Copy</a>
+                  </b>(<a href="../Optimization/Solution.html">Solution</a>)<blockquote>Copy data from another solution.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution)">FromStorage</a>
+                  </b>(<a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a>, <a href="../Optimization.Storage.Records/Optimizer.html">Optimization.Storage.Records.Optimizer</a>, <a href="../Optimization.Storage.Records/Solution.html">Optimization.Storage.Records.Solution</a>)<blockquote>Restore solution from storage.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Remove(System.String)">Remove</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Remove parameter specified by name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Reset">Reset</a>
+                  </b>()<blockquote>Reset all parameters to random initial values.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.ToString">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Solution in string representation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double})">Update</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a>)<blockquote>Update the fitness of the solution.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Solution:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Solution">
+          <a href="javascript:toggle_display('C:Optimization.Solution:member')">
+            <span id="C:Optimization.Solution:member:toggle">⊟</span> Solution Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Solution:member">
+          <p class="Summary">Create new solution.</p>
+          <div class="Signature">public  <b>Solution</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Solution:Remarks')">
+              <span id="C:Optimization.Solution:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Solution:Remarks">Create a new stub solution. Generally you don't use this
+        function, but the <a href="../Optimization/Solution.html#C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State)">Solution(uint, Fitness, State)</a>
+        constructor instead.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Solution:Version Information')">
+              <span id="C:Optimization.Solution:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Solution:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State)">
+          <a href="javascript:toggle_display('C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):member')">
+            <span id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):member:toggle">⊟</span> Solution Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):member">
+          <p class="Summary">Create new solution.</p>
+          <div class="Signature">public  <b>Solution</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> id, <a href="../Optimization/Fitness.html">Fitness</a> fitness, <a href="../Optimization/State.html">State</a> state)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Parameters')">
+              <span id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Parameters">
+            <dl>
+              <dt>
+                <i>id</i>
+              </dt>
+              <dd>The solution id.</dd>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>The fitness template.</dd>
+              <dt>
+                <i>state</i>
+              </dt>
+              <dd>The optimization state.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Remarks')">
+              <span id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Remarks">Create a new solution. This is usually called from the
+        optimizer to create a new solution. The supplied fitness object
+        should be used to update and evaluate the solution fitness. The
+        state contains state information for the optimization of which the
+        solution is a part.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Version Information')">
+              <span id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Solution(System.UInt32,Optimization.Fitness,Optimization.State):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Add(Optimization.Parameter)">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Add(Optimization.Parameter):member')">
+            <span id="M:Optimization.Solution.Add(Optimization.Parameter):member:toggle">⊟</span> Add Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Add(Optimization.Parameter):member">
+          <p class="Summary">Add a new parameter to the solution.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="../Optimization/Parameter.html">Parameter</a> parameter)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(Optimization.Parameter):Parameters')">
+              <span id="M:Optimization.Solution.Add(Optimization.Parameter):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(Optimization.Parameter):Parameters">
+            <dl>
+              <dt>
+                <i>parameter</i>
+              </dt>
+              <dd>Parameter.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(Optimization.Parameter):Remarks')">
+              <span id="M:Optimization.Solution.Add(Optimization.Parameter):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(Optimization.Parameter):Remarks">Add a new parameter to the solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(Optimization.Parameter):Version Information')">
+              <span id="M:Optimization.Solution.Add(Optimization.Parameter):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(Optimization.Parameter):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Add(System.String,System.Double,System.Double)">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Add(System.String,System.Double,System.Double):member')">
+            <span id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):member:toggle">⊟</span> Add Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):member">
+          <p class="Summary">Add a new parameter to the solution.</p>
+          <div class="Signature">public <a href="../Optimization/Parameter.html">Parameter</a> <b>Add</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> min, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> max)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(System.String,System.Double,System.Double):Parameters')">
+              <span id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Parameter name.</dd>
+              <dt>
+                <i>min</i>
+              </dt>
+              <dd>Parameter minimum value.</dd>
+              <dt>
+                <i>max</i>
+              </dt>
+              <dd>Parameter maximum value.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(System.String,System.Double,System.Double):Returns')">
+              <span id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Returns">The new parameter object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(System.String,System.Double,System.Double):Remarks')">
+              <span id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Remarks">Add a new parameter to the solution given a name and
+        parameter value boundaries. This creates a new parameter object and
+        adds it to the current list of parameters for this solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Add(System.String,System.Double,System.Double):Version Information')">
+              <span id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Add(System.String,System.Double,System.Double):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Clone">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Clone:member')">
+            <span id="M:Optimization.Solution.Clone:member:toggle">⊟</span> Clone Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Clone:member">
+          <p class="Summary">Clone (deep copy) the current solution.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>Clone</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Clone:Returns')">
+              <span id="M:Optimization.Solution.Clone:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Clone:Returns">The new, cloned solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Clone:Remarks')">
+              <span id="M:Optimization.Solution.Clone:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Clone:Remarks">Create a deep copy of the solution. Subclasses must override
+        this and create a new solution object based on the subclass. They
+        should then call <a href="../Optimization/Solution.html#M:Optimization.Solution.Copy">Solution.Copy</a> and return
+        the new object. If the subclass has reference type data of its own
+        it should also override <a href="../Optimization/Solution.html#M:Optimization.Solution.Copy">Solution.Copy</a>
+        and in it copy its own data. Make sure to call 
+        <a href="../Optimization/Solution.html#M:Optimization.Solution.Copy">Solution.Copy</a> on the base class if you
+        do.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Clone:Version Information')">
+              <span id="M:Optimization.Solution.Clone:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Clone:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Copy(Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Copy(Optimization.Solution):member')">
+            <span id="M:Optimization.Solution.Copy(Optimization.Solution):member:toggle">⊟</span> Copy Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Copy(Optimization.Solution):member">
+          <p class="Summary">Copy data from another solution.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Copy</b> (<a href="../Optimization/Solution.html">Solution</a> other)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Copy(Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Solution.Copy(Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Copy(Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>other</i>
+              </dt>
+              <dd>The solution to copy from.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Copy(Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Solution.Copy(Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Copy(Optimization.Solution):Remarks">Copy the data from another solution. This copy should be
+        a deep copy of all reference data. This method is called from
+        the <a href="../Optimization/Solution.html#M:Optimization.Solution.Clone">Solution.Clone</a> method and should
+        be overriden in subclasses if they have their own data to copy
+        (see <a href="../Optimization/Solution.html#M:Optimization.Solution.Clone">Solution.Clone</a> for more information)
+        </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Copy(Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Solution.Copy(Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Copy(Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Solution.Data">
+          <a href="javascript:toggle_display('P:Optimization.Solution.Data:member')">
+            <span id="P:Optimization.Solution.Data:member:toggle">⊟</span> Data Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Solution.Data:member">
+          <p class="Summary">User defined data.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a> <b>Data</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Data:Value')">
+              <span id="P:Optimization.Solution.Data:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Data:Value">User defined data dictionary.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Data:Remarks')">
+              <span id="P:Optimization.Solution.Data:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Data:Remarks">Get or set user defined data in the solution. User defined
+        data will normally be saved along with the results, and it is the
+        preferred way of saving extra data. Additionally, any data that
+        is send in a <a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a> from
+        the master will also be stored in this dictionary.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Data:Version Information')">
+              <span id="P:Optimization.Solution.Data:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Data:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Solution.Fitness">
+          <a href="javascript:toggle_display('P:Optimization.Solution.Fitness:member')">
+            <span id="P:Optimization.Solution.Fitness:member:toggle">⊟</span> Fitness Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Solution.Fitness:member">
+          <p class="Summary">The fitness.</p>
+          <div class="Signature">public <a href="../Optimization/Fitness.html">Fitness</a> <b>Fitness</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Fitness:Value')">
+              <span id="P:Optimization.Solution.Fitness:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Fitness:Value">The fitness object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Fitness:Remarks')">
+              <span id="P:Optimization.Solution.Fitness:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Fitness:Remarks">The solution fitness.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Fitness:Version Information')">
+              <span id="P:Optimization.Solution.Fitness:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Fitness:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):member')">
+            <span id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):member:toggle">⊟</span> FromStorage Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):member">
+          <p class="Summary">Restore solution from storage.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>FromStorage</b> (<a href="../Optimization.Storage/Storage.html">Optimization.Storage.Storage</a> storage, <a href="../Optimization.Storage.Records/Optimizer.html">Optimization.Storage.Records.Optimizer</a> optimizer, <a href="../Optimization.Storage.Records/Solution.html">Optimization.Storage.Records.Solution</a> solution)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Parameters')">
+              <span id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>storage</i>
+              </dt>
+              <dd>The storage.</dd>
+              <dt>
+                <i>optimizer</i>
+              </dt>
+              <dd>The optimizer storage record.</dd>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>The solution storage record.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Remarks')">
+              <span id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Remarks">Restore the solution state from storage.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Version Information')">
+              <span id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.FromStorage(Optimization.Storage.Storage,Optimization.Storage.Records.Optimizer,Optimization.Storage.Records.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Solution.Id">
+          <a href="javascript:toggle_display('P:Optimization.Solution.Id:member')">
+            <span id="P:Optimization.Solution.Id:member:toggle">⊟</span> Id Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Solution.Id:member">
+          <p class="Summary">The id.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>Id</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Id:Value')">
+              <span id="P:Optimization.Solution.Id:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Id:Value">The solution id.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Id:Remarks')">
+              <span id="P:Optimization.Solution.Id:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Id:Remarks">The solution id.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Id:Version Information')">
+              <span id="P:Optimization.Solution.Id:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Id:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Solution.Parameters">
+          <a href="javascript:toggle_display('P:Optimization.Solution.Parameters:member')">
+            <span id="P:Optimization.Solution.Parameters:member:toggle">⊟</span> Parameters Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Solution.Parameters:member">
+          <p class="Summary">List of solution parameters.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.List`1">List&lt;Parameter&gt;</a> <b>Parameters</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Parameters:Value')">
+              <span id="P:Optimization.Solution.Parameters:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Parameters:Value">List of parameters.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Parameters:Remarks')">
+              <span id="P:Optimization.Solution.Parameters:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Parameters:Remarks">List of solution parameters.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.Parameters:Version Information')">
+              <span id="P:Optimization.Solution.Parameters:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.Parameters:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Remove(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Remove(System.String):member')">
+            <span id="M:Optimization.Solution.Remove(System.String):member:toggle">⊟</span> Remove Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Remove(System.String):member">
+          <p class="Summary">Remove parameter specified by name.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Remove</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Remove(System.String):Parameters')">
+              <span id="M:Optimization.Solution.Remove(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Remove(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Parameter name.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Remove(System.String):Remarks')">
+              <span id="M:Optimization.Solution.Remove(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Remove(System.String):Remarks">Removes a parameter specified by name.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Remove(System.String):Version Information')">
+              <span id="M:Optimization.Solution.Remove(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Remove(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Reset">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Reset:member')">
+            <span id="M:Optimization.Solution.Reset:member:toggle">⊟</span> Reset Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Reset:member">
+          <p class="Summary">Reset all parameters to random initial values.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Reset:Remarks')">
+              <span id="M:Optimization.Solution.Reset:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Reset:Remarks">Reset all the parameters to random initial values within
+        their respecitive boundaries.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Reset:Version Information')">
+              <span id="M:Optimization.Solution.Reset:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Reset:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Solution.State">
+          <a href="javascript:toggle_display('P:Optimization.Solution.State:member')">
+            <span id="P:Optimization.Solution.State:member:toggle">⊟</span> State Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Solution.State:member">
+          <p class="Summary">Get solution optimization state.</p>
+          <div class="Signature">public <a href="../Optimization/State.html">State</a> <b>State</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.State:Value')">
+              <span id="P:Optimization.Solution.State:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.State:Value">Optimization state.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.State:Remarks')">
+              <span id="P:Optimization.Solution.State:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.State:Remarks">Get solution optimization state.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Solution.State:Version Information')">
+              <span id="P:Optimization.Solution.State:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Solution.State:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.ToString">
+          <a href="javascript:toggle_display('M:Optimization.Solution.ToString:member')">
+            <span id="M:Optimization.Solution.ToString:member:toggle">⊟</span> ToString Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.ToString:member">
+          <p class="Summary">Solution in string representation.</p>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.ToString:Returns')">
+              <span id="M:Optimization.Solution.ToString:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.ToString:Returns">String representation of the solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.ToString:Remarks')">
+              <span id="M:Optimization.Solution.ToString:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.ToString:Remarks">Convenient human readable string representation of a solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.ToString:Version Information')">
+              <span id="M:Optimization.Solution.ToString:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.ToString:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double})">
+          <a href="javascript:toggle_display('M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):member')">
+            <span id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):member:toggle">⊟</span> Update Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):member">
+          <p class="Summary">Update the fitness of the solution.</p>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, double&gt;</a> fitness)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters')">
+              <span id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Parameters">
+            <dl>
+              <dt>
+                <i>fitness</i>
+              </dt>
+              <dd>New solution fitness values.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks')">
+              <span id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Remarks">This updates the fitness of the solution and is usually called
+        by the optimization application when a solution has been evaluated
+        successfully and its fitness has been received.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information')">
+              <span id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Solution.Update(System.Collections.Generic.Dictionary{System.String,System.Double}):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

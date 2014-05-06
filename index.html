@@ -1,0 +1,36 @@
+<%= template 'templates/header.html' %>
+
+<% markdown do %>
+
+# Optimization framework
+This website makes available an open source framework for easy to configure, large scale and
+distributed, population based optimizations. The framework is specifically targeted for optimizations
+for which the time to evaluate a task is much longer than the time to perform the optimization itself
+(once the task has been evaluated), i.e. it does not provide high performance optimization algorithms.
+Additionally, it targets consumer grade hardware, i.e. simple clusters that can be built and assembled
+from off-the-shelf components.
+
+## Design
+The design of the framework is relatively simple and consists of a variety of components which communicate
+with each other over the network. Using automatic discovery of workers, optimizations can be easily
+distributed over a large number of PCs. A single master daemon is responsible for accepting new tasks and
+distributing them to available worker processes (which are not required to run on the same PC). These workers
+receive tasks from the master and find a dispatcher suitable for evaluating a specific task. Dispatchers
+are decoupled from workers, i.e. are separate processes, such that it is easy to make customized dispatcher
+which are capable of evaluating specific tasks. After a task is evaluated, it is propagated back to the client
+for processing through the worker and master processes. For more information on the architecture and design
+of the framework see [documentation](documentation.html).
+
+## Availability
+All framework components are made available freely and are released under GPLv2 and LGPLv2 licenses. Please
+see [downloads](downloads.html) for more information on getting and installing the framework. Note that there
+are currently only binary releases for Ubuntu. The software can be compiled for OS X without too much effort,
+but is not compatible with Windows.
+
+## Contact
+For any questions regarding the framework, installation issues or general help with regard to the software,
+please contact <a href='#'>jesse&nbsp;at&nbsp;codyn&nbsp;dot&nbsp;net</a>.
+
+<% end %>
+
+<%= template 'templates/footer.html' %>

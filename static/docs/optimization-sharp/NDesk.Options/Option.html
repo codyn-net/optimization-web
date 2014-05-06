@@ -1,0 +1,876 @@
+<html>
+  <head>
+    <title>NDesk.Options.Option</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">NDesk.Options Namespace</a></div>
+    <h1 class="PageTitle" id="T:NDesk.Options.Option">Option  Class</h1>
+    <p class="Summary" id="T:NDesk.Options.Option:Summary">
+      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+    </p>
+    <div id="T:NDesk.Options.Option:Signature">
+      <div class="Signature">public abstract class  <b>Option</b></div>
+    </div>
+    <div class="Remarks" id="T:NDesk.Options.Option:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:NDesk.Options.Option:Docs:Remarks')">
+          <span id="T:NDesk.Options.Option:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:NDesk.Options.Option:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:NDesk.Options.Option:Docs:Version Information')">
+          <span id="T:NDesk.Options.Option:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:NDesk.Options.Option:Docs:Version Information">
+        <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Protected Constructors')">
+            <span id="Protected Constructors:toggle">⊟</span> Protected Constructors</a>
+        </h3>
+        <blockquote id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:NDesk.Options.Option(System.String,System.String)">Option</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:NDesk.Options.Option(System.String,System.String,System.Int32)">Option</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:NDesk.Options.Option.Description">Description</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:NDesk.Options.Option.MaxValueCount">MaxValueCount</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:NDesk.Options.Option.OptionValueType">OptionValueType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../NDesk.Options/OptionValueType.html">NDesk.Options.OptionValueType</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:NDesk.Options.Option.Prototype">Prototype</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:NDesk.Options.Option.GetNames">GetNames</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[]</nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:NDesk.Options.Option.GetValueSeparators">GetValueSeparators</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[]</nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext)">Invoke</a>
+                  </b>(<a href="../NDesk.Options/OptionContext.html">NDesk.Options.OptionContext</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:NDesk.Options.Option.ToString">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Protected Methods')">
+            <span id="Protected Methods:toggle">⊟</span> Protected Methods</a>
+        </h3>
+        <blockquote id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext)">OnParseComplete</a>
+                  </b>(<a href="../NDesk.Options/OptionContext.html">NDesk.Options.OptionContext</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext)">Parse&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../NDesk.Options/OptionContext.html">NDesk.Options.OptionContext</a>)<nobr> : <i title="To be added.">T</i></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:NDesk.Options.Option:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:NDesk.Options.Option(System.String,System.String)">
+          <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String):member')">
+            <span id="C:NDesk.Options.Option(System.String,System.String):member:toggle">⊟</span> Option Constructor</a>
+        </h3>
+        <blockquote id="C:NDesk.Options.Option(System.String,System.String):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">protected  <b>Option</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prototype, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> description)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String):Parameters')">
+              <span id="C:NDesk.Options.Option(System.String,System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:NDesk.Options.Option(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>prototype</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>description</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String):Remarks')">
+              <span id="C:NDesk.Options.Option(System.String,System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:NDesk.Options.Option(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String):Version Information')">
+              <span id="C:NDesk.Options.Option(System.String,System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:NDesk.Options.Option(System.String,System.String):Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:NDesk.Options.Option(System.String,System.String,System.Int32)">
+          <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String,System.Int32):member')">
+            <span id="C:NDesk.Options.Option(System.String,System.String,System.Int32):member:toggle">⊟</span> Option Constructor</a>
+        </h3>
+        <blockquote id="C:NDesk.Options.Option(System.String,System.String,System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">protected  <b>Option</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prototype, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> description, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> maxValueCount)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String,System.Int32):Parameters')">
+              <span id="C:NDesk.Options.Option(System.String,System.String,System.Int32):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:NDesk.Options.Option(System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>prototype</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>description</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>maxValueCount</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String,System.Int32):Remarks')">
+              <span id="C:NDesk.Options.Option(System.String,System.String,System.Int32):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:NDesk.Options.Option(System.String,System.String,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:NDesk.Options.Option(System.String,System.String,System.Int32):Version Information')">
+              <span id="C:NDesk.Options.Option(System.String,System.String,System.Int32):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:NDesk.Options.Option(System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:NDesk.Options.Option.Description">
+          <a href="javascript:toggle_display('P:NDesk.Options.Option.Description:member')">
+            <span id="P:NDesk.Options.Option.Description:member:toggle">⊟</span> Description Property</a>
+        </h3>
+        <blockquote id="P:NDesk.Options.Option.Description:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Description</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.Description:Value')">
+              <span id="P:NDesk.Options.Option.Description:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.Description:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.Description:Remarks')">
+              <span id="P:NDesk.Options.Option.Description:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.Description:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.Description:Version Information')">
+              <span id="P:NDesk.Options.Option.Description:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.Description:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:NDesk.Options.Option.GetNames">
+          <a href="javascript:toggle_display('M:NDesk.Options.Option.GetNames:member')">
+            <span id="M:NDesk.Options.Option.GetNames:member:toggle">⊟</span> GetNames Method</a>
+        </h3>
+        <blockquote id="M:NDesk.Options.Option.GetNames:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] <b>GetNames</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.GetNames:Returns')">
+              <span id="M:NDesk.Options.Option.GetNames:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.GetNames:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.GetNames:Remarks')">
+              <span id="M:NDesk.Options.Option.GetNames:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.GetNames:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.GetNames:Version Information')">
+              <span id="M:NDesk.Options.Option.GetNames:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.GetNames:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:NDesk.Options.Option.GetValueSeparators">
+          <a href="javascript:toggle_display('M:NDesk.Options.Option.GetValueSeparators:member')">
+            <span id="M:NDesk.Options.Option.GetValueSeparators:member:toggle">⊟</span> GetValueSeparators Method</a>
+        </h3>
+        <blockquote id="M:NDesk.Options.Option.GetValueSeparators:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] <b>GetValueSeparators</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.GetValueSeparators:Returns')">
+              <span id="M:NDesk.Options.Option.GetValueSeparators:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.GetValueSeparators:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.GetValueSeparators:Remarks')">
+              <span id="M:NDesk.Options.Option.GetValueSeparators:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.GetValueSeparators:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.GetValueSeparators:Version Information')">
+              <span id="M:NDesk.Options.Option.GetValueSeparators:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.GetValueSeparators:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext)">
+          <a href="javascript:toggle_display('M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):member')">
+            <span id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):member:toggle">⊟</span> Invoke Method</a>
+        </h3>
+        <blockquote id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Invoke</b> (<a href="../NDesk.Options/OptionContext.html">OptionContext</a> c)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Parameters')">
+              <span id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Parameters">
+            <dl>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Remarks')">
+              <span id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Version Information')">
+              <span id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Invoke(NDesk.Options.OptionContext):Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:NDesk.Options.Option.MaxValueCount">
+          <a href="javascript:toggle_display('P:NDesk.Options.Option.MaxValueCount:member')">
+            <span id="P:NDesk.Options.Option.MaxValueCount:member:toggle">⊟</span> MaxValueCount Property</a>
+        </h3>
+        <blockquote id="P:NDesk.Options.Option.MaxValueCount:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaxValueCount</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.MaxValueCount:Value')">
+              <span id="P:NDesk.Options.Option.MaxValueCount:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.MaxValueCount:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.MaxValueCount:Remarks')">
+              <span id="P:NDesk.Options.Option.MaxValueCount:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.MaxValueCount:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.MaxValueCount:Version Information')">
+              <span id="P:NDesk.Options.Option.MaxValueCount:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.MaxValueCount:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext)">
+          <a href="javascript:toggle_display('M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):member')">
+            <span id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):member:toggle">⊟</span> OnParseComplete Method</a>
+        </h3>
+        <blockquote id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnParseComplete</b> (<a href="../NDesk.Options/OptionContext.html">OptionContext</a> c)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Parameters')">
+              <span id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Parameters">
+            <dl>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Remarks')">
+              <span id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Version Information')">
+              <span id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.OnParseComplete(NDesk.Options.OptionContext):Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:NDesk.Options.Option.OptionValueType">
+          <a href="javascript:toggle_display('P:NDesk.Options.Option.OptionValueType:member')">
+            <span id="P:NDesk.Options.Option.OptionValueType:member:toggle">⊟</span> OptionValueType Property</a>
+        </h3>
+        <blockquote id="P:NDesk.Options.Option.OptionValueType:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="../NDesk.Options/OptionValueType.html">OptionValueType</a> <b>OptionValueType</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.OptionValueType:Value')">
+              <span id="P:NDesk.Options.Option.OptionValueType:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.OptionValueType:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.OptionValueType:Remarks')">
+              <span id="P:NDesk.Options.Option.OptionValueType:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.OptionValueType:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.OptionValueType:Version Information')">
+              <span id="P:NDesk.Options.Option.OptionValueType:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.OptionValueType:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext)">
+          <a href="javascript:toggle_display('M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):member')">
+            <span id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):member:toggle">⊟</span> Parse&lt;T&gt; Generic Method</a>
+        </h3>
+        <blockquote id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">protected static <i title="To be added.">T</i> <b>Parse&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value, <a href="../NDesk.Options/OptionContext.html">OptionContext</a> c)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Type Parameters')">
+              <span id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Type Parameters:toggle">⊟</span> Type Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Parameters')">
+              <span id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Returns')">
+              <span id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Remarks')">
+              <span id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Version Information')">
+              <span id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.Parse``1(System.String,NDesk.Options.OptionContext):Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:NDesk.Options.Option.Prototype">
+          <a href="javascript:toggle_display('P:NDesk.Options.Option.Prototype:member')">
+            <span id="P:NDesk.Options.Option.Prototype:member:toggle">⊟</span> Prototype Property</a>
+        </h3>
+        <blockquote id="P:NDesk.Options.Option.Prototype:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Prototype</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.Prototype:Value')">
+              <span id="P:NDesk.Options.Option.Prototype:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.Prototype:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.Prototype:Remarks')">
+              <span id="P:NDesk.Options.Option.Prototype:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.Prototype:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:NDesk.Options.Option.Prototype:Version Information')">
+              <span id="P:NDesk.Options.Option.Prototype:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:NDesk.Options.Option.Prototype:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:NDesk.Options.Option.ToString">
+          <a href="javascript:toggle_display('M:NDesk.Options.Option.ToString:member')">
+            <span id="M:NDesk.Options.Option.ToString:member:toggle">⊟</span> ToString Method</a>
+        </h3>
+        <blockquote id="M:NDesk.Options.Option.ToString:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.ToString:Returns')">
+              <span id="M:NDesk.Options.Option.ToString:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.ToString:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.ToString:Remarks')">
+              <span id="M:NDesk.Options.Option.ToString:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.ToString:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:NDesk.Options.Option.ToString:Version Information')">
+              <span id="M:NDesk.Options.Option.ToString:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:NDesk.Options.Option.ToString:Version Information">
+            <b>Namespace: </b>NDesk.Options<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

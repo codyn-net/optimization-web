@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>User Layer</TITLE>
+<META NAME="description" CONTENT="User Layer">
+<META NAME="keywords" CONTENT="concept">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="concept.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html132"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html126"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node4.html">Server Layer</A>
+<B> Up:</B> <A NAME="tex2html133"
+  HREF="node2.html">Conceptual Overview</A>
+<B> Previous:</B> <A NAME="tex2html127"
+  HREF="node2.html">Conceptual Overview</A>
+ &nbsp; <B>  <A NAME="tex2html135"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00210000000000000000">
+User Layer</A>
+</H1>
+The user layer represents the front-end layer which is run by a user of the
+system. This layer is responsible for running the optimization algorithm. The
+algorithm produces tasks to be evaluated. As can be seen in figure
+<A HREF="node2.html#fig:overview">1.1</A>, each optimization, run at the user layer, is encapsulated
+in a <SPAN  CLASS="textit">Job</SPAN> process. The job drives the optimization, sends tasks
+to the <SPAN  CLASS="textit">server</SPAN> layer, and feeds retrieved results back into the
+optimizer.
+
+<P>
+The optimizer consists of a population (of tasks) that need to
+be executed, an optional function which combines a multi-objective fitness evaluation
+into a single fitness value, and a data storage to store the results of the
+optimization. The optimizer population is a set of tasks that can be executed
+independently. For example, in Genetic Algorithms this would be a single
+generation of individuals. These represent the set of tasks that can be
+distributed at the <SPAN  CLASS="textit">server</SPAN> layer. The fitness function represents
+a mathematical expression that can be used to transform multiple objectives
+into a single fitness value, used by the optimizer.
+
+<P>
+A description of the task that is sent to the <SPAN  CLASS="textit">server</SPAN> layer
+is given in table <A HREF="#tab:task_message">1.1</A>. Once a task is executed, a result
+message as described in table <A HREF="#tab:result_message">1.2</A> is sent back to
+the <SPAN  CLASS="textit">user</SPAN> layer.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:task_message"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="51"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 1.1:</STRONG>
+Task Message</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=283><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Id</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>A unique task identifier</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Dispatcher</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>The dispatcher with which to evaluate the ask</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Parameters</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>A {<SPAN  CLASS="textit">name</SPAN> <!-- MATH
+ $\rightarrow$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rightarrow$"></SPAN> <SPAN  CLASS="textit">value</SPAN>} dictionary of
+			         parameters to be evaluated</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Settings</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>A {<SPAN  CLASS="textit">name</SPAN> <!-- MATH
+ $\rightarrow$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rightarrow$"></SPAN> <SPAN  CLASS="textit">value</SPAN>} dictionary of
+			       settings to be passed to the dispatcher</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<A NAME="tab:result_message"></A>
+<BR>
+<BR>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+<P>
+<A NAME="66"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 1.2:</STRONG>
+Result Message</CAPTION>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><SPAN  CLASS="textbf">Name</SPAN></TD>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=283><SPAN  CLASS="textbf">Description</SPAN></TH>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Id</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>The unique task identifier</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Status</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>Whether the execution was successful or not</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Fitness</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>A {<SPAN  CLASS="textit">name</SPAN> <!-- MATH
+ $\rightarrow$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rightarrow$"></SPAN> <SPAN  CLASS="textit">value</SPAN>} dictionary
+		          of fitness values</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Data</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>A {<SPAN  CLASS="textit">name</SPAN> <!-- MATH
+ $\rightarrow$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \rightarrow$"></SPAN> <SPAN  CLASS="textit">value</SPAN>} dictionary
+		          of additional, custom data to be stored with this task/solution</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=283>&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html132"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html126"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node4.html">Server Layer</A>
+<B> Up:</B> <A NAME="tex2html133"
+  HREF="node2.html">Conceptual Overview</A>
+<B> Previous:</B> <A NAME="tex2html127"
+  HREF="node2.html">Conceptual Overview</A>
+ &nbsp; <B>  <A NAME="tex2html135"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Jesse van den Kieboom
+2014-02-26
+</ADDRESS>
+</BODY>
+</HTML>

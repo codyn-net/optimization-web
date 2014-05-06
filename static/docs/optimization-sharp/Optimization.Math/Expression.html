@@ -1,0 +1,594 @@
+<html>
+  <head>
+    <title>Optimization.Math.Expression</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization.Math Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Math.Expression">Expression  Class</h1>
+    <p class="Summary" id="T:Optimization.Math.Expression:Summary">Mathematical expression representation.</p>
+    <div id="T:Optimization.Math.Expression:Signature">
+      <div class="Signature">public class  <b>Expression</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Math.Expression:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Math.Expression:Docs:Remarks')">
+          <span id="T:Optimization.Math.Expression:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Math.Expression:Docs:Remarks">This class represents a mathematical expression. It can parse and
+    evaluate most common mathematical operators and a limited set of mathematical
+    functions (such as sin, cos, abs, min, max, etc). It also has support for
+    variables which will be substituted on evaluation <a href="../Optimization.Math/Expression.html#M:Optimization.Math.Expression.Evaluate">Expression.Evaluate</a></blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Math.Expression:Docs:Version Information')">
+          <span id="T:Optimization.Math.Expression:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Math.Expression:Docs:Version Information">
+        <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Math.Expression">Expression</a>
+                    </b>()</div>
+                </td>
+                <td>Default constructor.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Math.Expression.ErrorMessage">ErrorMessage</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. An parser error message.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Math.Expression.Text">Text</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. Get the mathematical expression that was last parsed.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Math.Expression.Evaluate">Evaluate</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote>Evaluate a previously parsed expression.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[])">Evaluate</a>
+                  </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a>[])<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Math.Expression.Parse(System.String)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Parse string representation of mathematical expression.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Operators')">
+            <span id="Public Operators:toggle">⊟</span> Public Operators</a>
+        </h3>
+        <blockquote id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean">Conversion to System.Boolean</a>
+                  </b>(Implicit)</td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Math.Expression:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Math.Expression">
+          <a href="javascript:toggle_display('C:Optimization.Math.Expression:member')">
+            <span id="C:Optimization.Math.Expression:member:toggle">⊟</span> Expression Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Math.Expression:member">
+          <p class="Summary">Default constructor.</p>
+          <div class="Signature">public  <b>Expression</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Math.Expression:Remarks')">
+              <span id="C:Optimization.Math.Expression:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Math.Expression:Remarks">Create new expression object.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Math.Expression:Version Information')">
+              <span id="C:Optimization.Math.Expression:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Math.Expression:Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Math.Expression.ErrorMessage">
+          <a href="javascript:toggle_display('P:Optimization.Math.Expression.ErrorMessage:member')">
+            <span id="P:Optimization.Math.Expression.ErrorMessage:member:toggle">⊟</span> ErrorMessage Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Math.Expression.ErrorMessage:member">
+          <p class="Summary">An parser error message.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ErrorMessage</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Math.Expression.ErrorMessage:Value')">
+              <span id="P:Optimization.Math.Expression.ErrorMessage:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Math.Expression.ErrorMessage:Value">The parser error message.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Math.Expression.ErrorMessage:Remarks')">
+              <span id="P:Optimization.Math.Expression.ErrorMessage:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Math.Expression.ErrorMessage:Remarks">This will contain an error message describing the problem while
+        parsing a mathematical expression (<a href="../Optimization.Math/Expression.html#M:Optimization.Math.Expression.Parse">Expression.Parse</a>).</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Math.Expression.ErrorMessage:Version Information')">
+              <span id="P:Optimization.Math.Expression.ErrorMessage:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Math.Expression.ErrorMessage:Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Math.Expression.Evaluate">
+          <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate:member')">
+            <span id="M:Optimization.Math.Expression.Evaluate:member:toggle">⊟</span> Evaluate Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Math.Expression.Evaluate:member">
+          <p class="Summary">Evaluate a previously parsed expression.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Evaluate</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate:Returns')">
+              <span id="M:Optimization.Math.Expression.Evaluate:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate:Returns">The value the expression evaluates to.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate:Remarks')">
+              <span id="M:Optimization.Math.Expression.Evaluate:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate:Remarks">This evaluates the expression previously parsed with 
+        <a href="../Optimization.Math/Expression.html#M:Optimization.Math.Expression.Parse(System.String)">Expression.Parse(string)</a>.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate:Version Information')">
+              <span id="M:Optimization.Math.Expression.Evaluate:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate:Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[])">
+          <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):member')">
+            <span id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):member:toggle">⊟</span> Evaluate Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Evaluate</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.Dictionary`2">Dictionary&lt;string, object&gt;</a>[] context)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Parameters')">
+              <span id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Parameters">
+            <dl>
+              <dt>
+                <i>context</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Returns')">
+              <span id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Remarks')">
+              <span id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Version Information')">
+              <span id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Object}[]):Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean">
+          <a href="javascript:toggle_display('M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:member')">
+            <span id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:member:toggle">⊟</span> Conversion Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <div class="Signature">public static implicit operator <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> (<a href="../Optimization.Math/Expression.html">Expression</a> expr)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Parameters')">
+              <span id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Parameters">
+            <dl>
+              <dt>
+                <i>expr</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Returns')">
+              <span id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Remarks')">
+              <span id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Version Information')">
+              <span id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.op_Implicit(Optimization.Math.Expression)~System.Boolean:Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Math.Expression.Parse(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Math.Expression.Parse(System.String):member')">
+            <span id="M:Optimization.Math.Expression.Parse(System.String):member:toggle">⊟</span> Parse Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Math.Expression.Parse(System.String):member">
+          <p class="Summary">Parse string representation of mathematical expression.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Parse(System.String):Parameters')">
+              <span id="M:Optimization.Math.Expression.Parse(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Parse(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The mathematical expression to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Parse(System.String):Returns')">
+              <span id="M:Optimization.Math.Expression.Parse(System.String):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Parse(System.String):Returns">true if the expression could be parsed correctly, false otherwise.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Parse(System.String):Remarks')">
+              <span id="M:Optimization.Math.Expression.Parse(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Parse(System.String):Remarks">Parse a mathematical expression. If any errors occur during
+        parsing, false is returned and <a href="../Optimization.Math/Expression.html#P:Optimization.Math.Expression.ErrorMessage">Expression.ErrorMessage</a>
+        is set to a message describing the error.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Math.Expression.Parse(System.String):Version Information')">
+              <span id="M:Optimization.Math.Expression.Parse(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Math.Expression.Parse(System.String):Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Math.Expression.Text">
+          <a href="javascript:toggle_display('P:Optimization.Math.Expression.Text:member')">
+            <span id="P:Optimization.Math.Expression.Text:member:toggle">⊟</span> Text Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Math.Expression.Text:member">
+          <p class="Summary">Get the mathematical expression that was last parsed.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Text</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Math.Expression.Text:Value')">
+              <span id="P:Optimization.Math.Expression.Text:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Math.Expression.Text:Value">The mathematical expression string.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Math.Expression.Text:Remarks')">
+              <span id="P:Optimization.Math.Expression.Text:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Math.Expression.Text:Remarks">Get the mathematical expression as the string as it was
+        supplied to the last call to <a href="../Optimization.Math/Expression.html#M:Optimization.Math.Expression.Parse(System.String)">Expression.Parse(string)</a>.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Math.Expression.Text:Version Information')">
+              <span id="P:Optimization.Math.Expression.Text:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Math.Expression.Text:Version Information">
+            <b>Namespace: </b>Optimization.Math<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

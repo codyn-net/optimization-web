@@ -1,0 +1,1460 @@
+<html>
+  <head>
+    <title>Optimization.Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      * { font-family: sans-serif, sans serif, verdana, arial; font-size: 0.98em; }
+
+      a { font-weight: normal; text-decoration: none; color: #559fd2}
+      a:hover { text-decoration: underline; }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid #935c1f;
+        background-color: #fffded;
+      }
+      
+      h4 a span, h2 a span, h3 a span {
+      	font-size: 10px;
+      	vertical-align: middle;
+      }
+      
+      div.SideBar p {
+      	margin-top: 5px;
+      	margin-bottom: 5px;
+      }
+    
+      .CollectionTitle {  }
+      .PageTitle { font-size: 150%}
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125% }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%}
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; margin-top: 1em; }
+      .Subsection { font-size: 105%; }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #4276a0;
+        color: #fff;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: #c37f2d;
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.2em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #fafafa;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Optimization</a> : <a href="index.html">Optimization Namespace</a></div>
+    <h1 class="PageTitle" id="T:Optimization.Application">Application  Class</h1>
+    <p class="Summary" id="T:Optimization.Application:Summary">Main optimization application class.</p>
+    <div id="T:Optimization.Application:Signature">
+      <div class="Signature">public class  <b>Application</b></div>
+    </div>
+    <div class="Remarks" id="T:Optimization.Application:Docs">
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Application:Docs:Remarks')">
+          <span id="T:Optimization.Application:Docs:Remarks:toggle">⊟</span> Remarks</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Application:Docs:Remarks">
+        <p>This class provides the main machinery for executing a
+    <a href="../Optimization/Job.html">Optimization.Job</a>. It will connect to the master
+    process and sends populations of solutions as batched tasks to the
+    master. It then receives responses back from the master and updates
+    the solutions in the optimizer according to their evaluated 
+    fitnesses. It then drives the optimizer to generate new populations when
+    all solutions are properly evaluated.</p>
+        <p>
+    The usual way of using this class is to create a new instance, passing it
+    command line arguments to parse. Then create a new 
+    <a href="../Optimization/Job.html">Optimization.Job</a> (either from an XML or manually) and
+    pass it to <a href="javascript:alert(&quot;Documentation not found.&quot;)">Application.Run</a>. The run method implements
+    a main loop which will block until the optimization has completed
+    (or when a critical error has occurred). You might want to consider
+    to create or implement a <a href="../Optimization/Visual.html">Optimization.Visual</a> to show
+    any messages (status, error) and/or progress of the optimization.
+    </p>
+      </blockquote>
+      <h4 class="Subsection">
+        <a href="javascript:toggle_display('T:Optimization.Application:Docs:Version Information')">
+          <span id="T:Optimization.Application:Docs:Version Information:toggle">⊟</span> Requirements</a>
+      </h4>
+      <blockquote class="SubsectionBox" id="T:Optimization.Application:Docs:Version Information">
+        <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+      <h2 class="Section" id="Members">
+        <a href="javascript:toggle_display('_Members')">
+          <span id="_Members:toggle">⊟</span> Members</a>
+      </h2>
+      <blockquote class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h3>
+          <a href="javascript:toggle_display('Public Constructors')">
+            <span id="Public Constructors:toggle">⊟</span> Public Constructors</a>
+        </h3>
+        <blockquote id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Optimization.Application(System.String[]@)">Application</a>
+                    </b>(<i>ref</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[])</div>
+                </td>
+                <td>Create new application.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Properties')">
+            <span id="Public Properties:toggle">⊟</span> Public Properties</a>
+        </h3>
+        <blockquote id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Application.Job">Job</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Optimization/Job.html">Job</a>
+                  </i>. The currently running job.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Optimization.Application.WaitHandle">WaitHandle</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.EventWaitHandle">System.Threading.EventWaitHandle</a>
+                  </i>. Main loop wait handle.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Methods')">
+            <span id="Public Methods:toggle">⊟</span> Public Methods</a>
+        </h3>
+        <blockquote id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Run(Optimization.Job)">Run</a>
+                  </b>(<a href="../Optimization/Job.html">Job</a>)<blockquote>Run an optimization job.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Stop">Stop</a>
+                  </b>()<blockquote>Stop the current job.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Protected Methods')">
+            <span id="Protected Methods:toggle">⊟</span> Protected Methods</a>
+        </h3>
+        <blockquote id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.AddOptions(NDesk.Options.OptionSet)">AddOptions</a>
+                  </b>(<a href="../NDesk.Options/OptionSet.html">NDesk.Options.OptionSet</a>)<blockquote>Add command line options to the option set.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Close">Close</a>
+                  </b>()<blockquote>Called when connection from master is closed.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Done(Optimization.Solution)">Done</a>
+                  </b>(<a href="../Optimization/Solution.html">Solution</a>)<blockquote>Called when a solution has been evaluated.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Error(System.String)">Error</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Fire the <a href="../Optimization/Application.html#E:Optimization.Application.OnError">Application.OnError</a>
+        event.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Error(System.String,System.Object[])">Error</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote>Fire the <a href="../Optimization/Application.html#E:Optimization.Application.OnError">Application.OnError</a>
+        event.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType)">FailureToString</a>
+                  </b>(<a href="../Optimization.Messages/Response+FailureType.html">Optimization.Messages.Response.FailureType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Convert a response failure type to a string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Initialize">Initialize</a>
+                  </b>()<blockquote>Application initialization.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.NewIteration">NewIteration</a>
+                  </b>()<blockquote>Start new optimization iteration.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.OnChallenge(Optimization.Messages.Response)">OnChallenge</a>
+                  </b>(<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a>)<blockquote>Handle a challenge response.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.OnFailed(Optimization.Messages.Response)">OnFailed</a>
+                  </b>(<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a>)<blockquote>Handle a failed response message.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.OnSuccess(Optimization.Messages.Response)">OnSuccess</a>
+                  </b>(<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a>)<blockquote>Handle a success response message.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.ParseArguments(System.String[]@)">ParseArguments</a>
+                  </b>(<i>ref</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[])<blockquote>Parse command line arguments.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Send">Send</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Send current population to the master in a batch.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.ShowMessage(System.String)">ShowMessage</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Show a message to the user.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.ShowMessage(System.String,System.Object[])">ShowMessage</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote>Show a formatted message to the user.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Status(System.String)">Status</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Show a status message to the user.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Optimization.Application.Status(System.String,System.Object[])">Status</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote>Show a formatted status message to the user.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+        <h3>
+          <a href="javascript:toggle_display('Public Events')">
+            <span id="Public Events:toggle">⊟</span> Public Events</a>
+        </h3>
+        <blockquote id="Public Events">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnError">OnError</a>
+                  </b>
+                </td>
+                <td>Fired when an error has occurred.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnIterate">OnIterate</a>
+                  </b>
+                </td>
+                <td>Fired to give listeners some time to do some work on the
+        main thread.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnJob">OnJob</a>
+                  </b>
+                </td>
+                <td>Fired when a new job is started.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnMessage">OnMessage</a>
+                  </b>
+                </td>
+                <td>Message event.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnProgress">OnProgress</a>
+                  </b>
+                </td>
+                <td>Fired when there is some progress in the optimization.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnStatus">OnStatus</a>
+                  </b>
+                </td>
+                <td>Fired when there is some status update.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Optimization.Application.OnWarning">OnWarning</a>
+                  </b>
+                </td>
+                <td>Warning event.</td>
+              </tr>
+            </table>
+          </div>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class="Members" id="T:Optimization.Application:Members">
+      <h2 class="Section" id="MemberDetails">
+        <a href="javascript:toggle_display('_MemberDetails')">
+          <span id="_MemberDetails:toggle">⊟</span> Member Details</a>
+      </h2>
+      <blockquote class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Optimization.Application(System.String[]@)">
+          <a href="javascript:toggle_display('C:Optimization.Application(System.String[]@):member')">
+            <span id="C:Optimization.Application(System.String[]@):member:toggle">⊟</span> Application Constructor</a>
+        </h3>
+        <blockquote id="C:Optimization.Application(System.String[]@):member">
+          <p class="Summary">Create new application.</p>
+          <div class="Signature">public  <b>Application</b> (<i>ref</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] args)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Application(System.String[]@):Parameters')">
+              <span id="C:Optimization.Application(System.String[]@):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Application(System.String[]@):Parameters">
+            <dl>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>Command line arguments.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Application(System.String[]@):Remarks')">
+              <span id="C:Optimization.Application(System.String[]@):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Application(System.String[]@):Remarks">Create new application.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('C:Optimization.Application(System.String[]@):Version Information')">
+              <span id="C:Optimization.Application(System.String[]@):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="C:Optimization.Application(System.String[]@):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet)">
+          <a href="javascript:toggle_display('M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):member')">
+            <span id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):member:toggle">⊟</span> AddOptions Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):member">
+          <p class="Summary">Add command line options to the option set.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddOptions</b> (<a href="../NDesk.Options/OptionSet.html">NDesk.Options.OptionSet</a> optionSet)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Parameters')">
+              <span id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Parameters">
+            <dl>
+              <dt>
+                <i>optionSet</i>
+              </dt>
+              <dd>The option set.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Remarks')">
+              <span id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Remarks">Add command line options to the option set. Subclasses
+        can override this to set their own command line options in the
+        option set.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Version Information')">
+              <span id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.AddOptions(NDesk.Options.OptionSet):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Close">
+          <a href="javascript:toggle_display('M:Optimization.Application.Close:member')">
+            <span id="M:Optimization.Application.Close:member:toggle">⊟</span> Close Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Close:member">
+          <p class="Summary">Called when connection from master is closed.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Close</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Close:Remarks')">
+              <span id="M:Optimization.Application.Close:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Close:Remarks">Called when the connection with the master is closed. This
+        will stop the main application loop.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Close:Version Information')">
+              <span id="M:Optimization.Application.Close:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Close:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Done(Optimization.Solution)">
+          <a href="javascript:toggle_display('M:Optimization.Application.Done(Optimization.Solution):member')">
+            <span id="M:Optimization.Application.Done(Optimization.Solution):member:toggle">⊟</span> Done Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Done(Optimization.Solution):member">
+          <p class="Summary">Called when a solution has been evaluated.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Done</b> (<a href="../Optimization/Solution.html">Solution</a> solution)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Done(Optimization.Solution):Parameters')">
+              <span id="M:Optimization.Application.Done(Optimization.Solution):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Done(Optimization.Solution):Parameters">
+            <dl>
+              <dt>
+                <i>solution</i>
+              </dt>
+              <dd>The solution.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Done(Optimization.Solution):Remarks')">
+              <span id="M:Optimization.Application.Done(Optimization.Solution):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Done(Optimization.Solution):Remarks">Called when a solution has been evaluated. This method
+        checks if this was the last solution in the iteration and if so
+        will start a new iteration.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Done(Optimization.Solution):Version Information')">
+              <span id="M:Optimization.Application.Done(Optimization.Solution):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Done(Optimization.Solution):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Error(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String):member')">
+            <span id="M:Optimization.Application.Error(System.String):member:toggle">⊟</span> Error Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Error(System.String):member">
+          <p class="Summary">Fire the <a href="../Optimization/Application.html#E:Optimization.Application.OnError">Application.OnError</a>
+        event.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Error</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> str)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String):Parameters')">
+              <span id="M:Optimization.Application.Error(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Error(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>str</i>
+              </dt>
+              <dd>Error message.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String):Remarks')">
+              <span id="M:Optimization.Application.Error(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Error(System.String):Remarks">Fire the .<a href="../Optimization/Application.html#E:Optimization.Application.OnError">Application.OnError</a>
+        event.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String):Version Information')">
+              <span id="M:Optimization.Application.Error(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Error(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Error(System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String,System.Object[]):member')">
+            <span id="M:Optimization.Application.Error(System.String,System.Object[]):member:toggle">⊟</span> Error Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Error(System.String,System.Object[]):member">
+          <p class="Summary">Fire the <a href="../Optimization/Application.html#E:Optimization.Application.OnError">Application.OnError</a>
+        event.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Error</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> format, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Application.Error(System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Error(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>Format string.</dd>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>Format arguments.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Application.Error(System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Error(System.String,System.Object[]):Remarks">Fire the .<a href="../Optimization/Application.html#E:Optimization.Application.OnError">Application.OnError</a>
+        event.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Error(System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Application.Error(System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Error(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType)">
+          <a href="javascript:toggle_display('M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):member')">
+            <span id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):member:toggle">⊟</span> FailureToString Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):member">
+          <p class="Summary">Convert a response failure type to a string.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FailureToString</b> (<a href="../Optimization.Messages/Response+FailureType.html">Optimization.Messages.Response.FailureType</a> failure)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Parameters')">
+              <span id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Parameters">
+            <dl>
+              <dt>
+                <i>failure</i>
+              </dt>
+              <dd>Response failure.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Returns')">
+              <span id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Returns">The string representation of the failure type.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Remarks')">
+              <span id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Remarks">Convert a response failure type to a string.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Version Information')">
+              <span id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.FailureToString(Optimization.Messages.Response.FailureType):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Initialize">
+          <a href="javascript:toggle_display('M:Optimization.Application.Initialize:member')">
+            <span id="M:Optimization.Application.Initialize:member:toggle">⊟</span> Initialize Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Initialize:member">
+          <p class="Summary">Application initialization.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Initialize</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Initialize:Remarks')">
+              <span id="M:Optimization.Application.Initialize:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Initialize:Remarks">Called during the initialization of the application.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Initialize:Version Information')">
+              <span id="M:Optimization.Application.Initialize:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Initialize:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Application.Job">
+          <a href="javascript:toggle_display('P:Optimization.Application.Job:member')">
+            <span id="P:Optimization.Application.Job:member:toggle">⊟</span> Job Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Application.Job:member">
+          <p class="Summary">The currently running job.</p>
+          <div class="Signature">public <a href="../Optimization/Job.html">Job</a> <b>Job</b>  { set; get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Application.Job:Value')">
+              <span id="P:Optimization.Application.Job:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Application.Job:Value">A job.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Application.Job:Remarks')">
+              <span id="P:Optimization.Application.Job:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Application.Job:Remarks">Get or set the currently running job.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Application.Job:Version Information')">
+              <span id="P:Optimization.Application.Job:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Application.Job:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.NewIteration">
+          <a href="javascript:toggle_display('M:Optimization.Application.NewIteration:member')">
+            <span id="M:Optimization.Application.NewIteration:member:toggle">⊟</span> NewIteration Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.NewIteration:member">
+          <p class="Summary">Start new optimization iteration.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>NewIteration</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.NewIteration:Remarks')">
+              <span id="M:Optimization.Application.NewIteration:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.NewIteration:Remarks">This will call <a href="javascript:alert(&quot;Documentation not found.&quot;)">Optimization.Optimizer.Next</a>
+        and will fire the <a href="../Optimization/Application.html#E:Optimization.Application.OnProgress">Application.OnProgress</a>
+        event accordingly. If the optimization is fininshed, the main loop
+        is quitted, otherwise a batch of new solutions will be send to the
+        master.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.NewIteration:Version Information')">
+              <span id="M:Optimization.Application.NewIteration:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.NewIteration:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response)">
+          <a href="javascript:toggle_display('M:Optimization.Application.OnChallenge(Optimization.Messages.Response):member')">
+            <span id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):member:toggle">⊟</span> OnChallenge Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):member">
+          <p class="Summary">Handle a challenge response.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnChallenge</b> (<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a> response)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Parameters')">
+              <span id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Parameters">
+            <dl>
+              <dt>
+                <i>response</i>
+              </dt>
+              <dd>A response.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Remarks')">
+              <span id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Remarks">Handles a challenge response message. It will encode the
+        challenge with the job token and send a token message back to
+        the master.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Version Information')">
+              <span id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnChallenge(Optimization.Messages.Response):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnError">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnError:member')">
+            <span id="E:Optimization.Application.OnError:member:toggle">⊟</span> OnError Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnError:member">
+          <p class="Summary">Fired when an error has occurred.</p>
+          <div class="Signature">public event <a href="../Optimization/Application+MessageHandler.html">Application.MessageHandler</a> <b>OnError</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnError:Remarks')">
+              <span id="E:Optimization.Application.OnError:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnError:Remarks">Fired when an error has occurred.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnError:Version Information')">
+              <span id="E:Optimization.Application.OnError:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnError:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.OnFailed(Optimization.Messages.Response)">
+          <a href="javascript:toggle_display('M:Optimization.Application.OnFailed(Optimization.Messages.Response):member')">
+            <span id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):member:toggle">⊟</span> OnFailed Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):member">
+          <p class="Summary">Handle a failed response message.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnFailed</b> (<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a> response)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnFailed(Optimization.Messages.Response):Parameters')">
+              <span id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):Parameters">
+            <dl>
+              <dt>
+                <i>response</i>
+              </dt>
+              <dd>A response.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnFailed(Optimization.Messages.Response):Remarks')">
+              <span id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):Remarks">Handles a failed response message. The fitness of the solution
+        that failed will be marked with a 0 fitness.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnFailed(Optimization.Messages.Response):Version Information')">
+              <span id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnFailed(Optimization.Messages.Response):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnIterate">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnIterate:member')">
+            <span id="E:Optimization.Application.OnIterate:member:toggle">⊟</span> OnIterate Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnIterate:member">
+          <p class="Summary">Fired to give listeners some time to do some work on the
+        main thread.</p>
+          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler">EventHandler</a> <b>OnIterate</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnIterate:Remarks')">
+              <span id="E:Optimization.Application.OnIterate:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnIterate:Remarks">Fired to give listeners some time to do some work on the
+        main thread. This is used by for instance visualizers that need some
+        interation, or some time to draw their interfaces. If a visual needs
+        to be updated periodically, it should periodically signal the
+        <a href="../Optimization/Application.html#P:Optimization.Application.WaitHandle">Application.WaitHandle</a> so that
+        <a href="../Optimization/Application.html#E:Optimization.Application.OnIterate">Application.OnIterate</a> is called.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnIterate:Version Information')">
+              <span id="E:Optimization.Application.OnIterate:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnIterate:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnJob">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnJob:member')">
+            <span id="E:Optimization.Application.OnJob:member:toggle">⊟</span> OnJob Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnJob:member">
+          <p class="Summary">Fired when a new job is started.</p>
+          <div class="Signature">public event <a href="../Optimization/Application+JobHandler.html">Application.JobHandler</a> <b>OnJob</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnJob:Remarks')">
+              <span id="E:Optimization.Application.OnJob:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnJob:Remarks">Fired when a new job is started.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnJob:Version Information')">
+              <span id="E:Optimization.Application.OnJob:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnJob:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnMessage">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnMessage:member')">
+            <span id="E:Optimization.Application.OnMessage:member:toggle">⊟</span> OnMessage Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnMessage:member">
+          <p class="Summary">Message event.</p>
+          <div class="Signature">public event <a href="../Optimization/Application+MessageHandler.html">Application.MessageHandler</a> <b>OnMessage</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnMessage:Remarks')">
+              <span id="E:Optimization.Application.OnMessage:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnMessage:Remarks">This event is emitted when there is a general message that
+        should be reported to the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnMessage:Version Information')">
+              <span id="E:Optimization.Application.OnMessage:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnMessage:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnProgress">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnProgress:member')">
+            <span id="E:Optimization.Application.OnProgress:member:toggle">⊟</span> OnProgress Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnProgress:member">
+          <p class="Summary">Fired when there is some progress in the optimization.</p>
+          <div class="Signature">public event <a href="../Optimization/Application+ProgressHandler.html">Application.ProgressHandler</a> <b>OnProgress</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnProgress:Remarks')">
+              <span id="E:Optimization.Application.OnProgress:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnProgress:Remarks">Fired when there is some progress in the optimization.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnProgress:Version Information')">
+              <span id="E:Optimization.Application.OnProgress:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnProgress:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnStatus">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnStatus:member')">
+            <span id="E:Optimization.Application.OnStatus:member:toggle">⊟</span> OnStatus Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnStatus:member">
+          <p class="Summary">Fired when there is some status update.</p>
+          <div class="Signature">public event <a href="../Optimization/Application+MessageHandler.html">Application.MessageHandler</a> <b>OnStatus</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnStatus:Remarks')">
+              <span id="E:Optimization.Application.OnStatus:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnStatus:Remarks">Fired when there is some status update.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnStatus:Version Information')">
+              <span id="E:Optimization.Application.OnStatus:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnStatus:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response)">
+          <a href="javascript:toggle_display('M:Optimization.Application.OnSuccess(Optimization.Messages.Response):member')">
+            <span id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):member:toggle">⊟</span> OnSuccess Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):member">
+          <p class="Summary">Handle a success response message.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnSuccess</b> (<a href="../Optimization.Messages/Response.html">Optimization.Messages.Response</a> response)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Parameters')">
+              <span id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Parameters">
+            <dl>
+              <dt>
+                <i>response</i>
+              </dt>
+              <dd>A response.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Remarks')">
+              <span id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Remarks">Handles a success response message. This will update the
+        fitness of the solution according to the received fitness. 
+        Additionally any data that was transmitted with the response will
+        be added/set in the solution.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Version Information')">
+              <span id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.OnSuccess(Optimization.Messages.Response):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Optimization.Application.OnWarning">
+          <a href="javascript:toggle_display('E:Optimization.Application.OnWarning:member')">
+            <span id="E:Optimization.Application.OnWarning:member:toggle">⊟</span> OnWarning Event</a>
+        </h3>
+        <blockquote id="E:Optimization.Application.OnWarning:member">
+          <p class="Summary">Warning event.</p>
+          <div class="Signature">public event <a href="../Optimization/Application+MessageHandler.html">Application.MessageHandler</a> <b>OnWarning</b> </div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnWarning:Remarks')">
+              <span id="E:Optimization.Application.OnWarning:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnWarning:Remarks">This event is emitted when there is a warning that should be
+        displayed to the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('E:Optimization.Application.OnWarning:Version Information')">
+              <span id="E:Optimization.Application.OnWarning:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="E:Optimization.Application.OnWarning:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.ParseArguments(System.String[]@)">
+          <a href="javascript:toggle_display('M:Optimization.Application.ParseArguments(System.String[]@):member')">
+            <span id="M:Optimization.Application.ParseArguments(System.String[]@):member:toggle">⊟</span> ParseArguments Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.ParseArguments(System.String[]@):member">
+          <p class="Summary">Parse command line arguments.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ParseArguments</b> (<i>ref</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] args)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ParseArguments(System.String[]@):Parameters')">
+              <span id="M:Optimization.Application.ParseArguments(System.String[]@):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ParseArguments(System.String[]@):Parameters">
+            <dl>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>Arguments to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ParseArguments(System.String[]@):Remarks')">
+              <span id="M:Optimization.Application.ParseArguments(System.String[]@):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ParseArguments(System.String[]@):Remarks">Subclasses can override this to do their own command
+        line parsing, or to setup data needed for command line parsing
+        (see <a href="../Optimization/Application.html#M:Optimization.Application.AddOptions">Application.AddOptions</a>).</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ParseArguments(System.String[]@):Version Information')">
+              <span id="M:Optimization.Application.ParseArguments(System.String[]@):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ParseArguments(System.String[]@):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Run(Optimization.Job)">
+          <a href="javascript:toggle_display('M:Optimization.Application.Run(Optimization.Job):member')">
+            <span id="M:Optimization.Application.Run(Optimization.Job):member:toggle">⊟</span> Run Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Run(Optimization.Job):member">
+          <p class="Summary">Run an optimization job.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Run</b> (<a href="../Optimization/Job.html">Job</a> job)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Run(Optimization.Job):Parameters')">
+              <span id="M:Optimization.Application.Run(Optimization.Job):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Run(Optimization.Job):Parameters">
+            <dl>
+              <dt>
+                <i>job</i>
+              </dt>
+              <dd>A job.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Run(Optimization.Job):Remarks')">
+              <span id="M:Optimization.Application.Run(Optimization.Job):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Run(Optimization.Job):Remarks">This method will run one optimization job. It will batch
+        tasks to the master prococess as long as the optimization is running
+        and will process any responses from the master to update the
+        solution fitnesses and drive the optimization.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Run(Optimization.Job):Version Information')">
+              <span id="M:Optimization.Application.Run(Optimization.Job):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Run(Optimization.Job):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Send">
+          <a href="javascript:toggle_display('M:Optimization.Application.Send:member')">
+            <span id="M:Optimization.Application.Send:member:toggle">⊟</span> Send Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Send:member">
+          <p class="Summary">Send current population to the master in a batch.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Send</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Send:Returns')">
+              <span id="M:Optimization.Application.Send:Returns:toggle">⊟</span> Returns</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Send:Returns">True if the batch was successfully send.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Send:Remarks')">
+              <span id="M:Optimization.Application.Send:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Send:Remarks">Send current population to the master in a batch.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Send:Version Information')">
+              <span id="M:Optimization.Application.Send:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Send:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.ShowMessage(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String):member')">
+            <span id="M:Optimization.Application.ShowMessage(System.String):member:toggle">⊟</span> ShowMessage Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.ShowMessage(System.String):member">
+          <p class="Summary">Show a message to the user.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> str)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String):Parameters')">
+              <span id="M:Optimization.Application.ShowMessage(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ShowMessage(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>str</i>
+              </dt>
+              <dd>The message.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String):Remarks')">
+              <span id="M:Optimization.Application.ShowMessage(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ShowMessage(System.String):Remarks">Show a message to the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String):Version Information')">
+              <span id="M:Optimization.Application.ShowMessage(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ShowMessage(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.ShowMessage(System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String,System.Object[]):member')">
+            <span id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):member:toggle">⊟</span> ShowMessage Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):member">
+          <p class="Summary">Show a formatted message to the user.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> format, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format string.</dd>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>The format string arguments.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):Remarks">Show a formatted message to the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.ShowMessage(System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.ShowMessage(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Status(System.String)">
+          <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String):member')">
+            <span id="M:Optimization.Application.Status(System.String):member:toggle">⊟</span> Status Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Status(System.String):member">
+          <p class="Summary">Show a status message to the user.</p>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Status</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> str)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String):Parameters')">
+              <span id="M:Optimization.Application.Status(System.String):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Status(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>str</i>
+              </dt>
+              <dd>Status message.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String):Remarks')">
+              <span id="M:Optimization.Application.Status(System.String):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Status(System.String):Remarks">Show a status message to the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String):Version Information')">
+              <span id="M:Optimization.Application.Status(System.String):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Status(System.String):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Status(System.String,System.Object[])">
+          <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String,System.Object[]):member')">
+            <span id="M:Optimization.Application.Status(System.String,System.Object[]):member:toggle">⊟</span> Status Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Status(System.String,System.Object[]):member">
+          <p class="Summary">Show a formatted status message to the user.</p>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Status</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> format, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String,System.Object[]):Parameters')">
+              <span id="M:Optimization.Application.Status(System.String,System.Object[]):Parameters:toggle">⊟</span> Parameters</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Status(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format string.</dd>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>The format string arguments.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String,System.Object[]):Remarks')">
+              <span id="M:Optimization.Application.Status(System.String,System.Object[]):Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Status(System.String,System.Object[]):Remarks">Show a formatted status message to the user.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Status(System.String,System.Object[]):Version Information')">
+              <span id="M:Optimization.Application.Status(System.String,System.Object[]):Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Status(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Optimization.Application.Stop">
+          <a href="javascript:toggle_display('M:Optimization.Application.Stop:member')">
+            <span id="M:Optimization.Application.Stop:member:toggle">⊟</span> Stop Method</a>
+        </h3>
+        <blockquote id="M:Optimization.Application.Stop:member">
+          <p class="Summary">Stop the current job.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> ()</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Stop:Remarks')">
+              <span id="M:Optimization.Application.Stop:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Stop:Remarks">Stop the currently running job.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('M:Optimization.Application.Stop:Version Information')">
+              <span id="M:Optimization.Application.Stop:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="M:Optimization.Application.Stop:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Optimization.Application.WaitHandle">
+          <a href="javascript:toggle_display('P:Optimization.Application.WaitHandle:member')">
+            <span id="P:Optimization.Application.WaitHandle:member:toggle">⊟</span> WaitHandle Property</a>
+        </h3>
+        <blockquote id="P:Optimization.Application.WaitHandle:member">
+          <p class="Summary">Main loop wait handle.</p>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.EventWaitHandle">System.Threading.EventWaitHandle</a> <b>WaitHandle</b>  { get; }</div>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Application.WaitHandle:Value')">
+              <span id="P:Optimization.Application.WaitHandle:Value:toggle">⊟</span> Value</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Application.WaitHandle:Value">The wait handle.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Application.WaitHandle:Remarks')">
+              <span id="P:Optimization.Application.WaitHandle:Remarks:toggle">⊟</span> Remarks</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Application.WaitHandle:Remarks">Get the main loop wait handle. The main loop runs on the
+        main thread and uses a message queue and a wait handle to process
+        messages from other threads. To run an iteration of the application
+        main loop, you can use <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.Threading.WaitHandle.Set">System.Threading.WaitHandle.Set</a>.
+        This will in turn handle any received messages, fire
+        <a href="../Optimization/Application.html#E:Optimization.Application.OnIterate">Application.OnIterate</a> and check if the
+        job should be stopped.</blockquote>
+          <h4 class="Subsection">
+            <a href="javascript:toggle_display('P:Optimization.Application.WaitHandle:Version Information')">
+              <span id="P:Optimization.Application.WaitHandle:Version Information:toggle">⊟</span> Requirements</a>
+          </h4>
+          <blockquote class="SubsectionBox" id="P:Optimization.Application.WaitHandle:Version Information">
+            <b>Namespace: </b>Optimization<br /><b>Assembly: </b>Optimization (in Optimization.dll)</blockquote>
+          <hr size="1" />
+        </blockquote>
+      </blockquote>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
